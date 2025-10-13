@@ -1,0 +1,4 @@
+retrieval:
+  top_k: 20
+  index: gemma/embeddings/faiss.index
+

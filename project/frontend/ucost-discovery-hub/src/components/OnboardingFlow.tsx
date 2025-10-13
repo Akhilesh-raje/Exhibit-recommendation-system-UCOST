@@ -6,7 +6,7 @@ import { ProfileStep4 } from "./ProfileStep4";
 import { SmartRoadmap } from "./SmartRoadmap";
 
 interface OnboardingFlowProps {
-  onComplete: (profile: UserProfile) => void;
+  onComplete: (profile: UserProfile, recommendedExhibits?: any[]) => void;
   onBack: () => void;
 }
 
@@ -49,8 +49,8 @@ export function OnboardingFlow({ onComplete, onBack }: OnboardingFlowProps) {
     setCurrentStep(5);
   };
 
-  const handleStartTour = () => {
-    onComplete(profile as UserProfile);
+  const handleStartTour = (recommendedExhibits?: any[]) => {
+    onComplete(profile as UserProfile, recommendedExhibits);
   };
 
   const handleCustomize = () => {

@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "file:./dev.db"
+  url      = env("DATABASE_URL")
 }
 
 model User {
@@ -46,6 +46,58 @@ model Exhibit {
   category          String?
   imageUrl          String?
   isActive          Boolean            @default(true)
+  
+  // Enhanced Data Sheet Fields
+  exhibitCode       String?            // Unique exhibit identifier
+  scientificName    String?            // Scientific classification if applicable
+  ageRange          String?            // Target age group
+  exhibitType       String?            // Interactive, Passive, Hands-on
+  environment       String?            // Indoor, Outdoor, Both
+  duration          Int?               // Estimated viewing time in minutes
+  difficulty        String?            // Easy, Medium, Hard
+  language          String?            // Primary language of display
+  accessibility     String?            // Accessibility features
+  maintenanceNotes  String?            // Maintenance and care instructions
+  safetyNotes       String?            // Safety guidelines
+  educationalValue  String?            // Learning objectives
+  curriculumLinks   String?            // Links to educational curriculum
+  materials         String?            // Materials used in exhibit
+  dimensions        String?            // Physical dimensions
+  weight            Float?             // Weight in kg
+  powerRequirements String?            // Electrical requirements
+  temperatureRange  String?            // Operating temperature range
+  humidityRange     String?            // Operating humidity range
+  lastMaintenance   DateTime?          // Last maintenance date
+  nextMaintenance   DateTime?          // Next scheduled maintenance
+  cost              Float?             // Exhibit cost
+  sponsor           String?            // Sponsor information
+  designer          String?            // Exhibit designer
+  manufacturer      String?            // Manufacturer information
+  warrantyExpiry    DateTime?          // Warranty expiration date
+  insuranceInfo     String?            // Insurance information
+  riskAssessment    String?            // Risk assessment details
+  emergencyContact  String?            // Emergency contact information
+  
+  // Media and Features
+  images            String?            // JSON array of image URLs
+  videos            String?            // JSON array of video URLs
+  audioGuides       String?            // JSON array of audio guide URLs
+  interactiveFeatures String?          // JSON array of interactive features
+  virtualTour       String?            // Virtual tour URL
+  
+  // Location and Mapping
+  floor             String?            // Floor number/name
+  coordinates       String?            // JSON object with x, y coordinates
+  nearbyFacilities  String?            // JSON array of nearby facilities
+  routeInstructions String?            // How to reach the exhibit
+  
+  // Analytics and Performance
+  visitorCount      Int                @default(0)
+  averageTime       Int                @default(0)  // Average time spent in minutes
+  rating            Float              @default(0.0)
+  feedbackCount     Int                @default(0)
+  
+  // Timestamps
   createdAt         DateTime           @default(now())
   updatedAt         DateTime           @updatedAt
   

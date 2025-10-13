@@ -1,0 +1,4 @@
+id,name,description,category,averageTime,rating,coordinates_x,coordinates_y,coordinates_floor,ageRange,exhibitType,difficulty,interactiveFeatures
+exhibit_001,Planetarium Dome,Immersive space projection showcasing planets, stars, and galaxies.,space-and-astronomy,12,4.7,34.2,72.1,first,all,interactive,easy,"3D projections;immersive visuals"
+exhibit_002,Fossil Gallery,Collection of ancient fossils and dinosaur bones.,earth-science,10,4.5,15.8,43.5,ground,"kids,teen,adult",passive,medium,
+exhibit_003,Robotics Lab,Hands-on station with programmable robots.,technology,8,4.6,68.0,58.4,ground,"teen,adult",interactive,easy,"programming;sensors"

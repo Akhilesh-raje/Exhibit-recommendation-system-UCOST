@@ -4,10 +4,11 @@ import { Button } from './ui/button';
 import { Plus, Wifi, Smartphone, BarChart3, Settings, Users, Shield, Database, QrCode, Activity } from 'lucide-react';
 import P2PSyncPanel from './P2PSyncPanel';
 import ExhibitUpload from './ExhibitUpload';
+import AdminExhibits from './AdminExhibits';
 import MobileAppManagement from './MobileAppManagement';
 
 export default function AdminPanel({ onBack }: { onBack: () => void }) {
-  const [view, setView] = useState<'dashboard' | 'upload' | 'p2p-sync' | 'mobile-app'>('dashboard');
+  const [view, setView] = useState<'dashboard' | 'upload' | 'p2p-sync' | 'mobile-app' | 'exhibits'>('dashboard');
 
   if (view === 'upload') {
     return <ExhibitUpload onBack={() => setView('dashboard')} />;
@@ -19,6 +20,10 @@ export default function AdminPanel({ onBack }: { onBack: () => void }) {
 
   if (view === 'mobile-app') {
     return <MobileAppManagement onBack={() => setView('dashboard')} />;
+  }
+
+  if (view === 'exhibits') {
+    return <AdminExhibits onBack={() => setView('dashboard')} />;
   }
 
   return (
@@ -45,6 +50,18 @@ export default function AdminPanel({ onBack }: { onBack: () => void }) {
             </CardHeader>
             <CardContent>
               <p className="text-gray-300">Add a new exhibit with images, descriptions, and metadata.</p>
+            </CardContent>
+          </Card>
+
+          <Card className="hover:shadow-lg transition-shadow cursor-pointer bg-gray-800 border-gray-700 text-white" onClick={() => setView('exhibits')}>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-3 text-white">
+                <Database className="h-6 w-6 text-orange-400" />
+                Manage Exhibits
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-300">View all uploaded exhibits and see full details.</p>
             </CardContent>
           </Card>
 

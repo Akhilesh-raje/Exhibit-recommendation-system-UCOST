@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, Play, Lightbulb, Plus, Check, Telescope, Sparkles } from "lucide-react";
@@ -9,10 +10,33 @@ interface ExhibitDetailProps {
 }
 
 export function ExhibitDetail({ exhibitId, onBack, onAddToTour }: ExhibitDetailProps) {
-  // TODO: Replace with real exhibit data from database
-  const exhibitData: any = {};
+  const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [exhibit, setExhibit] = useState<any | null>(null);
 
-  const exhibit = exhibitData[exhibitId] || {
+  useEffect(() => {
+    let isMounted = true;
+    if (!exhibitId) return;
+    (async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        const res = await fetch(`${API_BASE_URL}/exhibits/${exhibitId}`);
+        if (!res.ok) throw new Error(`Failed to load exhibit (${res.status})`);
+        const data = await res.json();
+        if (!isMounted) return;
+        setExhibit(data?.exhibit || null);
+      } catch (e: any) {
+        if (isMounted) setError(e.message || 'Failed to load exhibit');
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    })();
+    return () => { isMounted = false; };
+  }, [API_BASE_URL, exhibitId]);
+
+  const uiExhibit = exhibit || {
     name: "EXHIBIT NOT FOUND",
     funFact: "This exhibit doesn't exist yet!",
     description: "Please upload exhibits from the admin panel to see them here.",
@@ -59,7 +83,7 @@ export function ExhibitDetail({ exhibitId, onBack, onAddToTour }: ExhibitDetailP
             {/* Header */}
             <div className="text-center mb-8">
               <h1 className="text-6xl font-bold text-white mb-6">
-                {exhibit.name}
+                {uiExhibit.name}
               </h1>
               
               {/* Fun Fact Banner */}
@@ -67,7 +91,7 @@ export function ExhibitDetail({ exhibitId, onBack, onAddToTour }: ExhibitDetailP
                 <div className="flex items-center gap-3">
                   <Lightbulb className="w-6 h-6 text-yellow-500" />
                   <span className="text-gray-800 font-medium text-lg">
-                    Did You Know? {exhibit.funFact}
+                    Did You Know? {uiExhibit.funFact || 'Learn something new at every exhibit!'}
                   </span>
                 </div>
               </Card>
@@ -76,7 +100,7 @@ export function ExhibitDetail({ exhibitId, onBack, onAddToTour }: ExhibitDetailP
             {/* Description */}
             <div className="mb-8">
               <p className="text-white/90 text-xl leading-relaxed text-center max-w-3xl mx-auto">
-                {exhibit.description}
+                {uiExhibit.description}
               </p>
             </div>
 
@@ -84,7 +108,7 @@ export function ExhibitDetail({ exhibitId, onBack, onAddToTour }: ExhibitDetailP
             <div className="mb-8">
               <h3 className="text-2xl font-bold text-white mb-4 text-center">What You'll Experience:</h3>
               <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto">
-                {exhibit.features.map((feature, index) => (
+                {(uiExhibit.features || []).map((feature: string, index: number) => (
                   <div key={index} className="flex items-center gap-3 text-white/80">
                     <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-lg">{feature}</span>
@@ -125,6 +149,12 @@ export function ExhibitDetail({ exhibitId, onBack, onAddToTour }: ExhibitDetailP
               </Button>
             </div>
           </Card>
+          {loading && (
+            <div className="text-center text-white/80 mt-4">Loading exhibit...</div>
+          )}
+          {error && (
+            <div className="text-center text-red-300 mt-2">{error}</div>
+          )}
         </div>
       </div>
     </div>

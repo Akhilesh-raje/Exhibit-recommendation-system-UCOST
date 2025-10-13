@@ -3,6 +3,7 @@ import multer from 'multer';
 import { spawn } from 'child_process';
 import path from 'path';
 import fs from 'fs';
+import sharp from 'sharp';
 
 const router = express.Router();
 
@@ -13,11 +14,35 @@ router.get('/test', async (req: any, res: any) => {
   try {
     console.log('🔍 Testing OCR endpoint...');
     
-    // Use absolute path to bypass path resolution issues
-    const pythonScriptPath = 'C:\\Users\\rajea\\Desktop\\Internship 2025\\uc work\\project\\ocr-engine\\simple_ocr.py';
-    
+    // Resolve Python OCR script and interpreter for portability
+    const resolveScriptPath = (): string => {
+      const fromEnv = process.env.OCR_SCRIPT_PATH;
+      const candidates = [
+        fromEnv ? path.resolve(process.cwd(), fromEnv) : '',
+        path.resolve(process.cwd(), '../../ocr-engine/simple_ocr.py'),
+        path.resolve(__dirname, '../../../../../../ocr-engine/simple_ocr.py')
+      ].filter(Boolean);
+      for (const candidate of candidates) {
+        try { if (candidate && fs.existsSync(candidate)) return candidate; } catch {}
+      }
+      return '';
+    };
+    const resolvePythonBin = (): string => {
+      const fromEnv = process.env.OCR_PYTHON_BIN;
+      if (fromEnv && fromEnv.trim().length > 0) return fromEnv;
+      const venvWin = path.resolve(process.cwd(), '../../ocr-engine/.venv/Scripts/python.exe');
+      const venvPosix = path.resolve(process.cwd(), '../../ocr-engine/.venv/bin/python');
+      try { if (fs.existsSync(venvWin)) return venvWin; } catch {}
+      try { if (fs.existsSync(venvPosix)) return venvPosix; } catch {}
+      return 'python';
+    };
+
+    const pythonScriptPath = resolveScriptPath();
+    const pythonBin = resolvePythonBin();
+
     console.log('🔍 Python script path:', pythonScriptPath);
-    console.log('🔍 Script exists:', fs.existsSync(pythonScriptPath));
+    console.log('🔍 Script exists:', pythonScriptPath ? fs.existsSync(pythonScriptPath) : false);
+    console.log('🔍 Python bin:', pythonBin);
     console.log('🔍 Current working directory:', process.cwd());
     console.log('🔍 __dirname:', __dirname);
     
@@ -32,12 +57,12 @@ router.get('/test', async (req: any, res: any) => {
     }
     
     // Test the OCR script with a sample image
-    const testImagePath = 'C:\\Users\\rajea\\Desktop\\Internship 2025\\uc work\\project\\ocr-engine\\demo_fish_board.png';
+    const testImagePath = path.resolve(process.cwd(), '../../ocr-engine/demo_fish_board.png');
     
     if (fs.existsSync(testImagePath)) {
       console.log('🔍 Testing with sample image:', testImagePath);
       
-      const pythonProcess = spawn('python', [pythonScriptPath, testImagePath]);
+      const pythonProcess = spawn(pythonBin, [pythonScriptPath, testImagePath]);
       
       let output = '';
       let errorOutput = '';
@@ -123,25 +148,66 @@ router.post('/describe', upload.single('image'), async (req: any, res: any) => {
 
     console.log('🔍 File received:', req.file.originalname, 'Size:', req.file.size);
     
-    // Save image to temporary file
-    const tempImagePath = path.join(__dirname, '../../uploads', `temp_${Date.now()}.png`);
+    // Save image to temporary file (downscale/compress to speed up OCR)
+    const tempImagePath = path.join(__dirname, '../../uploads', `temp_${Date.now()}.jpg`);
     
     // Ensure uploads directory exists
     if (!fs.existsSync(path.dirname(tempImagePath))) {
       fs.mkdirSync(path.dirname(tempImagePath), { recursive: true });
     }
     
-    fs.writeFileSync(tempImagePath, req.file.buffer);
-    console.log('🔍 Image saved to:', tempImagePath);
+    try {
+      await sharp(req.file.buffer)
+        .rotate()
+        .resize({ height: 1600, fit: 'inside', withoutEnlargement: true })
+        .jpeg({ quality: 85 })
+        .toFile(tempImagePath);
+      console.log('🔍 Image preprocessed and saved to:', tempImagePath);
+    } catch (imgErr: any) {
+      // Fallback: write original buffer if preprocessing fails
+      fs.writeFileSync(tempImagePath, req.file.buffer);
+      console.warn('⚠️ Image preprocessing failed, saved original buffer:', imgErr?.message || imgErr);
+    }
     
-    // Path to the Python OCR script - CORRECTED PATH
-    const pythonScriptPath = 'C:\\Users\\rajea\\Desktop\\Internship 2025\\uc work\\project\\ocr-engine\\simple_ocr.py';
-    
+    // Resolve Python OCR script path and interpreter for portability
+    const resolveScriptPath = (): string => {
+      const fromEnv = process.env.OCR_SCRIPT_PATH;
+      const candidates = [
+        fromEnv ? path.resolve(process.cwd(), fromEnv) : '',
+        // When running from backend workspace: project/backend/backend → ../../ocr-engine
+        path.resolve(process.cwd(), '../../ocr-engine/simple_ocr.py'),
+        // When resolving relative to compiled file location
+        path.resolve(__dirname, '../../../../../../ocr-engine/simple_ocr.py')
+      ].filter(Boolean);
+      for (const candidate of candidates) {
+        try {
+          if (candidate && fs.existsSync(candidate)) return candidate;
+        } catch {}
+      }
+      return '';
+    };
+
+    const resolvePythonBin = (): string => {
+      const fromEnv = process.env.OCR_PYTHON_BIN;
+      if (fromEnv && fromEnv.trim().length > 0) return fromEnv;
+      // Prefer local venv if present
+      const venvWin = path.resolve(process.cwd(), '../../ocr-engine/.venv/Scripts/python.exe');
+      const venvPosix = path.resolve(process.cwd(), '../../ocr-engine/.venv/bin/python');
+      try { if (fs.existsSync(venvWin)) return venvWin; } catch {}
+      try { if (fs.existsSync(venvPosix)) return venvPosix; } catch {}
+      return 'python';
+    };
+
+    const pythonScriptPath = resolveScriptPath();
+    const pythonBin = resolvePythonBin();
+    const timeoutMs = Number(process.env.OCR_TIMEOUT_MS || 120000);
+
     console.log('🔍 OCR Script Path:', pythonScriptPath);
-    console.log('🔍 Script exists:', fs.existsSync(pythonScriptPath));
+    console.log('🔍 Script exists:', pythonScriptPath ? fs.existsSync(pythonScriptPath) : false);
+    console.log('🔍 Python bin:', pythonBin);
     
     // Check if Python script exists
-    if (!fs.existsSync(pythonScriptPath)) {
+    if (!pythonScriptPath || !fs.existsSync(pythonScriptPath)) {
       console.error('❌ Python OCR script not found');
       return res.status(500).json({
         success: false,
@@ -151,8 +217,8 @@ router.post('/describe', upload.single('image'), async (req: any, res: any) => {
     }
     
     // Call Python script
-    console.log('🔍 Calling Python script with:', pythonScriptPath, tempImagePath);
-    const pythonProcess = spawn('python', [pythonScriptPath, tempImagePath]);
+    console.log('🔍 Calling Python script with:', pythonBin, pythonScriptPath, tempImagePath);
+    const pythonProcess = spawn(pythonBin, [pythonScriptPath, tempImagePath]);
     
     // Set timeout for Python process - OPTIMIZED TO PREVENT 408 ERRORS
     const timeout = setTimeout(() => {
@@ -174,7 +240,7 @@ router.post('/describe', upload.single('image'), async (req: any, res: any) => {
         error: 'Python OCR process timed out',
         suggestion: 'Try uploading a clearer image with better contrast'
       });
-    }, 45000); // 45 seconds timeout - OPTIMIZED
+    }, timeoutMs); // Timeout (ms) - configurable via OCR_TIMEOUT_MS
     
     let output = '';
     let errorOutput = '';

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "exhibit_001",
+    "name": "Planetarium Dome",
+    "description": "Immersive space projection showcasing planets, stars, and galaxies with guided narration and interactive stargazing sessions.",
+    "category": "space-and-astronomy",
+    "averageTime": 12,
+    "rating": 4.7,
+    "coordinates": { "x": 34.2, "y": 72.1, "floor": "first" },
+    "ageRange": "all",
+    "exhibitType": "interactive",
+    "difficulty": "easy",
+    "interactiveFeatures": ["3D projections", "immersive visuals"]
+  },
+  {
+    "id": "exhibit_002",
+    "name": "Fossil Gallery",
+    "description": "Collection of ancient fossils, trace imprints and dinosaur bones with educational panels on geological timescales.",
+    "category": "earth-science",
+    "averageTime": 10,
+    "rating": 4.5,
+    "coordinates": { "x": 15.8, "y": 43.5, "floor": "ground" },
+    "ageRange": "kids,teen,adult",
+    "exhibitType": "passive",
+    "difficulty": "medium",
+    "interactiveFeatures": []
+  },
+  {
+    "id": "exhibit_003",
+    "name": "Robotics Lab",
+    "description": "Hands-on station featuring programmable robots, basic automation demos, and sensor experiments for learners.",
+    "category": "technology",
+    "averageTime": 8,
+    "rating": 4.6,
+    "coordinates": { "x": 68.0, "y": 58.4, "floor": "ground" },
+    "ageRange": "teen,adult",
+    "exhibitType": "interactive",
+    "difficulty": "easy",
+    "interactiveFeatures": ["programming", "sensors"]
+  }
+]

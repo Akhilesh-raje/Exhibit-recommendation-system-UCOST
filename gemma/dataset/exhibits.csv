@@ -1,0 +1,201 @@
+id,name,category,description,averageTime,rating
+E001,Exhibit 1 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,10,3.5
+E002,Exhibit 2 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,15,3.6
+E003,Exhibit 3 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,10,4.4
+E004,Exhibit 4 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,5,4.9
+E005,Exhibit 5 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,10,4.4
+E006,Exhibit 6 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,5,4.5
+E007,Exhibit 7 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,10,3.8
+E008,Exhibit 8 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,10,4.5
+E009,Exhibit 9 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,5,4.6
+E010,Exhibit 10 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,15,4.4
+E011,Exhibit 11 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,4.1
+E012,Exhibit 12 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,5,4.6
+E013,Exhibit 13 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,10,4.1
+E014,Exhibit 14 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,10,4.1
+E015,Exhibit 15 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,10,4.2
+E016,Exhibit 16 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,5,3.6
+E017,Exhibit 17 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,15,4.9
+E018,Exhibit 18 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,3.8
+E019,Exhibit 19 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,10,4.8
+E020,Exhibit 20 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,4.4
+E021,Exhibit 21 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,15,4.9
+E022,Exhibit 22 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,10,4.4
+E023,Exhibit 23 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,15,4.6
+E024,Exhibit 24 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,5,4.1
+E025,Exhibit 25 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,10,4.1
+E026,Exhibit 26 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,5,4.8
+E027,Exhibit 27 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,5,3.8
+E028,Exhibit 28 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,5,4.7
+E029,Exhibit 29 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,15,3.8
+E030,Exhibit 30 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,15,3.8
+E031,Exhibit 31 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,15,3.7
+E032,Exhibit 32 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,15,3.6
+E033,Exhibit 33 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,15,3.6
+E034,Exhibit 34 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,10,4.8
+E035,Exhibit 35 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,15,3.6
+E036,Exhibit 36 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,15,4.2
+E037,Exhibit 37 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,15,3.6
+E038,Exhibit 38 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,10,4.5
+E039,Exhibit 39 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,4.1
+E040,Exhibit 40 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,10,4.2
+E041,Exhibit 41 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,15,4.9
+E042,Exhibit 42 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,10,4.0
+E043,Exhibit 43 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,15,4.2
+E044,Exhibit 44 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,10,4.4
+E045,Exhibit 45 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,10,4.2
+E046,Exhibit 46 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,15,4.3
+E047,Exhibit 47 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,5,3.8
+E048,Exhibit 48 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,4.6
+E049,Exhibit 49 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,15,4.7
+E050,Exhibit 50 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,15,4.0
+E051,Exhibit 51 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,15,4.1
+E052,Exhibit 52 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,5,4.5
+E053,Exhibit 53 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,5,3.7
+E054,Exhibit 54 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,5,4.3
+E055,Exhibit 55 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,5,4.4
+E056,Exhibit 56 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,10,3.7
+E057,Exhibit 57 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,10,3.5
+E058,Exhibit 58 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,10,4.4
+E059,Exhibit 59 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,15,4.0
+E060,Exhibit 60 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,10,4.9
+E061,Exhibit 61 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,10,4.1
+E062,Exhibit 62 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,5,4.9
+E063,Exhibit 63 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,10,4.8
+E064,Exhibit 64 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,10,4.0
+E065,Exhibit 65 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,15,4.0
+E066,Exhibit 66 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,15,4.8
+E067,Exhibit 67 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,15,3.7
+E068,Exhibit 68 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,5,4.3
+E069,Exhibit 69 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,5,3.9
+E070,Exhibit 70 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,15,4.6
+E071,Exhibit 71 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,10,3.8
+E072,Exhibit 72 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,5,4.5
+E073,Exhibit 73 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,10,3.8
+E074,Exhibit 74 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,5,4.8
+E075,Exhibit 75 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,15,4.7
+E076,Exhibit 76 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,10,3.5
+E077,Exhibit 77 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,4.1
+E078,Exhibit 78 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,5,4.2
+E079,Exhibit 79 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,10,4.8
+E080,Exhibit 80 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,5,4.7
+E081,Exhibit 81 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,4.3
+E082,Exhibit 82 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,10,3.7
+E083,Exhibit 83 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,15,4.2
+E084,Exhibit 84 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,10,4.7
+E085,Exhibit 85 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,5,3.7
+E086,Exhibit 86 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,10,3.9
+E087,Exhibit 87 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,4.3
+E088,Exhibit 88 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,10,4.7
+E089,Exhibit 89 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,15,4.1
+E090,Exhibit 90 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,10,3.8
+E091,Exhibit 91 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,5,4.4
+E092,Exhibit 92 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,15,3.9
+E093,Exhibit 93 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,5,4.0
+E094,Exhibit 94 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,10,4.4
+E095,Exhibit 95 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,5,3.5
+E096,Exhibit 96 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,15,4.8
+E097,Exhibit 97 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,10,4.4
+E098,Exhibit 98 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,5,4.7
+E099,Exhibit 99 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,5,3.9
+E100,Exhibit 100 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,10,4.0
+E101,Exhibit 101 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,5,5.0
+E102,Exhibit 102 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,5,4.8
+E103,Exhibit 103 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,5,3.7
+E104,Exhibit 104 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,15,4.0
+E105,Exhibit 105 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,5,4.2
+E106,Exhibit 106 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,10,3.9
+E107,Exhibit 107 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,10,4.6
+E108,Exhibit 108 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,3.5
+E109,Exhibit 109 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,3.5
+E110,Exhibit 110 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,10,4.7
+E111,Exhibit 111 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,5,4.4
+E112,Exhibit 112 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,10,4.0
+E113,Exhibit 113 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,5,4.4
+E114,Exhibit 114 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,3.9
+E115,Exhibit 115 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,15,4.7
+E116,Exhibit 116 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,5,4.5
+E117,Exhibit 117 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,10,4.0
+E118,Exhibit 118 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,10,3.9
+E119,Exhibit 119 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,10,4.9
+E120,Exhibit 120 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,15,3.8
+E121,Exhibit 121 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,10,4.0
+E122,Exhibit 122 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,10,4.5
+E123,Exhibit 123 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,10,4.0
+E124,Exhibit 124 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,5,4.4
+E125,Exhibit 125 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,10,3.8
+E126,Exhibit 126 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,10,3.6
+E127,Exhibit 127 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,5,4.2
+E128,Exhibit 128 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,5,3.7
+E129,Exhibit 129 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,5,4.0
+E130,Exhibit 130 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,10,4.6
+E131,Exhibit 131 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,10,4.5
+E132,Exhibit 132 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,15,4.9
+E133,Exhibit 133 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,5,4.4
+E134,Exhibit 134 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,10,4.1
+E135,Exhibit 135 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,4.0
+E136,Exhibit 136 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,15,4.0
+E137,Exhibit 137 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,5,4.5
+E138,Exhibit 138 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,10,4.5
+E139,Exhibit 139 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,5,3.9
+E140,Exhibit 140 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,10,3.7
+E141,Exhibit 141 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,15,4.0
+E142,Exhibit 142 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,4.6
+E143,Exhibit 143 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,10,4.3
+E144,Exhibit 144 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,10,3.9
+E145,Exhibit 145 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,10,3.5
+E146,Exhibit 146 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,10,4.9
+E147,Exhibit 147 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,10,3.9
+E148,Exhibit 148 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,4.5
+E149,Exhibit 149 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,15,4.9
+E150,Exhibit 150 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,4.9
+E151,Exhibit 151 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,15,4.5
+E152,Exhibit 152 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,5,3.6
+E153,Exhibit 153 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,10,4.4
+E154,Exhibit 154 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,10,4.4
+E155,Exhibit 155 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,5,3.8
+E156,Exhibit 156 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,10,3.9
+E157,Exhibit 157 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,15,4.0
+E158,Exhibit 158 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,15,4.3
+E159,Exhibit 159 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,3.9
+E160,Exhibit 160 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,15,3.6
+E161,Exhibit 161 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,10,4.8
+E162,Exhibit 162 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,5,4.3
+E163,Exhibit 163 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,15,3.9
+E164,Exhibit 164 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,15,4.3
+E165,Exhibit 165 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,10,4.5
+E166,Exhibit 166 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,15,3.8
+E167,Exhibit 167 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,15,3.5
+E168,Exhibit 168 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,5,4.5
+E169,Exhibit 169 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,10,4.9
+E170,Exhibit 170 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,5,3.9
+E171,Exhibit 171 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,10,4.4
+E172,Exhibit 172 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,15,4.5
+E173,Exhibit 173 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,10,4.3
+E174,Exhibit 174 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,10,3.9
+E175,Exhibit 175 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,10,4.8
+E176,Exhibit 176 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,10,4.2
+E177,Exhibit 177 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,5,3.8
+E178,Exhibit 178 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,15,4.8
+E179,Exhibit 179 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,15,4.1
+E180,Exhibit 180 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,5,3.9
+E181,Exhibit 181 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,15,4.4
+E182,Exhibit 182 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,10,4.1
+E183,Exhibit 183 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,10,3.9
+E184,Exhibit 184 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,15,4.7
+E185,Exhibit 185 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,15,4.1
+E186,Exhibit 186 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,4.6
+E187,Exhibit 187 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,15,4.6
+E188,Exhibit 188 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,10,3.7
+E189,Exhibit 189 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,10,4.5
+E190,Exhibit 190 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,5,4.9
+E191,Exhibit 191 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,15,4.7
+E192,Exhibit 192 - Physics,physics,An engaging exhibit about physics featuring interactive elements and learning content.,10,4.3
+E193,Exhibit 193 - Earth Science,earth-science,An engaging exhibit about earth-science featuring interactive elements and learning content.,15,4.5
+E194,Exhibit 194 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,5,3.9
+E195,Exhibit 195 - Technology,technology,An engaging exhibit about technology featuring interactive elements and learning content.,10,4.4
+E196,Exhibit 196 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,15,3.6
+E197,Exhibit 197 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,15,4.2
+E198,Exhibit 198 - Ai And Robotics,ai-and-robotics,An engaging exhibit about ai-and-robotics featuring interactive elements and learning content.,15,4.6
+E199,Exhibit 199 - Environment,environment,An engaging exhibit about environment featuring interactive elements and learning content.,10,4.9
+E200,Exhibit 200 - Space And Astronomy,space-and-astronomy,An engaging exhibit about space-and-astronomy featuring interactive elements and learning content.,15,4.1

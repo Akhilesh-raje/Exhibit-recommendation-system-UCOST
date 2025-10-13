@@ -1,0 +1,11 @@
+model: google/gemma-2b
+train:
+  epochs: 3
+  batch_size: 4
+  lr: 2e-4
+  max_len: 1024
+  lora:
+    r: 8
+    alpha: 16
+    dropout: 0.05
+

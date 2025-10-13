@@ -1,0 +1,2602 @@
+[
+  {
+    "id": "E001",
+    "tags": [
+      "cave",
+      "strata",
+      "fossils"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 78,
+      "y": 93
+    }
+  },
+  {
+    "id": "E002",
+    "tags": [
+      "ai",
+      "electronics",
+      "coding"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 38,
+      "y": 45
+    }
+  },
+  {
+    "id": "E003",
+    "tags": [
+      "ai",
+      "automation",
+      "electronics"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 95,
+      "y": 20
+    }
+  },
+  {
+    "id": "E004",
+    "tags": [
+      "computing",
+      "electronics",
+      "engineering"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 91,
+      "y": 8
+    }
+  },
+  {
+    "id": "E005",
+    "tags": [
+      "innovation",
+      "computing",
+      "electronics"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 78,
+      "y": 76
+    }
+  },
+  {
+    "id": "E006",
+    "tags": [
+      "climate",
+      "nature",
+      "ecosystem"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 50,
+      "y": 78
+    }
+  },
+  {
+    "id": "E007",
+    "tags": [
+      "computing",
+      "electronics",
+      "engineering"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 71,
+      "y": 81
+    }
+  },
+  {
+    "id": "E008",
+    "tags": [
+      "nature",
+      "climate",
+      "ecosystem"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 35,
+      "y": 61
+    }
+  },
+  {
+    "id": "E009",
+    "tags": [
+      "computing",
+      "innovation",
+      "electronics"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 53,
+      "y": 34
+    }
+  },
+  {
+    "id": "E010",
+    "tags": [
+      "nature",
+      "biodiversity",
+      "climate"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 55,
+      "y": 53
+    }
+  },
+  {
+    "id": "E011",
+    "tags": [
+      "optics",
+      "energy",
+      "motion"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 12,
+      "y": 57
+    }
+  },
+  {
+    "id": "E012",
+    "tags": [
+      "automation",
+      "coding",
+      "ai"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 81,
+      "y": 67
+    }
+  },
+  {
+    "id": "E013",
+    "tags": [
+      "quantum",
+      "energy",
+      "forces"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 21,
+      "y": 24
+    }
+  },
+  {
+    "id": "E014",
+    "tags": [
+      "electronics",
+      "ai",
+      "robotics"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 49,
+      "y": 49
+    }
+  },
+  {
+    "id": "E015",
+    "tags": [
+      "strata",
+      "mountain",
+      "fossils"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 13,
+      "y": 56
+    }
+  },
+  {
+    "id": "E016",
+    "tags": [
+      "electronics",
+      "computing",
+      "engineering"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 23,
+      "y": 80
+    }
+  },
+  {
+    "id": "E017",
+    "tags": [
+      "nature",
+      "ecosystem",
+      "climate"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 26,
+      "y": 38
+    }
+  },
+  {
+    "id": "E018",
+    "tags": [
+      "optics",
+      "energy",
+      "motion"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 90,
+      "y": 61
+    }
+  },
+  {
+    "id": "E019",
+    "tags": [
+      "biodiversity",
+      "nature",
+      "climate"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 87,
+      "y": 40
+    }
+  },
+  {
+    "id": "E020",
+    "tags": [
+      "quantum",
+      "motion",
+      "energy"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 89,
+      "y": 43
+    }
+  },
+  {
+    "id": "E021",
+    "tags": [
+      "nature",
+      "climate",
+      "ecosystem"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 72,
+      "y": 53
+    }
+  },
+  {
+    "id": "E022",
+    "tags": [
+      "galaxy",
+      "astronomy",
+      "space"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 53,
+      "y": 42
+    }
+  },
+  {
+    "id": "E023",
+    "tags": [
+      "energy",
+      "forces",
+      "optics"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 42,
+      "y": 88
+    }
+  },
+  {
+    "id": "E024",
+    "tags": [
+      "automation",
+      "robotics",
+      "coding"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 36,
+      "y": 30
+    }
+  },
+  {
+    "id": "E025",
+    "tags": [
+      "planets",
+      "stars",
+      "galaxy"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 24,
+      "y": 44
+    }
+  },
+  {
+    "id": "E026",
+    "tags": [
+      "robotics",
+      "ai",
+      "coding"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 63,
+      "y": 5
+    }
+  },
+  {
+    "id": "E027",
+    "tags": [
+      "planets",
+      "galaxy",
+      "space"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 11,
+      "y": 64
+    }
+  },
+  {
+    "id": "E028",
+    "tags": [
+      "climate",
+      "ecosystem",
+      "nature"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 34,
+      "y": 48
+    }
+  },
+  {
+    "id": "E029",
+    "tags": [
+      "energy",
+      "quantum",
+      "optics"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 10,
+      "y": 76
+    }
+  },
+  {
+    "id": "E030",
+    "tags": [
+      "electronics",
+      "ai",
+      "coding"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 21,
+      "y": 59
+    }
+  },
+  {
+    "id": "E031",
+    "tags": [
+      "electronics",
+      "computing",
+      "innovation"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 68,
+      "y": 76
+    }
+  },
+  {
+    "id": "E032",
+    "tags": [
+      "electronics",
+      "innovation",
+      "computing"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 32,
+      "y": 73
+    }
+  },
+  {
+    "id": "E033",
+    "tags": [
+      "strata",
+      "cave",
+      "earth"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 87,
+      "y": 18
+    }
+  },
+  {
+    "id": "E034",
+    "tags": [
+      "strata",
+      "cave",
+      "earth"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 89,
+      "y": 45
+    }
+  },
+  {
+    "id": "E035",
+    "tags": [
+      "nature",
+      "climate",
+      "biodiversity"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 46,
+      "y": 67
+    }
+  },
+  {
+    "id": "E036",
+    "tags": [
+      "earth",
+      "strata",
+      "geology"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 94,
+      "y": 63
+    }
+  },
+  {
+    "id": "E037",
+    "tags": [
+      "coding",
+      "automation",
+      "robotics"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 34,
+      "y": 92
+    }
+  },
+  {
+    "id": "E038",
+    "tags": [
+      "astronomy",
+      "galaxy",
+      "space"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 44,
+      "y": 45
+    }
+  },
+  {
+    "id": "E039",
+    "tags": [
+      "optics",
+      "quantum",
+      "motion"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 75,
+      "y": 74
+    }
+  },
+  {
+    "id": "E040",
+    "tags": [
+      "motion",
+      "quantum",
+      "optics"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 12,
+      "y": 88
+    }
+  },
+  {
+    "id": "E041",
+    "tags": [
+      "electronics",
+      "automation",
+      "robotics"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 44,
+      "y": 77
+    }
+  },
+  {
+    "id": "E042",
+    "tags": [
+      "mountain",
+      "earth",
+      "cave"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 50,
+      "y": 27
+    }
+  },
+  {
+    "id": "E043",
+    "tags": [
+      "biodiversity",
+      "ecosystem",
+      "nature"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 15,
+      "y": 63
+    }
+  },
+  {
+    "id": "E044",
+    "tags": [
+      "stars",
+      "rocket",
+      "astronomy"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 56,
+      "y": 92
+    }
+  },
+  {
+    "id": "E045",
+    "tags": [
+      "astronomy",
+      "stars",
+      "space"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 38,
+      "y": 95
+    }
+  },
+  {
+    "id": "E046",
+    "tags": [
+      "quantum",
+      "forces",
+      "energy"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 39,
+      "y": 78
+    }
+  },
+  {
+    "id": "E047",
+    "tags": [
+      "ecosystem",
+      "climate",
+      "biodiversity"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 94,
+      "y": 80
+    }
+  },
+  {
+    "id": "E048",
+    "tags": [
+      "motion",
+      "quantum",
+      "energy"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 91,
+      "y": 23
+    }
+  },
+  {
+    "id": "E049",
+    "tags": [
+      "galaxy",
+      "stars",
+      "astronomy"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 86,
+      "y": 9
+    }
+  },
+  {
+    "id": "E050",
+    "tags": [
+      "coding",
+      "automation",
+      "robotics"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 37,
+      "y": 25
+    }
+  },
+  {
+    "id": "E051",
+    "tags": [
+      "ecosystem",
+      "climate",
+      "nature"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 54,
+      "y": 63
+    }
+  },
+  {
+    "id": "E052",
+    "tags": [
+      "strata",
+      "geology",
+      "earth"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 16,
+      "y": 27
+    }
+  },
+  {
+    "id": "E053",
+    "tags": [
+      "computing",
+      "engineering",
+      "electronics"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 93,
+      "y": 86
+    }
+  },
+  {
+    "id": "E054",
+    "tags": [
+      "fossils",
+      "earth",
+      "mountain"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 8,
+      "y": 71
+    }
+  },
+  {
+    "id": "E055",
+    "tags": [
+      "innovation",
+      "electronics",
+      "engineering"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 60,
+      "y": 67
+    }
+  },
+  {
+    "id": "E056",
+    "tags": [
+      "motion",
+      "optics",
+      "quantum"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 68,
+      "y": 22
+    }
+  },
+  {
+    "id": "E057",
+    "tags": [
+      "nature",
+      "climate",
+      "biodiversity"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 59,
+      "y": 86
+    }
+  },
+  {
+    "id": "E058",
+    "tags": [
+      "space",
+      "planets",
+      "rocket"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 94,
+      "y": 42
+    }
+  },
+  {
+    "id": "E059",
+    "tags": [
+      "innovation",
+      "computing",
+      "engineering"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 12,
+      "y": 33
+    }
+  },
+  {
+    "id": "E060",
+    "tags": [
+      "automation",
+      "coding",
+      "ai"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 69,
+      "y": 33
+    }
+  },
+  {
+    "id": "E061",
+    "tags": [
+      "stars",
+      "space",
+      "planets"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 15,
+      "y": 32
+    }
+  },
+  {
+    "id": "E062",
+    "tags": [
+      "biodiversity",
+      "nature",
+      "ecosystem"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 17,
+      "y": 24
+    }
+  },
+  {
+    "id": "E063",
+    "tags": [
+      "automation",
+      "electronics",
+      "robotics"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 38,
+      "y": 36
+    }
+  },
+  {
+    "id": "E064",
+    "tags": [
+      "motion",
+      "forces",
+      "energy"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 87,
+      "y": 42
+    }
+  },
+  {
+    "id": "E065",
+    "tags": [
+      "stars",
+      "rocket",
+      "space"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 60,
+      "y": 72
+    }
+  },
+  {
+    "id": "E066",
+    "tags": [
+      "optics",
+      "energy",
+      "motion"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 86,
+      "y": 87
+    }
+  },
+  {
+    "id": "E067",
+    "tags": [
+      "engineering",
+      "innovation",
+      "computing"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 75,
+      "y": 88
+    }
+  },
+  {
+    "id": "E068",
+    "tags": [
+      "biodiversity",
+      "climate",
+      "nature"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 38,
+      "y": 6
+    }
+  },
+  {
+    "id": "E069",
+    "tags": [
+      "electronics",
+      "robotics",
+      "automation"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 53,
+      "y": 86
+    }
+  },
+  {
+    "id": "E070",
+    "tags": [
+      "cave",
+      "mountain",
+      "earth"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 10,
+      "y": 85
+    }
+  },
+  {
+    "id": "E071",
+    "tags": [
+      "electronics",
+      "computing",
+      "engineering"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 91,
+      "y": 63
+    }
+  },
+  {
+    "id": "E072",
+    "tags": [
+      "computing",
+      "engineering",
+      "electronics"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 90,
+      "y": 45
+    }
+  },
+  {
+    "id": "E073",
+    "tags": [
+      "fossils",
+      "cave",
+      "earth"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 24,
+      "y": 10
+    }
+  },
+  {
+    "id": "E074",
+    "tags": [
+      "nature",
+      "climate",
+      "biodiversity"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 61,
+      "y": 58
+    }
+  },
+  {
+    "id": "E075",
+    "tags": [
+      "coding",
+      "ai",
+      "robotics"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 37,
+      "y": 28
+    }
+  },
+  {
+    "id": "E076",
+    "tags": [
+      "ai",
+      "coding",
+      "automation"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 62,
+      "y": 56
+    }
+  },
+  {
+    "id": "E077",
+    "tags": [
+      "quantum",
+      "forces",
+      "motion"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 33,
+      "y": 26
+    }
+  },
+  {
+    "id": "E078",
+    "tags": [
+      "electronics",
+      "automation",
+      "ai"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 93,
+      "y": 70
+    }
+  },
+  {
+    "id": "E079",
+    "tags": [
+      "galaxy",
+      "stars",
+      "astronomy"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 20,
+      "y": 49
+    }
+  },
+  {
+    "id": "E080",
+    "tags": [
+      "electronics",
+      "computing",
+      "innovation"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 75,
+      "y": 9
+    }
+  },
+  {
+    "id": "E081",
+    "tags": [
+      "optics",
+      "quantum",
+      "motion"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 78,
+      "y": 91
+    }
+  },
+  {
+    "id": "E082",
+    "tags": [
+      "earth",
+      "cave",
+      "mountain"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 17,
+      "y": 33
+    }
+  },
+  {
+    "id": "E083",
+    "tags": [
+      "nature",
+      "climate",
+      "biodiversity"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 81,
+      "y": 42
+    }
+  },
+  {
+    "id": "E084",
+    "tags": [
+      "mountain",
+      "earth",
+      "geology"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 86,
+      "y": 16
+    }
+  },
+  {
+    "id": "E085",
+    "tags": [
+      "ecosystem",
+      "climate",
+      "nature"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 51,
+      "y": 47
+    }
+  },
+  {
+    "id": "E086",
+    "tags": [
+      "energy",
+      "forces",
+      "quantum"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 87,
+      "y": 39
+    }
+  },
+  {
+    "id": "E087",
+    "tags": [
+      "forces",
+      "energy",
+      "quantum"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 46,
+      "y": 6
+    }
+  },
+  {
+    "id": "E088",
+    "tags": [
+      "computing",
+      "electronics",
+      "engineering"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 91,
+      "y": 7
+    }
+  },
+  {
+    "id": "E089",
+    "tags": [
+      "fossils",
+      "earth",
+      "geology"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 76,
+      "y": 56
+    }
+  },
+  {
+    "id": "E090",
+    "tags": [
+      "planets",
+      "galaxy",
+      "space"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 5,
+      "y": 82
+    }
+  },
+  {
+    "id": "E091",
+    "tags": [
+      "electronics",
+      "ai",
+      "robotics"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 54,
+      "y": 59
+    }
+  },
+  {
+    "id": "E092",
+    "tags": [
+      "automation",
+      "ai",
+      "electronics"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 52,
+      "y": 67
+    }
+  },
+  {
+    "id": "E093",
+    "tags": [
+      "cave",
+      "geology",
+      "strata"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 13,
+      "y": 37
+    }
+  },
+  {
+    "id": "E094",
+    "tags": [
+      "biodiversity",
+      "climate",
+      "ecosystem"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 28,
+      "y": 86
+    }
+  },
+  {
+    "id": "E095",
+    "tags": [
+      "ai",
+      "coding",
+      "electronics"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 79,
+      "y": 85
+    }
+  },
+  {
+    "id": "E096",
+    "tags": [
+      "electronics",
+      "coding",
+      "automation"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 55,
+      "y": 30
+    }
+  },
+  {
+    "id": "E097",
+    "tags": [
+      "optics",
+      "motion",
+      "forces"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 31,
+      "y": 86
+    }
+  },
+  {
+    "id": "E098",
+    "tags": [
+      "strata",
+      "earth",
+      "geology"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 36,
+      "y": 20
+    }
+  },
+  {
+    "id": "E099",
+    "tags": [
+      "nature",
+      "ecosystem",
+      "climate"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 34,
+      "y": 72
+    }
+  },
+  {
+    "id": "E100",
+    "tags": [
+      "engineering",
+      "computing",
+      "electronics"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 47,
+      "y": 81
+    }
+  },
+  {
+    "id": "E101",
+    "tags": [
+      "innovation",
+      "electronics",
+      "computing"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 35,
+      "y": 84
+    }
+  },
+  {
+    "id": "E102",
+    "tags": [
+      "planets",
+      "space",
+      "stars"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 89,
+      "y": 28
+    }
+  },
+  {
+    "id": "E103",
+    "tags": [
+      "fossils",
+      "earth",
+      "cave"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 63,
+      "y": 73
+    }
+  },
+  {
+    "id": "E104",
+    "tags": [
+      "energy",
+      "quantum",
+      "forces"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 10,
+      "y": 34
+    }
+  },
+  {
+    "id": "E105",
+    "tags": [
+      "electronics",
+      "computing",
+      "engineering"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 40,
+      "y": 73
+    }
+  },
+  {
+    "id": "E106",
+    "tags": [
+      "electronics",
+      "automation",
+      "coding"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 72,
+      "y": 77
+    }
+  },
+  {
+    "id": "E107",
+    "tags": [
+      "planets",
+      "astronomy",
+      "rocket"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 66,
+      "y": 39
+    }
+  },
+  {
+    "id": "E108",
+    "tags": [
+      "forces",
+      "motion",
+      "optics"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 81,
+      "y": 82
+    }
+  },
+  {
+    "id": "E109",
+    "tags": [
+      "quantum",
+      "optics",
+      "energy"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 16,
+      "y": 91
+    }
+  },
+  {
+    "id": "E110",
+    "tags": [
+      "energy",
+      "optics",
+      "forces"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 84,
+      "y": 20
+    }
+  },
+  {
+    "id": "E111",
+    "tags": [
+      "strata",
+      "fossils",
+      "cave"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 25,
+      "y": 85
+    }
+  },
+  {
+    "id": "E112",
+    "tags": [
+      "innovation",
+      "engineering",
+      "electronics"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 59,
+      "y": 51
+    }
+  },
+  {
+    "id": "E113",
+    "tags": [
+      "mountain",
+      "earth",
+      "strata"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 55,
+      "y": 15
+    }
+  },
+  {
+    "id": "E114",
+    "tags": [
+      "forces",
+      "quantum",
+      "optics"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 13,
+      "y": 30
+    }
+  },
+  {
+    "id": "E115",
+    "tags": [
+      "quantum",
+      "energy",
+      "motion"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 72,
+      "y": 16
+    }
+  },
+  {
+    "id": "E116",
+    "tags": [
+      "electronics",
+      "coding",
+      "robotics"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 70,
+      "y": 78
+    }
+  },
+  {
+    "id": "E117",
+    "tags": [
+      "optics",
+      "forces",
+      "quantum"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 37,
+      "y": 6
+    }
+  },
+  {
+    "id": "E118",
+    "tags": [
+      "climate",
+      "nature",
+      "biodiversity"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 8,
+      "y": 43
+    }
+  },
+  {
+    "id": "E119",
+    "tags": [
+      "nature",
+      "climate",
+      "biodiversity"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 50,
+      "y": 17
+    }
+  },
+  {
+    "id": "E120",
+    "tags": [
+      "astronomy",
+      "rocket",
+      "galaxy"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 49,
+      "y": 93
+    }
+  },
+  {
+    "id": "E121",
+    "tags": [
+      "automation",
+      "electronics",
+      "coding"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 55,
+      "y": 65
+    }
+  },
+  {
+    "id": "E122",
+    "tags": [
+      "innovation",
+      "electronics",
+      "computing"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 90,
+      "y": 37
+    }
+  },
+  {
+    "id": "E123",
+    "tags": [
+      "cave",
+      "earth",
+      "mountain"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 48,
+      "y": 90
+    }
+  },
+  {
+    "id": "E124",
+    "tags": [
+      "innovation",
+      "computing",
+      "electronics"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 87,
+      "y": 28
+    }
+  },
+  {
+    "id": "E125",
+    "tags": [
+      "optics",
+      "forces",
+      "quantum"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 30,
+      "y": 26
+    }
+  },
+  {
+    "id": "E126",
+    "tags": [
+      "nature",
+      "climate",
+      "ecosystem"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 19,
+      "y": 62
+    }
+  },
+  {
+    "id": "E127",
+    "tags": [
+      "astronomy",
+      "rocket",
+      "stars"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 35,
+      "y": 84
+    }
+  },
+  {
+    "id": "E128",
+    "tags": [
+      "electronics",
+      "robotics",
+      "coding"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 27,
+      "y": 22
+    }
+  },
+  {
+    "id": "E129",
+    "tags": [
+      "ai",
+      "automation",
+      "robotics"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 15,
+      "y": 67
+    }
+  },
+  {
+    "id": "E130",
+    "tags": [
+      "quantum",
+      "motion",
+      "energy"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 60,
+      "y": 53
+    }
+  },
+  {
+    "id": "E131",
+    "tags": [
+      "stars",
+      "rocket",
+      "planets"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 24,
+      "y": 71
+    }
+  },
+  {
+    "id": "E132",
+    "tags": [
+      "climate",
+      "nature",
+      "ecosystem"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 94,
+      "y": 72
+    }
+  },
+  {
+    "id": "E133",
+    "tags": [
+      "biodiversity",
+      "nature",
+      "climate"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 76,
+      "y": 36
+    }
+  },
+  {
+    "id": "E134",
+    "tags": [
+      "nature",
+      "climate",
+      "ecosystem"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 15,
+      "y": 13
+    }
+  },
+  {
+    "id": "E135",
+    "tags": [
+      "quantum",
+      "forces",
+      "motion"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 27,
+      "y": 30
+    }
+  },
+  {
+    "id": "E136",
+    "tags": [
+      "mountain",
+      "fossils",
+      "cave"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 83,
+      "y": 27
+    }
+  },
+  {
+    "id": "E137",
+    "tags": [
+      "nature",
+      "climate",
+      "ecosystem"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 65,
+      "y": 41
+    }
+  },
+  {
+    "id": "E138",
+    "tags": [
+      "geology",
+      "earth",
+      "mountain"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 55,
+      "y": 77
+    }
+  },
+  {
+    "id": "E139",
+    "tags": [
+      "biodiversity",
+      "nature",
+      "ecosystem"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 71,
+      "y": 17
+    }
+  },
+  {
+    "id": "E140",
+    "tags": [
+      "automation",
+      "electronics",
+      "robotics"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 70,
+      "y": 52
+    }
+  },
+  {
+    "id": "E141",
+    "tags": [
+      "quantum",
+      "energy",
+      "motion"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 41,
+      "y": 48
+    }
+  },
+  {
+    "id": "E142",
+    "tags": [
+      "energy",
+      "forces",
+      "quantum"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 38,
+      "y": 7
+    }
+  },
+  {
+    "id": "E143",
+    "tags": [
+      "optics",
+      "motion",
+      "quantum"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 35,
+      "y": 37
+    }
+  },
+  {
+    "id": "E144",
+    "tags": [
+      "forces",
+      "energy",
+      "quantum"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 10,
+      "y": 66
+    }
+  },
+  {
+    "id": "E145",
+    "tags": [
+      "rocket",
+      "astronomy",
+      "planets"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 16,
+      "y": 38
+    }
+  },
+  {
+    "id": "E146",
+    "tags": [
+      "electronics",
+      "ai",
+      "robotics"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 77,
+      "y": 37
+    }
+  },
+  {
+    "id": "E147",
+    "tags": [
+      "stars",
+      "planets",
+      "space"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 32,
+      "y": 68
+    }
+  },
+  {
+    "id": "E148",
+    "tags": [
+      "quantum",
+      "forces",
+      "motion"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 48,
+      "y": 16
+    }
+  },
+  {
+    "id": "E149",
+    "tags": [
+      "electronics",
+      "robotics",
+      "ai"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 40,
+      "y": 42
+    }
+  },
+  {
+    "id": "E150",
+    "tags": [
+      "optics",
+      "forces",
+      "energy"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 77,
+      "y": 30
+    }
+  },
+  {
+    "id": "E151",
+    "tags": [
+      "automation",
+      "coding",
+      "ai"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 81,
+      "y": 17
+    }
+  },
+  {
+    "id": "E152",
+    "tags": [
+      "coding",
+      "robotics",
+      "electronics"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 33,
+      "y": 22
+    }
+  },
+  {
+    "id": "E153",
+    "tags": [
+      "climate",
+      "biodiversity",
+      "nature"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 94,
+      "y": 59
+    }
+  },
+  {
+    "id": "E154",
+    "tags": [
+      "planets",
+      "space",
+      "galaxy"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 30,
+      "y": 20
+    }
+  },
+  {
+    "id": "E155",
+    "tags": [
+      "biodiversity",
+      "climate",
+      "nature"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 56,
+      "y": 5
+    }
+  },
+  {
+    "id": "E156",
+    "tags": [
+      "electronics",
+      "innovation",
+      "engineering"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 87,
+      "y": 40
+    }
+  },
+  {
+    "id": "E157",
+    "tags": [
+      "space",
+      "astronomy",
+      "galaxy"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 30,
+      "y": 51
+    }
+  },
+  {
+    "id": "E158",
+    "tags": [
+      "electronics",
+      "innovation",
+      "engineering"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 13,
+      "y": 66
+    }
+  },
+  {
+    "id": "E159",
+    "tags": [
+      "motion",
+      "forces",
+      "quantum"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 37,
+      "y": 92
+    }
+  },
+  {
+    "id": "E160",
+    "tags": [
+      "astronomy",
+      "galaxy",
+      "rocket"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 87,
+      "y": 34
+    }
+  },
+  {
+    "id": "E161",
+    "tags": [
+      "quantum",
+      "optics",
+      "motion"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 33,
+      "y": 31
+    }
+  },
+  {
+    "id": "E162",
+    "tags": [
+      "engineering",
+      "computing",
+      "innovation"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 62,
+      "y": 35
+    }
+  },
+  {
+    "id": "E163",
+    "tags": [
+      "optics",
+      "motion",
+      "energy"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 84,
+      "y": 38
+    }
+  },
+  {
+    "id": "E164",
+    "tags": [
+      "electronics",
+      "ai",
+      "automation"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 89,
+      "y": 43
+    }
+  },
+  {
+    "id": "E165",
+    "tags": [
+      "electronics",
+      "innovation",
+      "engineering"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 15,
+      "y": 64
+    }
+  },
+  {
+    "id": "E166",
+    "tags": [
+      "engineering",
+      "electronics",
+      "computing"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 48,
+      "y": 11
+    }
+  },
+  {
+    "id": "E167",
+    "tags": [
+      "ecosystem",
+      "nature",
+      "climate"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 71,
+      "y": 85
+    }
+  },
+  {
+    "id": "E168",
+    "tags": [
+      "ecosystem",
+      "nature",
+      "climate"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 37,
+      "y": 19
+    }
+  },
+  {
+    "id": "E169",
+    "tags": [
+      "robotics",
+      "electronics",
+      "ai"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 83,
+      "y": 29
+    }
+  },
+  {
+    "id": "E170",
+    "tags": [
+      "engineering",
+      "computing",
+      "electronics"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 36,
+      "y": 75
+    }
+  },
+  {
+    "id": "E171",
+    "tags": [
+      "coding",
+      "robotics",
+      "ai"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 26,
+      "y": 63
+    }
+  },
+  {
+    "id": "E172",
+    "tags": [
+      "space",
+      "galaxy",
+      "stars"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 52,
+      "y": 36
+    }
+  },
+  {
+    "id": "E173",
+    "tags": [
+      "ai",
+      "automation",
+      "coding"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 93,
+      "y": 18
+    }
+  },
+  {
+    "id": "E174",
+    "tags": [
+      "engineering",
+      "electronics",
+      "innovation"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 51,
+      "y": 73
+    }
+  },
+  {
+    "id": "E175",
+    "tags": [
+      "forces",
+      "motion",
+      "energy"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 40,
+      "y": 33
+    }
+  },
+  {
+    "id": "E176",
+    "tags": [
+      "cave",
+      "earth",
+      "fossils"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 30,
+      "y": 55
+    }
+  },
+  {
+    "id": "E177",
+    "tags": [
+      "cave",
+      "mountain",
+      "earth"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 82,
+      "y": 19
+    }
+  },
+  {
+    "id": "E178",
+    "tags": [
+      "mountain",
+      "strata",
+      "geology"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 57,
+      "y": 29
+    }
+  },
+  {
+    "id": "E179",
+    "tags": [
+      "quantum",
+      "motion",
+      "optics"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 69,
+      "y": 48
+    }
+  },
+  {
+    "id": "E180",
+    "tags": [
+      "innovation",
+      "electronics",
+      "computing"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 62,
+      "y": 51
+    }
+  },
+  {
+    "id": "E181",
+    "tags": [
+      "motion",
+      "optics",
+      "quantum"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 60,
+      "y": 88
+    }
+  },
+  {
+    "id": "E182",
+    "tags": [
+      "electronics",
+      "engineering",
+      "computing"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 13,
+      "y": 90
+    }
+  },
+  {
+    "id": "E183",
+    "tags": [
+      "rocket",
+      "planets",
+      "space"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 78,
+      "y": 61
+    }
+  },
+  {
+    "id": "E184",
+    "tags": [
+      "planets",
+      "space",
+      "rocket"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 66,
+      "y": 28
+    }
+  },
+  {
+    "id": "E185",
+    "tags": [
+      "engineering",
+      "innovation",
+      "computing"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 43,
+      "y": 84
+    }
+  },
+  {
+    "id": "E186",
+    "tags": [
+      "motion",
+      "optics",
+      "forces"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 29,
+      "y": 11
+    }
+  },
+  {
+    "id": "E187",
+    "tags": [
+      "computing",
+      "electronics",
+      "engineering"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 71,
+      "y": 43
+    }
+  },
+  {
+    "id": "E188",
+    "tags": [
+      "automation",
+      "electronics",
+      "coding"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 94,
+      "y": 23
+    }
+  },
+  {
+    "id": "E189",
+    "tags": [
+      "robotics",
+      "ai",
+      "automation"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 70,
+      "y": 81
+    }
+  },
+  {
+    "id": "E190",
+    "tags": [
+      "energy",
+      "motion",
+      "forces"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 83,
+      "y": 23
+    }
+  },
+  {
+    "id": "E191",
+    "tags": [
+      "automation",
+      "ai",
+      "electronics"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 75,
+      "y": 14
+    }
+  },
+  {
+    "id": "E192",
+    "tags": [
+      "quantum",
+      "energy",
+      "motion"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 66,
+      "y": 79
+    }
+  },
+  {
+    "id": "E193",
+    "tags": [
+      "earth",
+      "mountain",
+      "fossils"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 93,
+      "y": 74
+    }
+  },
+  {
+    "id": "E194",
+    "tags": [
+      "rocket",
+      "galaxy",
+      "stars"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 34,
+      "y": 46
+    }
+  },
+  {
+    "id": "E195",
+    "tags": [
+      "innovation",
+      "computing",
+      "electronics"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 21,
+      "y": 24
+    }
+  },
+  {
+    "id": "E196",
+    "tags": [
+      "nature",
+      "climate",
+      "biodiversity"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 64,
+      "y": 63
+    }
+  },
+  {
+    "id": "E197",
+    "tags": [
+      "climate",
+      "nature",
+      "ecosystem"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 10,
+      "y": 26
+    }
+  },
+  {
+    "id": "E198",
+    "tags": [
+      "robotics",
+      "automation",
+      "ai"
+    ],
+    "location": {
+      "floor": "ground",
+      "x": 52,
+      "y": 49
+    }
+  },
+  {
+    "id": "E199",
+    "tags": [
+      "climate",
+      "ecosystem",
+      "nature"
+    ],
+    "location": {
+      "floor": "outside",
+      "x": 64,
+      "y": 12
+    }
+  },
+  {
+    "id": "E200",
+    "tags": [
+      "planets",
+      "rocket",
+      "astronomy"
+    ],
+    "location": {
+      "floor": "first",
+      "x": 43,
+      "y": 43
+    }
+  }
+]

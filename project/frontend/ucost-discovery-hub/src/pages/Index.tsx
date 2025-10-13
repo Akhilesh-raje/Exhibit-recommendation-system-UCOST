@@ -15,6 +15,7 @@ const Index = () => {
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
   const [selectedExhibit, setSelectedExhibit] = useState<string>("");
   const [tourExhibits, setTourExhibits] = useState<string[]>([]);
+  const [recommendedExhibits, setRecommendedExhibits] = useState<any[]>([]);
   const [showAdminLogin, setShowAdminLogin] = useState(false);
   const { toast } = useToast();
 
@@ -22,8 +23,11 @@ const Index = () => {
     setCurrentScreen("onboarding");
   };
 
-  const handleOnboardingComplete = (profile: UserProfile) => {
+  const handleOnboardingComplete = (profile: UserProfile, recommendedExhibits?: any[]) => {
     setUserProfile(profile);
+    if (recommendedExhibits) {
+      setRecommendedExhibits(recommendedExhibits);
+    }
     setCurrentScreen("map");
     toast({
       title: "Profile Complete!",

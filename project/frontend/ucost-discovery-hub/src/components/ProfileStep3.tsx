@@ -107,10 +107,10 @@ export function ProfileStep3({ onAgeAndInterestsSelect, onBack }: ProfileStep3Pr
             <h2 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6 text-center">Age Group</h2>
             <div className="space-y-3 md:space-y-4">
               {/* First row: Under 10, 10-18 */}
-              <div className="flex gap-3 md:gap-4 justify-center">
+              <div className="flex gap-2 md:gap-3 justify-center">
                 <Button
                   variant={selectedAge === "under-10" ? "default" : "outline"}
-                  size="lg"
+                  size="sm"
                   onClick={() => handleAgeSelect("under-10")}
                   className={`flex-1 md:flex-none ${selectedAge === "under-10" ? 'ring-2 ring-primary' : ''}`}
                 >
@@ -118,7 +118,7 @@ export function ProfileStep3({ onAgeAndInterestsSelect, onBack }: ProfileStep3Pr
                 </Button>
                 <Button
                   variant={selectedAge === "10-18" ? "default" : "outline"}
-                  size="lg"
+                  size="sm"
                   onClick={() => handleAgeSelect("10-18")}
                   className={`flex-1 md:flex-none ${selectedAge === "10-18" ? 'ring-2 ring-primary' : ''}`}
                 >
@@ -127,10 +127,10 @@ export function ProfileStep3({ onAgeAndInterestsSelect, onBack }: ProfileStep3Pr
               </div>
               
               {/* Second row: 20-40, 25-40, 40+ */}
-              <div className="flex gap-3 md:gap-4 justify-center">
+              <div className="flex gap-2 md:gap-3 justify-center">
                 <Button
                   variant={selectedAge === "20-40" ? "default" : "outline"}
-                  size="lg"
+                  size="sm"
                   onClick={() => handleAgeSelect("20-40")}
                   className={`flex-1 md:flex-none ${selectedAge === "20-40" ? 'ring-2 ring-primary' : ''}`}
                 >
@@ -138,7 +138,7 @@ export function ProfileStep3({ onAgeAndInterestsSelect, onBack }: ProfileStep3Pr
                 </Button>
                 <Button
                   variant={selectedAge === "25-40" ? "default" : "outline"}
-                  size="lg"
+                  size="sm"
                   onClick={() => handleAgeSelect("25-40")}
                   className={`flex-1 md:flex-none ${selectedAge === "25-40" ? 'ring-2 ring-primary' : ''}`}
                 >
@@ -146,7 +146,7 @@ export function ProfileStep3({ onAgeAndInterestsSelect, onBack }: ProfileStep3Pr
                 </Button>
                 <Button
                   variant={selectedAge === "40-plus" ? "default" : "outline"}
-                  size="lg"
+                  size="sm"
                   onClick={() => handleAgeSelect("40-plus")}
                   className={`flex-1 md:flex-none ${selectedAge === "40-plus" ? 'ring-2 ring-primary' : ''}`}
                 >

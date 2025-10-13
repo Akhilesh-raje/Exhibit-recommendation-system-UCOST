@@ -1,6 +1,14 @@
+import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
+
+// Load environment variables early and ensure DATABASE_URL defaults to local SQLite
+dotenv.config();
+if (!process.env.DATABASE_URL || !process.env.DATABASE_URL.startsWith('file:')) {
+  const defaultDbPath = path.join(process.cwd(), 'prisma', 'dev.db').replace(/\\/g, '/');
+  process.env.DATABASE_URL = `file:${defaultDbPath}`;
+}
 
 // Import all route modules
 import authRoutes from './routes/auth';
@@ -39,7 +47,8 @@ app.get('/health', (req, res) => {
       exhibits: '/api/exhibits',
       tours: '/api/tours',
       analytics: '/api/analytics',
-      ocr: '/api/ocr'
+      ocr: '/api/ocr',
+      export: '/api/export'
     }
   });
 });

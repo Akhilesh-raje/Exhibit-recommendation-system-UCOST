@@ -14,6 +14,8 @@ import {
   Activity
 } from 'lucide-react';
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
 interface Exhibit {
   id: string;
   name: string;
@@ -23,41 +25,31 @@ interface Exhibit {
   imageUrl?: string;
 }
 
-const mockExhibits: Exhibit[] = [
-  {
-    id: '1',
-    name: 'Ancient Egyptian Artifacts',
-    description: 'Collection of artifacts from ancient Egypt',
-    category: 'Archaeology',
-    location: 'Ground Floor, Gallery A'
-  },
-  {
-    id: '2',
-    name: 'Renaissance Paintings',
-    description: 'Masterpieces from the Renaissance period',
-    category: 'Fine Art',
-    location: 'First Floor, Gallery B'
-  },
-  {
-    id: '3',
-    name: 'Modern Sculptures',
-    description: 'Contemporary sculpture collection',
-    category: 'Modern Art',
-    location: 'Outdoor Garden'
-  }
-];
-
 export const MobileHome: React.FC = () => {
   const navigate = useNavigate();
   const { isNative, triggerHaptic, platform } = useCapacitor();
   const [searchQuery, setSearchQuery] = useState('');
-  const [exhibits, setExhibits] = useState<Exhibit[]>(mockExhibits);
+  const [exhibits, setExhibits] = useState<Exhibit[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    // Simulate loading
-    setIsLoading(true);
-    setTimeout(() => setIsLoading(false), 1000);
+    const loadExhibits = async () => {
+      try {
+        setIsLoading(true);
+        const res = await fetch(`${API_BASE_URL}/exhibits`);
+        const data = await res.json();
+        if (data?.success && Array.isArray(data.exhibits)) {
+          setExhibits(data.exhibits);
+        } else {
+          setExhibits([]);
+        }
+      } catch (e) {
+        setExhibits([]);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    loadExhibits();
   }, []);
 
   const handleSearch = async (query: string) => {
@@ -65,25 +57,18 @@ export const MobileHome: React.FC = () => {
     if (isNative) {
       await triggerHaptic('light');
     }
-    
-    // Filter exhibits based on search
-    if (query.trim()) {
-      const filtered = mockExhibits.filter(exhibit =>
-        exhibit.name.toLowerCase().includes(query.toLowerCase()) ||
-        exhibit.description.toLowerCase().includes(query.toLowerCase()) ||
-        exhibit.category.toLowerCase().includes(query.toLowerCase())
-      );
-      setExhibits(filtered);
-    } else {
-      setExhibits(mockExhibits);
-    }
+    if (!query.trim()) return;
+    setExhibits((prev) => prev.filter(exhibit =>
+      exhibit.name?.toLowerCase().includes(query.toLowerCase()) ||
+      exhibit.description?.toLowerCase().includes(query.toLowerCase()) ||
+      exhibit.category?.toLowerCase().includes(query.toLowerCase())
+    ));
   };
 
   const handleExhibitClick = async (exhibit: Exhibit) => {
     if (isNative) {
       await triggerHaptic('medium');
     }
-    // Navigate to exhibit detail
     console.log('Navigate to exhibit:', exhibit.id);
   };
 

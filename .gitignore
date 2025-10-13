@@ -104,6 +104,30 @@ dist_electron/
 build/
 *.iml
 
+# Python / AI / OCR
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+.mypy_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Gemma / embeddings / FAISS (large generated assets)
+gemma/embeddings/faiss.index
+gemma/embeddings/meta.json
+gemma/embeddings/rows.json
+**/gemma/embeddings/*.index
+**/gemma/embeddings/*.faiss
+
+# Uploads and generated assets
+uploads/
+**/uploads/
+project/mobile-backend/uploads/
+
 # Android
 *.apk
 *.aab

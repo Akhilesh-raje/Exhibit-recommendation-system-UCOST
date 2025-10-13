@@ -1,0 +1,12 @@
+dataset:
+  base: gemma/dataset
+  csv: gemma/dataset/exhibits.csv
+  metadata: gemma/dataset/metadata.json
+  images: gemma/dataset/images
+  train_jsonl: gemma/dataset/training_data.jsonl
+embeddings:
+  dir: gemma/embeddings
+  index: gemma/embeddings/faiss.index
+model:
+  base: gemma/model/gemma-2b
+

@@ -1,6 +1,7 @@
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowLeft, Home, Play, Check, MapPin, Rocket, Brain, Leaf, Mountain } from "lucide-react";
+import { ArrowLeft, Home, Play, Check, MapPin } from "lucide-react";
 
 interface MyTourProps {
   selectedExhibits: string[];
@@ -10,12 +11,59 @@ interface MyTourProps {
 }
 
 export function MyTour({ selectedExhibits, onBack, onStartTour, onRemoveExhibit }: MyTourProps) {
-  const exhibitData = {
-    "space-mission": { name: "Space Mission", icon: Rocket, color: "bg-blue-500" },
-    "artificial-intelligence": { name: "Artificial Intelligence", icon: Brain, color: "bg-purple-500" },
-    "climate-change": { name: "Climate Change", icon: Leaf, color: "bg-green-500" },
-    "dinosaurs": { name: "Dinosaurs", icon: Mountain, color: "bg-orange-500" }
-  };
+  const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
+  interface ExhibitDetailItem {
+    id: string;
+    name: string;
+    location?: string;
+    category?: string;
+    mapLocation?: { floor?: string; x?: number; y?: number } | null;
+  }
+
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [exhibitDetails, setExhibitDetails] = useState<Record<string, ExhibitDetailItem>>({});
+
+  useEffect(() => {
+    let isMounted = true;
+    const uniqueIds = Array.from(new Set(selectedExhibits)).filter(Boolean);
+    if (uniqueIds.length === 0) {
+      setExhibitDetails({});
+      return;
+    }
+    (async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        const fetches = uniqueIds.map(async (id) => {
+          const res = await fetch(`${API_BASE_URL}/exhibits/${id}`);
+          if (!res.ok) throw new Error(`Failed to load exhibit ${id} (${res.status})`);
+          const data = await res.json();
+          const ex = data?.exhibit;
+          return [id, {
+            id,
+            name: ex?.name || 'Untitled Exhibit',
+            location: ex?.location || '',
+            category: ex?.category || '',
+            mapLocation: ex?.mapLocation || null,
+          } as ExhibitDetailItem] as const;
+        });
+        const entries = await Promise.all(fetches);
+        if (!isMounted) return;
+        const details: Record<string, ExhibitDetailItem> = {};
+        for (const [id, item] of entries) details[id] = item;
+        setExhibitDetails(details);
+      } catch (e: any) {
+        if (isMounted) setError(e.message || 'Failed to load tour exhibits');
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    })();
+    return () => { isMounted = false; };
+  }, [API_BASE_URL, selectedExhibits]);
+
+  const orderedDetails = useMemo(() => selectedExhibits.map(id => exhibitDetails[id]).filter(Boolean) as ExhibitDetailItem[], [selectedExhibits, exhibitDetails]);
 
   return (
     <div className="min-h-screen bg-gradient-space relative overflow-hidden">
@@ -80,24 +128,24 @@ export function MyTour({ selectedExhibits, onBack, onStartTour, onRemoveExhibit 
                 </div>
               ) : (
                 <div className="space-y-4">
-                  {selectedExhibits.map((exhibitId, index) => {
-                    const exhibit = exhibitData[exhibitId as keyof typeof exhibitData];
-                    if (!exhibit) return null;
-                    
-                    const Icon = exhibit.icon;
-                    return (
-                      <div key={exhibitId} className="flex items-center gap-4 p-4 bg-gray-50 rounded-2xl">
-                        <div className={`w-12 h-12 ${exhibit.color} rounded-full flex items-center justify-center`}>
-                          <Icon className="w-6 h-6 text-white" />
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="font-bold text-gray-800">{exhibit.name}</h3>
-                          <p className="text-sm text-gray-600">Stop #{index + 1}</p>
-                        </div>
-                        <Check className="w-5 h-5 text-green-500" />
+                  {loading && (
+                    <div className="text-gray-500">Loading selected exhibits...</div>
+                  )}
+                  {error && (
+                    <div className="text-red-500">{error}</div>
+                  )}
+                  {!loading && orderedDetails.map((exhibit, index) => (
+                    <div key={exhibit.id} className="flex items-center gap-4 p-4 bg-gray-50 rounded-2xl">
+                      <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                        <MapPin className="w-6 h-6 text-white" />
                       </div>
-                    );
-                  })}
+                      <div className="flex-1">
+                        <h3 className="font-bold text-gray-800">{exhibit.name}</h3>
+                        <p className="text-sm text-gray-600">Stop #{index + 1}{exhibit.location ? ` • ${exhibit.location}` : ''}</p>
+                      </div>
+                      <Button variant="ghost" className="text-red-500" onClick={() => onRemoveExhibit(exhibit.id)}>Remove</Button>
+                    </div>
+                  ))}
                 </div>
               )}
             </Card>

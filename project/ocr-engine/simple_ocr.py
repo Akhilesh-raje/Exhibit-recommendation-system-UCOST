@@ -13,6 +13,13 @@ import numpy as np
 from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 import logging
 
+# Optional pytesseract fallback (requires Tesseract OCR installed on system)
+try:
+    import pytesseract  # type: ignore
+    PYTESS_AVAILABLE = True
+except Exception:
+    PYTESS_AVAILABLE = False
+
 # Try to import EasyOCR for real OCR
 try:
     import easyocr
@@ -127,6 +134,36 @@ def perform_real_ocr(image_path, hindi_reader, english_reader):
                 pass
         
         confidence = np.mean(all_results) if all_results else 0.0
+
+        # Fallback: if EasyOCR produced no text, try pytesseract if available
+        if (not combined_text.strip()) and PYTESS_AVAILABLE:
+            try:
+                logger.info("🔄 EasyOCR empty; attempting pytesseract fallback...")
+                # Read original image for pytesseract (works better with original or lightly processed)
+                img = cv2.imread(image_path)
+                if img is None:
+                    raise ValueError(f"Could not load image: {image_path}")
+                gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+                # Light threshold to improve contrast
+                thr = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
+                # Prefer hindi+english if language data present; if not, default to english
+                try_lang = 'eng+hin'
+                try:
+                    raw_text = pytesseract.image_to_string(thr, lang=try_lang)
+                except Exception:
+                    raw_text = pytesseract.image_to_string(thr, lang='eng')
+
+                cleaned = (raw_text or '').strip()
+                if cleaned:
+                    combined_text = cleaned
+                    hindi_text = ''  # unknown split; provide as combined
+                    english_text = cleaned
+                    # Heuristic confidence based on length
+                    confidence = min(0.95, max(0.3, len(cleaned) / 500.0))
+                    all_results = [confidence]
+                    logger.info("✅ pytesseract fallback produced text (%d chars)", len(cleaned))
+            except Exception as e:
+                logger.error(f"❌ pytesseract fallback failed: {e}")
         
         logger.info(f"✅ Real OCR completed - Hindi: {len(hindi_text)} chars, English: {len(english_text)} chars")
         

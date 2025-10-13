@@ -4,8 +4,7 @@
   "description": "UCOST Discovery Hub - Museum Exhibit Management System by Uttarakhand Science and Technology Council",
   "private": true,
   "workspaces": [
-    "project/*",
-    "desktop"
+    "project/*"
   ],
   "scripts": {
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
@@ -14,12 +13,16 @@
     "dev:desktop": "cd desktop && npm run dev",
     "dev:mobile": "cd project/mobile-app && flutter run",
     "dev:ai": "cd project/ai-system && npm run dev",
+    "dev:ai:core": "cd project/ai-system/ai && npm run dev",
+    "dev:mobile-backend": "cd project/mobile-backend && npm run dev",
+    "dev:ocr": "cd project/ocr-engine && npm run start",
+    "dev:all": "concurrently -n BACKEND,FRONTEND,AI,MBACKEND,OCR -c blue,magenta,green,yellow,cyan \"npm run dev:backend\" \"npm run dev:frontend\" \"npm run dev:ai:core\" \"npm run dev:mobile-backend\" \"npm run dev:ocr\"",
     "install:all": "npm install && npm run install:workspaces",
     "install:workspaces": "npm install --workspaces",
     "build": "npm run build:backend && npm run build:frontend && npm run build:desktop",
     "build:backend": "cd project/backend/backend && npm run build",
     "build:frontend": "cd project/frontend/ucost-discovery-hub && npm run build",
-    "build:desktop": "cd desktop && npm run build",
+    "build:desktop": "node -e \"const fs=require('fs'),cp=require('child_process'); if(fs.existsSync('desktop')){ process.chdir('desktop'); cp.execSync('npm run build',{stdio:'inherit'}); } else { console.log('No desktop dir. Skipping desktop build.'); }\"",
     "build:ai": "cd project/ai-system && npm run build",
     "test": "npm run test:backend && npm run test:frontend && npm run test:ai",
     "test:backend": "cd project/backend/backend && npm test",
@@ -27,10 +30,11 @@
     "test:ai": "cd project/ai-system && npm test",
     "clean": "npm run clean:all",
     "clean:all": "rimraf dist node_modules project/*/node_modules project/*/dist desktop/node_modules desktop/dist",
-    "start": "cd desktop && npm start",
-    "package": "npm run build && cd desktop && npm run package",
-    "dist": "npm run build && cd desktop && npm run dist",
-    "create-exe": "npm run build && cd desktop && npm run create-exe"
+    "start": "cd project/backend/backend && npm start",
+    "package": "npm run build && node -e \"const fs=require('fs'),cp=require('child_process'); if(fs.existsSync('desktop')){ process.chdir('desktop'); cp.execSync('npm run package',{stdio:'inherit'}); } else { console.log('No desktop dir. Skipping desktop package.'); }\"",
+    "dist": "npm run build && node -e \"const fs=require('fs'),cp=require('child_process'); if(fs.existsSync('desktop')){ process.chdir('desktop'); cp.execSync('npm run dist',{stdio:'inherit'}); } else { console.log('No desktop dir. Skipping desktop dist.'); }\"",
+    "create-exe": "npm run build && node -e \"const fs=require('fs'),cp=require('child_process'); if(fs.existsSync('desktop')){ process.chdir('desktop'); cp.execSync('npm run create-exe',{stdio:'inherit'}); } else { console.log('No desktop dir. Skipping create-exe.'); }\"",
+    "setup:ocr": "bash scripts/dev/setup-ocr.sh"
   },
   "keywords": [
     "museum",

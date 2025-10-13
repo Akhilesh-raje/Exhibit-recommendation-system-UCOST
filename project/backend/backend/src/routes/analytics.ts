@@ -1,8 +1,46 @@
 import { Router } from 'express';
 import { PrismaClient } from '@prisma/client';
+import fetch from 'node-fetch';
 
 const router = Router();
 const prisma = new PrismaClient();
+
+// Embeddings health
+router.get('/health/embeddings', async (_req, res) => {
+  try {
+    let source: 'file'|'service'|'heuristics' = 'heuristics';
+    let vectorDim = 0;
+    let serviceOk = false;
+
+    // Probe service
+    try {
+      const url = process.env.EMBED_SERVICE_URL?.replace('/embed', '/health') || 'http://127.0.0.1:8001/health';
+      const r = await fetch(url);
+      serviceOk = r.ok;
+    } catch {}
+
+    // Check file presence
+    try {
+      const fs = await import('fs');
+      const path = await import('path');
+      const p = path.resolve(__dirname, '../../../../data/exhibit_embeddings.json');
+      if (fs.existsSync(p)) {
+        const raw = fs.readFileSync(p, 'utf8');
+        const data = JSON.parse(raw);
+        if (Array.isArray(data) && data.length > 0 && Array.isArray(data[0].vector)) {
+          vectorDim = (data[0].vector || []).length;
+          source = 'file';
+        }
+      }
+    } catch {}
+
+    if (source !== 'file' && serviceOk) source = 'service';
+
+    return res.json({ success: true, source, serviceOk, vectorDim });
+  } catch (e: any) {
+    return res.status(500).json({ success: false, message: e?.message || 'error' });
+  }
+});
 
 // Track visitor activity
 router.post('/track', async (req, res) => {
