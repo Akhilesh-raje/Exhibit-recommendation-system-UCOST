@@ -1,0 +1,7 @@
+﻿{
+  "feature_cols": ["gemma_score", "tfidf_cosine", "jaccard_overlap", "csv_exact_flag", "description_length", "top1_delta"],
+  "scaler_mean": [0, 0, 0, 0, 0, 0],
+  "scaler_scale": [1, 1, 1, 1, 1, 1],
+  "coef": [0, 0, 0, 0, 0, 0],
+  "intercept": 0
+}

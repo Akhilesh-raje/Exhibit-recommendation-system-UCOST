@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installing Dependencies</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 450px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: #667eea;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .progress-container {
+      margin: 30px 0;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 30px;
+      background: #e0e0e0;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+      border-radius: 15px;
+      transition: width 0.3s ease;
+      width: 0%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    .progress-text {
+      font-size: 18px;
+      font-weight: 600;
+      color: #667eea;
+      margin-bottom: 10px;
+    }
+
+    .message {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 10px;
+      min-height: 24px;
+    }
+
+    .details {
+      font-size: 14px;
+      color: #999;
+      font-style: italic;
+      min-height: 20px;
+    }
+
+    .spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #667eea;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .completion {
+      display: none;
+    }
+
+    .completion.show {
+      display: block;
+    }
+
+    .success-icon {
+      font-size: 64px;
+      color: #4caf50;
+      margin-bottom: 20px;
+    }
+
+    .error-icon {
+      font-size: 64px;
+      color: #f44336;
+      margin-bottom: 20px;
+    }
+
+    .completion-message {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #666;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">🔬 UCOST Discovery Hub</div>
+    <div class="title">Installing Dependencies</div>
+
+    <div id="progress-section">
+      <div class="progress-container">
+        <div class="progress-text" id="progress-text">0%</div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+      <div class="message" id="message">Preparing installation...</div>
+      <div class="details" id="details"></div>
+      <div class="spinner"></div>
+    </div>
+
+    <div class="completion" id="completion">
+      <div class="success-icon" id="success-icon">✓</div>
+      <div class="error-icon" id="error-icon" style="display: none;">✗</div>
+      <div class="completion-message" id="completion-message"></div>
+      <div class="note" id="completion-note"></div>
+    </div>
+  </div>
+
+  <script>
+    const { ipcRenderer } = require('electron');
+
+    const progressFill = document.getElementById('progress-fill');
+    const progressText = document.getElementById('progress-text');
+    const message = document.getElementById('message');
+    const details = document.getElementById('details');
+    const progressSection = document.getElementById('progress-section');
+    const completion = document.getElementById('completion');
+    const successIcon = document.getElementById('success-icon');
+    const errorIcon = document.getElementById('error-icon');
+    const completionMessage = document.getElementById('completion-message');
+    const completionNote = document.getElementById('completion-note');
+
+    ipcRenderer.on('update-progress', (event, data) => {
+      const percent = data.percent || 0;
+      progressFill.style.width = percent + '%';
+      progressText.textContent = Math.round(percent) + '%';
+      message.textContent = data.message || 'Installing...';
+      details.textContent = data.details || '';
+    });
+
+    ipcRenderer.on('show-completion', (event, data) => {
+      progressSection.style.display = 'none';
+      completion.classList.add('show');
+      
+      if (data.success) {
+        successIcon.style.display = 'block';
+        errorIcon.style.display = 'none';
+        completionMessage.textContent = 'Installation Complete!';
+        completionMessage.style.color = '#4caf50';
+        completionNote.textContent = data.message || 'All dependencies have been installed successfully.';
+      } else {
+        successIcon.style.display = 'none';
+        errorIcon.style.display = 'block';
+        completionMessage.textContent = 'Installation Failed';
+        completionMessage.style.color = '#f44336';
+        completionNote.textContent = data.message || 'Some dependencies failed to install. Please check the logs.';
+      }
+
+      // Auto-close after 3 seconds if successful
+      if (data.success) {
+        setTimeout(() => {
+          window.close();
+        }, 3000);
+      }
+    });
+  </script>
+</body>
+</html>
+

@@ -31,9 +31,21 @@ export default function AdminPanel({ onBack }: { onBack: () => void }) {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
-          <div>
-            <h1 className="text-3xl font-bold text-white">Admin Panel</h1>
-            <p className="text-gray-300 mt-2">Manage exhibits, sync devices, and monitor system</p>
+          <div className="flex items-center gap-4">
+            <img 
+              src="/logo.png" 
+              alt="UCOST Logo" 
+              className="h-12 w-12 object-contain"
+              onError={(e) => {
+                if (e.currentTarget.src !== '/logo.svg') {
+                  e.currentTarget.src = '/logo.svg';
+                }
+              }}
+            />
+            <div>
+              <h1 className="text-3xl font-bold text-white">Admin Panel</h1>
+              <p className="text-gray-300 mt-2">Manage exhibits, sync devices, and monitor system</p>
+            </div>
           </div>
           <Button variant="outline" onClick={onBack} className="text-white border-gray-600 hover:bg-gray-800">
             ← Back to Main

@@ -36,7 +36,16 @@ export const MobileLayout: React.FC<MobileLayoutProps> = ({
           <div className="container flex h-14 items-center">
             {headerContent || (
               <div className="flex items-center space-x-2">
-                <div className="h-8 w-8 rounded-lg bg-primary" />
+                <img 
+                  src="/logo.png" 
+                  alt="UCOST Logo" 
+                  className="h-8 w-8 object-contain"
+                  onError={(e) => {
+                    if (e.currentTarget.src !== '/logo.svg') {
+                      e.currentTarget.src = '/logo.svg';
+                    }
+                  }}
+                />
                 <span className="font-semibold">UCOST Discovery Hub</span>
               </div>
             )}

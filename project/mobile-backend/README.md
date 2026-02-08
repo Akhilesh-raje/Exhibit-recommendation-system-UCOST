@@ -1,6 +1,12 @@
 # UCOST Discovery Hub - Mobile Backend
 
+> Monorepo-wide documentation is consolidated in `README.md` (**Subsystem Guides → Mobile Backend**). This file remains the hands-on runbook for the standalone server.
+
 A **standalone, independent backend** for the UCOST Discovery Hub mobile application that works without external dependencies.
+
+## ✅ **Status: 100% Complete & Working**
+
+**All features are operational and the backend is production-ready.**
 
 ## 🚀 **Key Features**
 

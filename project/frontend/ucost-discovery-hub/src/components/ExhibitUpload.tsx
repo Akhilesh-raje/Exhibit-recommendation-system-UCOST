@@ -12,8 +12,9 @@ import { ArrowLeft, ArrowRight, Upload, Image, Video, CheckCircle, Loader2, Spar
 import { useToast } from '@/hooks/use-toast';
 import { LocationMapSelector } from './LocationMapSelector';
 import { describeFromImage, DescribeImageResponse } from '@/lib/ocr';
+import { getApiUrl } from '@/lib/desktop-config';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = getApiUrl();
 
 interface ExhibitData {
   name: string;
@@ -70,10 +71,10 @@ export default function ExhibitUpload({ onBack }: { onBack: () => void }) {
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
     setIsDragOver(false);
-    
+
     const files = Array.from(e.dataTransfer.files);
     const imageFiles = files.filter(file => file.type.startsWith('image/'));
-    
+
     if (imageFiles.length > 0) {
       setExhibitData(prev => ({ ...prev, images: [...prev.images, ...imageFiles] }));
     }
@@ -188,7 +189,7 @@ export default function ExhibitUpload({ onBack }: { onBack: () => void }) {
           <div className="space-y-4 md:space-y-6">
             <h2 className="text-lg md:text-2xl font-semibold text-white">Exhibit Basics</h2>
             <p className="text-gray-300 text-sm md:text-base">Start by providing the core details of your exhibit.</p>
-            
+
             <div className="space-y-3 md:space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-white text-sm md:text-base">Exhibit Name *</Label>
@@ -259,49 +260,49 @@ export default function ExhibitUpload({ onBack }: { onBack: () => void }) {
               />
             </div>
 
-                         <Card className="p-3 md:p-4 border-dashed border-2 border-blue-300/50 bg-blue-50/20 dark:bg-blue-900/20 backdrop-blur-sm dark:border-blue-600/50">
-               <CardHeader className="p-0 mb-3 md:mb-4">
-                 <CardTitle className="flex items-center gap-2 text-base md:text-lg text-blue-800 dark:text-blue-200">
-                   <Sparkles className="h-4 w-4 md:h-5 md:w-5 text-blue-500" /> Analyze from Image with AI (Optional)
-                 </CardTitle>
-               </CardHeader>
-               <CardContent className="p-0 space-y-3 md:space-y-4">
-                 <p className="text-xs md:text-sm text-blue-700 dark:text-blue-300">Upload an image of an information board or exhibit text, and AI will extract and suggest a description.</p>
-                 <div className="space-y-3">
-                   <div className="space-y-2">
-                     <Label className="text-xs md:text-sm text-blue-800 dark:text-blue-200 font-medium">Choose Image:</Label>
-                     <Input
-                       id="ocr-image-upload"
-                       type="file"
-                       accept="image/*"
-                       onChange={handleOCRImageUpload}
-                       ref={fileInputRef}
-                       className="w-full h-9 md:h-10 text-xs md:text-sm"
-                       disabled={isAnalyzing}
-                     />
-                   </div>
-                   <Button 
-                     onClick={handleAnalyzeImage} 
-                     disabled={!ocrImage || isAnalyzing}
-                     size="sm"
-                     className="w-full"
-                   >
-                     {isAnalyzing ? (
-                       <>
-                         <Loader2 className="mr-2 h-3 w-3 md:h-4 md:w-4 animate-spin" />
-                         {analysisProgress < 25 && 'Uploading...'}
-                         {analysisProgress >= 25 && analysisProgress < 50 && 'Extracting Text...'}
-                         {analysisProgress >= 50 && analysisProgress < 75 && 'Analyzing Content...'}
-                         {analysisProgress >= 75 && 'Generating Description...'}
-                       </>
-                     ) : (
-                       <>
-                         <Sparkles className="mr-2 h-3 w-3 md:h-4 md:w-4" />
-                         Extract with AI
-                       </>
-                     )}
-                   </Button>
-                 </div>
+            <Card className="p-3 md:p-4 border-dashed border-2 border-blue-300/50 bg-blue-50/20 dark:bg-blue-900/20 backdrop-blur-sm dark:border-blue-600/50">
+              <CardHeader className="p-0 mb-3 md:mb-4">
+                <CardTitle className="flex items-center gap-2 text-base md:text-lg text-blue-800 dark:text-blue-200">
+                  <Sparkles className="h-4 w-4 md:h-5 md:w-5 text-blue-500" /> Analyze from Image with AI (Optional)
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-0 space-y-3 md:space-y-4">
+                <p className="text-xs md:text-sm text-blue-700 dark:text-blue-300">Upload an image of an information board or exhibit text, and AI will extract and suggest a description.</p>
+                <div className="space-y-3">
+                  <div className="space-y-2">
+                    <Label className="text-xs md:text-sm text-blue-800 dark:text-blue-200 font-medium">Choose Image:</Label>
+                    <Input
+                      id="ocr-image-upload"
+                      type="file"
+                      accept="image/*"
+                      onChange={handleOCRImageUpload}
+                      ref={fileInputRef}
+                      className="w-full h-9 md:h-10 text-xs md:text-sm"
+                      disabled={isAnalyzing}
+                    />
+                  </div>
+                  <Button
+                    onClick={handleAnalyzeImage}
+                    disabled={!ocrImage || isAnalyzing}
+                    size="sm"
+                    className="w-full"
+                  >
+                    {isAnalyzing ? (
+                      <>
+                        <Loader2 className="mr-2 h-3 w-3 md:h-4 md:w-4 animate-spin" />
+                        {analysisProgress < 25 && 'Uploading...'}
+                        {analysisProgress >= 25 && analysisProgress < 50 && 'Extracting Text...'}
+                        {analysisProgress >= 50 && analysisProgress < 75 && 'Analyzing Content...'}
+                        {analysisProgress >= 75 && 'Generating Description...'}
+                      </>
+                    ) : (
+                      <>
+                        <Sparkles className="mr-2 h-3 w-3 md:h-4 md:w-4" />
+                        Extract with AI
+                      </>
+                    )}
+                  </Button>
+                </div>
                 {isAnalyzing && (
                   <Progress value={analysisProgress} className="w-full mt-2" />
                 )}
@@ -334,14 +335,14 @@ export default function ExhibitUpload({ onBack }: { onBack: () => void }) {
                           </div>
                         </div>
                       )}
-                      
+
                       {(ocrResult.enhanced.englishFinal || ocrResult.enhanced.hindiFinal) && (
                         <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
                           <h4 className="font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">Combine Languages:</h4>
                           <div className="flex gap-2">
-                            <Button 
-                              variant="outline" 
-                              size="sm" 
+                            <Button
+                              variant="outline"
+                              size="sm"
                               onClick={() => {
                                 let combinedText = '';
                                 if (ocrResult.enhanced.englishFinal && ocrResult.enhanced.hindiFinal) {
@@ -360,7 +361,7 @@ export default function ExhibitUpload({ onBack }: { onBack: () => void }) {
                             </Button>
                           </div>
                           <p className="text-xs text-muted-foreground mt-1">
-                            {ocrResult.enhanced.englishFinal && ocrResult.enhanced.hindiFinal 
+                            {ocrResult.enhanced.englishFinal && ocrResult.enhanced.hindiFinal
                               ? "Combines English and Hindi descriptions together"
                               : "Uses the available language description"
                             }
@@ -375,202 +376,201 @@ export default function ExhibitUpload({ onBack }: { onBack: () => void }) {
           </div>
         );
 
-             case 3:
-         return (
-           <div className="space-y-4 md:space-y-6">
-             <h2 className="text-lg md:text-2xl font-semibold text-white">Target Audience</h2>
-             <p className="text-gray-300 text-sm md:text-base">Define the target audience and exhibit characteristics.</p>
- 
-             <div className="space-y-4 md:space-y-6">
-               <div className="space-y-3">
-                 <Label className="text-white text-sm md:text-base">Target Age Range *</Label>
-                 <RadioGroup value={exhibitData.ageRange} onValueChange={(value) => setExhibitData(prev => ({ ...prev, ageRange: value }))}>
-                   <div className="space-y-2">
-                     <div className="flex items-center space-x-2">
-                       <RadioGroupItem value="kids" id="kids" />
-                       <Label htmlFor="kids" className="text-sm md:text-base">Kids (5-12 years)</Label>
-                     </div>
-                     <div className="flex items-center space-x-2">
-                       <RadioGroupItem value="students" id="students" />
-                       <Label htmlFor="students" className="text-sm md:text-base">Students (13-18 years)</Label>
-                     </div>
-                     <div className="flex items-center space-x-2">
-                       <RadioGroupItem value="families" id="families" />
-                       <Label htmlFor="families" className="text-sm md:text-base">Families (All ages)</Label>
-                     </div>
-                     <div className="flex items-center space-x-2">
-                       <RadioGroupItem value="researchers" id="researchers" />
-                       <Label htmlFor="researchers" className="text-sm md:text-base">Researchers/Adults</Label>
-                     </div>
-                   </div>
-                 </RadioGroup>
-               </div>
- 
-               <div className="space-y-3">
-                 <Label className="text-white text-sm md:text-base">Exhibit Type *</Label>
-                 <RadioGroup value={exhibitData.type} onValueChange={(value) => setExhibitData(prev => ({ ...prev, type: value }))}>
-                   <div className="space-y-2">
-                     <div className="flex items-center space-x-2">
-                       <RadioGroupItem value="interactive" id="interactive" />
-                       <Label htmlFor="interactive" className="text-sm md:text-base">Interactive</Label>
-                     </div>
-                     <div className="flex items-center space-x-2">
-                       <RadioGroupItem value="passive" id="passive" />
-                       <Label htmlFor="passive" className="text-sm md:text-base">Passive/Observational</Label>
-                     </div>
-                     <div className="flex items-center space-x-2">
-                       <RadioGroupItem value="hands-on" id="hands-on" />
-                       <Label htmlFor="hands-on" className="text-sm md:text-base">Hands-on Activity</Label>
-                     </div>
-                   </div>
-                 </RadioGroup>
-               </div>
-               
-               <div className="space-y-3">
-                 <Label className="text-white text-sm md:text-base">Environment *</Label>
-                 <RadioGroup value={exhibitData.environment} onValueChange={(value) => setExhibitData(prev => ({ ...prev, environment: value }))}>
-                   <div className="space-y-2">
-                     <div className="flex items-center space-x-2">
-                       <RadioGroupItem value="indoor" id="indoor" />
-                       <Label htmlFor="indoor" className="text-sm md:text-base">Indoor</Label>
-                     </div>
-                     <div className="flex items-center space-x-2">
-                       <RadioGroupItem value="outdoor" id="outdoor" />
-                       <Label htmlFor="outdoor" className="text-sm md:text-base">Outdoor</Label>
-                     </div>
-                     <div className="flex items-center space-x-2">
-                       <RadioGroupItem value="both" id="both" />
-                       <Label htmlFor="both" className="text-sm md:text-base">Both Indoor & Outdoor</Label>
-                     </div>
-                   </div>
-                 </RadioGroup>
-               </div>
-             </div>
-           </div>
-         );
+      case 3:
+        return (
+          <div className="space-y-4 md:space-y-6">
+            <h2 className="text-lg md:text-2xl font-semibold text-white">Target Audience</h2>
+            <p className="text-gray-300 text-sm md:text-base">Define the target audience and exhibit characteristics.</p>
 
-             case 4:
-         return (
-           <div className="space-y-3 md:space-y-4">
-             <h2 className="text-lg md:text-2xl font-semibold text-white">Map Location</h2>
-             <LocationMapSelector
-               selectedLocation={exhibitData.mapLocation}
-               onLocationSelect={(location: LocationData) => setExhibitData(prev => ({ ...prev, mapLocation: location }))}
-               selectedFloor={currentFloor}
-               onFloorChange={setCurrentFloor}
-             />
-           </div>
-         );
- 
-       case 5:
-         return (
-           <div className="space-y-4 md:space-y-6">
-             <h2 className="text-lg md:text-2xl font-semibold text-white">Exhibit Features & Media</h2>
-             <p className="text-gray-300 text-sm md:text-base">Select features and upload media for your exhibit.</p>
- 
-             <div className="space-y-4 md:space-y-6">
-               <div className="space-y-3 md:space-y-4">
-                 <h3 className="text-base md:text-lg font-medium text-white">Exhibit Features</h3>
-                 <p className="text-xs md:text-sm text-gray-300">Select the features available at this exhibit.</p>
-                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-                   {['Audio Guide', 'Video Content', 'Interactive Touch', '3D Models', 'Live Demonstrations', 'Guided Tours'].map((feature) => (
-                     <div key={feature} className="flex items-center space-x-2">
-                       <Checkbox
-                         id={feature}
-                         checked={exhibitData.features.includes(feature)}
-                         onCheckedChange={(checked) => {
-                           if (checked) {
-                             setExhibitData(prev => ({ ...prev, features: [...prev.features, feature] }));
-                           } else {
-                             setExhibitData(prev => ({ ...prev, features: prev.features.filter(f => f !== feature) }));
-                           }
-                         }}
-                       />
-                       <Label htmlFor={feature} className="text-white text-sm md:text-base">{feature}</Label>
-                     </div>
-                   ))}
-                 </div>
-               </div>
- 
-               <div className="space-y-3 md:space-y-4">
-                 <h3 className="text-base md:text-lg font-medium text-white">Media Uploads</h3>
-                 <div className="space-y-3 md:space-y-4">
-                   <div className="space-y-2">
-                     <Label className="text-white text-sm md:text-base">Exhibit Images</Label>
-                     <div 
-                       className={`border-2 border-dashed rounded-lg p-4 md:p-6 text-center transition-colors ${
-                         isDragOver 
-                           ? 'border-blue-400 bg-blue-900/20' 
-                           : 'border-gray-300'
-                       }`}
-                       onDragOver={handleDragOver}
-                       onDragLeave={handleDragLeave}
-                       onDrop={handleDrop}
-                     >
-                       <Upload className="mx-auto h-8 w-8 md:h-12 md:w-12 text-gray-400" />
-                       <p className="mt-2 text-xs md:text-sm text-gray-600">
-                         {isDragOver ? 'Drop images here' : 'Click to upload images'}
-                       </p>
-                       <p className="text-xs text-gray-500 mb-3">You can select multiple images at once or drag & drop</p>
-                       
-                                               {/* File input */}
-                        <Input
-                          ref={exhibitImagesInputRef}
-                          type="file"
-                          multiple
-                          accept="image/*"
-                          onChange={(e) => {
-                            const files = Array.from(e.target.files || []);
-                            if (files.length > 0) {
-                              setExhibitData(prev => ({ ...prev, images: [...prev.images, ...files] }));
-                            }
-                          }}
-                          className="mt-2"
-                        />
-                       
-                       {/* Display selected images */}
-                       {exhibitData.images.length > 0 && (
-                         <div className="mt-4 text-left">
-                           <p className="text-sm text-gray-300 mb-2">Selected Images ({exhibitData.images.length}):</p>
-                           <div className="space-y-2">
-                             {exhibitData.images.map((file, index) => (
-                               <div key={index} className="flex items-center justify-between bg-gray-700 rounded p-2">
-                                 <span className="text-xs text-gray-300 truncate">{file.name}</span>
-                                 <Button
-                                   type="button"
-                                   variant="ghost"
-                                   size="sm"
-                                   onClick={() => {
-                                     setExhibitData(prev => ({
-                                       ...prev,
-                                       images: prev.images.filter((_, i) => i !== index)
-                                     }));
-                                   }}
-                                   className="h-6 w-6 p-0 text-red-400 hover:text-red-300 hover:bg-red-900/20"
-                                 >
-                                   ×
-                                 </Button>
-                               </div>
-                             ))}
-                           </div>
-                         </div>
-                       )}
-                     </div>
-                   </div>
- 
-                   <div className="space-y-2">
-                     <Label className="text-white text-sm md:text-base">Video URL (Optional)</Label>
-                     <Input
-                       placeholder="Enter video URL"
-                       type="url"
-                       className="h-9 md:h-10"
-                     />
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         );
+            <div className="space-y-4 md:space-y-6">
+              <div className="space-y-3">
+                <Label className="text-white text-sm md:text-base">Target Age Range *</Label>
+                <RadioGroup value={exhibitData.ageRange} onValueChange={(value) => setExhibitData(prev => ({ ...prev, ageRange: value }))}>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="kids" id="kids" />
+                      <Label htmlFor="kids" className="text-sm md:text-base">Kids (5-12 years)</Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="students" id="students" />
+                      <Label htmlFor="students" className="text-sm md:text-base">Students (13-18 years)</Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="families" id="families" />
+                      <Label htmlFor="families" className="text-sm md:text-base">Families (All ages)</Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="researchers" id="researchers" />
+                      <Label htmlFor="researchers" className="text-sm md:text-base">Researchers/Adults</Label>
+                    </div>
+                  </div>
+                </RadioGroup>
+              </div>
+
+              <div className="space-y-3">
+                <Label className="text-white text-sm md:text-base">Exhibit Type *</Label>
+                <RadioGroup value={exhibitData.type} onValueChange={(value) => setExhibitData(prev => ({ ...prev, type: value }))}>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="interactive" id="interactive" />
+                      <Label htmlFor="interactive" className="text-sm md:text-base">Interactive</Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="passive" id="passive" />
+                      <Label htmlFor="passive" className="text-sm md:text-base">Passive/Observational</Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="hands-on" id="hands-on" />
+                      <Label htmlFor="hands-on" className="text-sm md:text-base">Hands-on Activity</Label>
+                    </div>
+                  </div>
+                </RadioGroup>
+              </div>
+
+              <div className="space-y-3">
+                <Label className="text-white text-sm md:text-base">Environment *</Label>
+                <RadioGroup value={exhibitData.environment} onValueChange={(value) => setExhibitData(prev => ({ ...prev, environment: value }))}>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="indoor" id="indoor" />
+                      <Label htmlFor="indoor" className="text-sm md:text-base">Indoor</Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="outdoor" id="outdoor" />
+                      <Label htmlFor="outdoor" className="text-sm md:text-base">Outdoor</Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="both" id="both" />
+                      <Label htmlFor="both" className="text-sm md:text-base">Both Indoor & Outdoor</Label>
+                    </div>
+                  </div>
+                </RadioGroup>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 4:
+        return (
+          <div className="space-y-3 md:space-y-4">
+            <h2 className="text-lg md:text-2xl font-semibold text-white">Map Location</h2>
+            <LocationMapSelector
+              selectedLocation={exhibitData.mapLocation}
+              onLocationSelect={(location: LocationData) => setExhibitData(prev => ({ ...prev, mapLocation: location }))}
+              selectedFloor={currentFloor}
+              onFloorChange={setCurrentFloor}
+            />
+          </div>
+        );
+
+      case 5:
+        return (
+          <div className="space-y-4 md:space-y-6">
+            <h2 className="text-lg md:text-2xl font-semibold text-white">Exhibit Features & Media</h2>
+            <p className="text-gray-300 text-sm md:text-base">Select features and upload media for your exhibit.</p>
+
+            <div className="space-y-4 md:space-y-6">
+              <div className="space-y-3 md:space-y-4">
+                <h3 className="text-base md:text-lg font-medium text-white">Exhibit Features</h3>
+                <p className="text-xs md:text-sm text-gray-300">Select the features available at this exhibit.</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+                  {['Audio Guide', 'Video Content', 'Interactive Touch', '3D Models', 'Live Demonstrations', 'Guided Tours'].map((feature) => (
+                    <div key={feature} className="flex items-center space-x-2">
+                      <Checkbox
+                        id={feature}
+                        checked={exhibitData.features.includes(feature)}
+                        onCheckedChange={(checked) => {
+                          if (checked) {
+                            setExhibitData(prev => ({ ...prev, features: [...prev.features, feature] }));
+                          } else {
+                            setExhibitData(prev => ({ ...prev, features: prev.features.filter(f => f !== feature) }));
+                          }
+                        }}
+                      />
+                      <Label htmlFor={feature} className="text-white text-sm md:text-base">{feature}</Label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="space-y-3 md:space-y-4">
+                <h3 className="text-base md:text-lg font-medium text-white">Media Uploads</h3>
+                <div className="space-y-3 md:space-y-4">
+                  <div className="space-y-2">
+                    <Label className="text-white text-sm md:text-base">Exhibit Images</Label>
+                    <div
+                      className={`border-2 border-dashed rounded-lg p-4 md:p-6 text-center transition-colors ${isDragOver
+                          ? 'border-blue-400 bg-blue-900/20'
+                          : 'border-gray-300'
+                        }`}
+                      onDragOver={handleDragOver}
+                      onDragLeave={handleDragLeave}
+                      onDrop={handleDrop}
+                    >
+                      <Upload className="mx-auto h-8 w-8 md:h-12 md:w-12 text-gray-400" />
+                      <p className="mt-2 text-xs md:text-sm text-gray-600">
+                        {isDragOver ? 'Drop images here' : 'Click to upload images'}
+                      </p>
+                      <p className="text-xs text-gray-500 mb-3">You can select multiple images at once or drag & drop</p>
+
+                      {/* File input */}
+                      <Input
+                        ref={exhibitImagesInputRef}
+                        type="file"
+                        multiple
+                        accept="image/*"
+                        onChange={(e) => {
+                          const files = Array.from(e.target.files || []);
+                          if (files.length > 0) {
+                            setExhibitData(prev => ({ ...prev, images: [...prev.images, ...files] }));
+                          }
+                        }}
+                        className="mt-2"
+                      />
+
+                      {/* Display selected images */}
+                      {exhibitData.images.length > 0 && (
+                        <div className="mt-4 text-left">
+                          <p className="text-sm text-gray-300 mb-2">Selected Images ({exhibitData.images.length}):</p>
+                          <div className="space-y-2">
+                            {exhibitData.images.map((file, index) => (
+                              <div key={index} className="flex items-center justify-between bg-gray-700 rounded p-2">
+                                <span className="text-xs text-gray-300 truncate">{file.name}</span>
+                                <Button
+                                  type="button"
+                                  variant="ghost"
+                                  size="sm"
+                                  onClick={() => {
+                                    setExhibitData(prev => ({
+                                      ...prev,
+                                      images: prev.images.filter((_, i) => i !== index)
+                                    }));
+                                  }}
+                                  className="h-6 w-6 p-0 text-red-400 hover:text-red-300 hover:bg-red-900/20"
+                                >
+                                  ×
+                                </Button>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label className="text-white text-sm md:text-base">Video URL (Optional)</Label>
+                    <Input
+                      placeholder="Enter video URL"
+                      type="url"
+                      className="h-9 md:h-10"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
 
       case 6:
         return (
@@ -629,9 +629,9 @@ export default function ExhibitUpload({ onBack }: { onBack: () => void }) {
       <Card className="w-full max-w-4xl mx-auto my-4 md:my-8 bg-gray-900/90 backdrop-blur-md shadow-2xl border border-gray-700/50">
         <CardHeader className="p-4 md:p-6">
           <div className="flex items-center justify-between mb-3 md:mb-4">
-            <Button 
-              variant="ghost" 
-              size="sm" 
+            <Button
+              variant="ghost"
+              size="sm"
               onClick={onBack}
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground text-sm"
             >

@@ -1,0 +1,15 @@
+[
+  {
+    "query": "top 3 space exhibits",
+    "expected_top1_id": "",
+    "expected_count": 3
+  },
+  {
+    "query": "best physics exhibits",
+    "expected_top1_id": ""
+  },
+  {
+    "query": "tell me about taramandal",
+    "expected_top1_id": ""
+  }
+]

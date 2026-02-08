@@ -10,7 +10,7 @@ if "%1"=="--install" (
   npm run install:all
 )
 
-echo Starting services (backend, frontend, AI, mobile-backend, OCR)...
+echo Starting services (backend, frontend, AI, mobile-backend, OCR, Gemma AI)...
 npm run dev:all
 
 endlocal

@@ -15,5 +15,5 @@ if ($Install) {
   npm run install:all
 }
 
-Write-Host "Starting services (backend, frontend, AI, mobile-backend, OCR)..." -ForegroundColor Green
+Write-Host "Starting services (backend, frontend, AI, mobile-backend, OCR, Gemma AI)..." -ForegroundColor Green
 npm run dev:all

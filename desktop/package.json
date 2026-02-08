@@ -1,0 +1,204 @@
+{
+  "name": "ucost-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development electron .",
+    "dev:prod": "cross-env NODE_ENV=production electron .",
+    "setup": "powershell -ExecutionPolicy Bypass -File ../TOTAL_SYNC_AND_SETUP.ps1",
+    "pre-deploy": "node scripts/pre-deploy-check.js",
+    "build": "node scripts/build-all.js",
+    "build:frontend": "cd ../project/frontend/ucost-discovery-hub && npm run build",
+    "build:backend": "cd ../project/backend/backend && npm run build",
+    "build:chatbot": "cd ../project/chatbot-mini && npm run build",
+    "setup:bundles": "node scripts/setup-all-bundles.js",
+    "complete:setup": "node scripts/complete-setup.js",
+    "test:installation": "node scripts/test-installation.js",
+    "package": "npm run pre-deploy && npm run build && electron-builder --win --x64",
+    "package:dir": "npm run build && electron-builder --win --x64 --dir",
+    "dist": "npm run package",
+    "start": "npm run dev",
+    "analyze": "node scripts/analyze-everything.js"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "axios": "^1.6.0",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "app-builder-bin": "^4.2.0",
+    "cross-env": "^7.0.3",
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3",
+    "sharp": "^0.34.5",
+    "to-ico": "^1.1.5"
+  },
+  "build": {
+    "appId": "org.ucost.discoveryhub",
+    "productName": "UCOST Discovery Hub",
+    "publish": null,
+    "directories": {
+      "output": "dist-prod",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "src/**/*",
+      "scripts/**/*",
+      "requirements/**/*",
+      "docs/**/*",
+      "!src/**/*.map",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../project/backend/backend/dist",
+        "to": "backend/dist",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "../project/backend/backend/node_modules",
+        "to": "backend/node_modules",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "../project/backend/backend/package.json",
+        "to": "backend/package.json"
+      },
+      {
+        "from": "../project/backend/backend/prisma",
+        "to": "backend/prisma",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "../project/frontend/ucost-discovery-hub/dist",
+        "to": "frontend/dist",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "../project/chatbot-mini/dist",
+        "to": "chatbot/dist",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "../project/chatbot-mini/node_modules",
+        "to": "chatbot/node_modules",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "../project/chatbot-mini/package.json",
+        "to": "chatbot/package.json"
+      },
+      {
+        "from": "../project/embed-service",
+        "to": "embed-service",
+        "filter": [
+          "**/*",
+          "!**/__pycache__/**",
+          "!**/*.pyc"
+        ]
+      },
+      {
+        "from": "../gemma/infer",
+        "to": "gemma/infer",
+        "filter": [
+          "**/*",
+          "!**/__pycache__/**",
+          "!**/*.pyc"
+        ]
+      },
+      {
+        "from": "../project/ocr-engine/server.js",
+        "to": "ocr-engine/server.js"
+      },
+      {
+        "from": "../project/ocr-engine/node_modules",
+        "to": "ocr-engine/node_modules",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "../project/ocr-engine/package.json",
+        "to": "ocr-engine/package.json"
+      },
+      {
+        "from": "../docs/exhibits.csv",
+        "to": "data/exhibits.csv"
+      },
+      {
+        "from": "requirements",
+        "to": "requirements",
+        "filter": [
+          "**/*.txt"
+        ]
+      },
+      {
+        "from": "resources/python",
+        "to": "python",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "resources/models",
+        "to": "models",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "resources/tesseract",
+        "to": "tesseract",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "docs",
+        "to": "docs",
+        "filter": [
+          "**/*.md"
+        ]
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "extraMetadata": {
+      "main": "main.js",
+      "author": "Uttarakhand Science and Technology Council",
+      "description": "UCOST Discovery Hub - Museum Exhibit Management System"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "deleteAppDataOnUninstall": false
+    }
+  }
+}

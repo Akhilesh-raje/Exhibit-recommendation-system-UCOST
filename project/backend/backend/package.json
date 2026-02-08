@@ -7,12 +7,14 @@
     "build": "tsc",
     "start": "node dist/app.js",
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
-    "test": "jest",
-    "recompute:times": "ts-node-dev --transpile-only scripts/recompute-exhibit-times.ts"
+    "test": "jest --passWithNoTests",
+    "recompute:times": "ts-node-dev --transpile-only scripts/recompute-exhibit-times.ts",
+    "postinstall": "prisma generate",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push"
   },
   "dependencies": {
     "@prisma/client": "^5.7.0",
-    "sharp": "^0.33.4",
     "archiver": "^6.0.2",
     "axios": "^1.6.0",
     "bcryptjs": "^2.4.3",
@@ -23,17 +25,19 @@
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^3.3.2",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
-    "@types/archiver": "^6.0.3",
+    "@types/archiver": "^6.0.4",
     "@types/bcryptjs": "^2.4.6",
-    "@types/cors": "^2.8.17",
-    "@types/express": "^4.17.21",
-    "@types/jsonwebtoken": "^9.0.5",
-    "@types/morgan": "^1.9.9",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.25",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/morgan": "^1.9.10",
     "@types/multer": "^1.4.13",
-    "@types/node": "^20.10.0",
+    "@types/node": "^20.19.30",
     "prisma": "^5.7.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.2"

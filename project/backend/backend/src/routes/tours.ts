@@ -8,7 +8,18 @@ const router = Router();
 const prisma = new PrismaClient();
 
 // Temporary file path for recommended exhibits
-const TEMP_RECOMMENDATIONS_FILE = path.join(__dirname, '../../temp', 'recommended_exhibits.json');
+// CRITICAL: Use writable directory (AppData in production, local temp in dev)
+const getTempPath = () => {
+  const isProduction = process.env.NODE_ENV === 'production';
+  if (isProduction) {
+    const os = require('os');
+    const appDataPath = process.env.APPDATA || os.homedir();
+    return path.join(appDataPath, 'UCOST Discovery Hub', 'temp', 'recommended_exhibits.json');
+  } else {
+    return path.join(__dirname, '../../temp', 'recommended_exhibits.json');
+  }
+};
+const TEMP_RECOMMENDATIONS_FILE = getTempPath();
 
 // Optional offline embeddings (if present)
 type EmbeddedExhibit = {
@@ -154,22 +165,121 @@ const INTEREST_TO_CATEGORY: Record<string, string[]> = {
   environment: ['environment'],
 };
 
-function buildUserVector(interests: string[]): number[] | null {
+// Interest domain mapping - shared helper
+const INTEREST_DOMAINS_SHARED: Record<string, string[]> = {
+  'physics': ['physics', 'mechanics', 'electromagnetism', 'optics', 'quantum', 'energy', 'force', 'motion', 'wave', 'light', 'sound'],
+  'robotics': ['robot', 'robotics', 'automation', 'ai', 'artificial intelligence', 'machine learning', 'ml', 'technology', 'electronics', 'coding', 'programming'],
+  'biology': ['biology', 'life', 'cell', 'organism', 'evolution', 'genetics', 'ecosystem', 'species'],
+  'chemistry': ['chemistry', 'molecule', 'atom', 'reaction', 'compound', 'element', 'periodic'],
+  'astronomy': ['space', 'astronomy', 'planet', 'star', 'galaxy', 'universe', 'cosmos', 'solar', 'moon', 'telescope'],
+  'geology': ['geology', 'rock', 'strata', 'mountain', 'earth', 'dinosaur', 'paleontology', 'fossil', 'cave', 'mineral'],
+  'environment': ['environment', 'nature', 'climate', 'ecosystem', 'conservation', 'sustainability', 'wildlife', 'forest', 'ocean'],
+  'technology': ['technology', 'engineering', 'innovation', 'computing', 'digital', 'electronic', 'device', 'computer']
+};
+
+// Helper to get interest keywords (used in buildUserVector)
+function getInterestKeywordsShared(interest: string): string[] {
+  const interestLower = interest.toLowerCase().trim();
+  const keywords: Set<string> = new Set([interestLower]);
+
+  // Add domain-specific related terms
+  for (const [domain, terms] of Object.entries(INTEREST_DOMAINS_SHARED)) {
+    if (terms.some(t => interestLower.includes(t) || t.includes(interestLower))) {
+      terms.forEach(t => keywords.add(t));
+    }
+  }
+
+  return Array.from(keywords);
+}
+
+function buildUserVector(interests: string[], ageBand?: string, groupType?: string): number[] | null {
   if (!EMBEDDINGS || EMBEDDINGS.length === 0 || VECTOR_DIM === 0) return null;
+  if (!interests || interests.length === 0) return null;
+
+  // Build comprehensive user query from all interests, age, and group type
+  const queryParts: string[] = [];
+
+  // Add all interests with domain expansion
+  for (const interest of interests) {
+    const keywords = getInterestKeywordsShared(interest);
+    queryParts.push(...keywords);
+  }
+
+  // Add age group context
+  if (ageBand) {
+    queryParts.push(ageBand);
+  }
+
+  // Add group type context
+  if (groupType) {
+    queryParts.push(groupType);
+  }
+
+  const queryText = queryParts.join(' ').toLowerCase();
+
+  // Find exhibits that match user interests
   const cats = new Set<string>();
   for (const raw of interests || []) {
     const key = String(raw || '').toLowerCase();
     (INTEREST_TO_CATEGORY[key] || []).forEach(c => cats.add(c));
   }
-  const pool = EMBEDDINGS.filter(e => cats.size === 0 ? true : (e.category && cats.has(e.category)));
-  const src = pool.length > 0 ? pool : EMBEDDINGS;
+
+  // Filter embeddings by matched categories
+  const matchedEmbeddings = EMBEDDINGS.filter(e => {
+    if (cats.size === 0) return true;
+    if (!e.category) return false;
+    const exCat = String(e.category).toLowerCase();
+    return Array.from(cats).some(cat => exCat.includes(cat.toLowerCase()));
+  });
+
+  const pool = matchedEmbeddings.length > 0 ? matchedEmbeddings : EMBEDDINGS;
+
+  // Build weighted average vector (weight by relevance to interests)
   const vec = new Array(VECTOR_DIM).fill(0);
-  for (const e of src) {
+  let totalWeight = 0;
+
+  for (const e of pool) {
     const v = e.vector || [];
-    for (let i = 0; i < VECTOR_DIM; i++) vec[i] += Number(v[i] || 0);
+    if (!v.length) continue;
+
+    // Calculate weight based on how well exhibit matches user interests
+    let weight = 1.0;
+    const exText = [
+      e.category || '',
+      (e as any).averageTime ? '' : ''
+    ].join(' ').toLowerCase();
+
+    // Higher weight if exhibit text contains user interest keywords
+    let matchCount = 0;
+    for (const keyword of queryParts) {
+      if (exText.includes(keyword.toLowerCase())) {
+        matchCount++;
+        weight += 0.5;
+      }
+    }
+
+    // Weight by match count
+    weight += matchCount * 0.3;
+
+    for (let i = 0; i < VECTOR_DIM && i < v.length; i++) {
+      vec[i] += Number(v[i] || 0) * weight;
+    }
+    totalWeight += weight;
   }
-  const count = src.length || 1;
-  for (let i = 0; i < VECTOR_DIM; i++) vec[i] /= count;
+
+  // Normalize
+  if (totalWeight > 0) {
+    for (let i = 0; i < VECTOR_DIM; i++) {
+      vec[i] /= totalWeight;
+    }
+  } else {
+    // Fallback: simple average
+    const count = pool.length || 1;
+    for (let i = 0; i < VECTOR_DIM; i++) {
+      vec[i] /= count;
+    }
+  }
+
   return vec;
 }
 
@@ -220,6 +330,14 @@ router.post('/recommend', rateLimitRecommend, validateRecommendPayload, async (r
       ageRange: e.ageRange || '',
       difficulty: e.difficulty || '',
       interactiveFeatures: (e as any).interactiveFeatures ? JSON.parse((e as any).interactiveFeatures) : [],
+      images: e.images ? (() => {
+        try {
+          const parsed = JSON.parse(e.images);
+          return Array.isArray(parsed) ? parsed : [];
+        } catch {
+          return [];
+        }
+      })() : [],
     }));
 
     // Hard filters (floor unless global, accessibility, rough time upper bound if extremely over budget)
@@ -235,101 +353,335 @@ router.post('/recommend', rateLimitRecommend, validateRecommendPayload, async (r
       return true;
     });
 
-    // Helper facet estimates (server-side mirror of frontend heuristics)
-    function extractTopics(texts: string[]): string[] {
-      const text = texts.join(' ').toLowerCase();
-      const keywords = [
-        'geology','rock','strata','mountain','earth','dinosaur','paleontology','cave','amarnath',
-        'robot','robotics','automation','ai','artificial intelligence','machine learning','ml','technology','electronics','coding','programming',
-        'physics','space','astronomy','planet','environment','nature','biology','chemistry','history'
-      ];
-      return keywords.filter(k => text.includes(k));
+    // ============================================================================
+    // ENHANCED PRECISE RECOMMENDATION ENGINE
+    // ============================================================================
+
+    // Interest domain mapping - connects related interests (use shared version)
+    const INTEREST_DOMAINS: Record<string, string[]> = INTEREST_DOMAINS_SHARED;
+
+    // Age group mapping for strict filtering
+    const AGE_GROUPS: Record<string, { min: number; max: number }> = {
+      'kids': { min: 3, max: 12 },
+      'children': { min: 3, max: 12 },
+      'child': { min: 3, max: 12 },
+      'teens': { min: 13, max: 18 },
+      'teenagers': { min: 13, max: 18 },
+      'adults': { min: 19, max: 64 },
+      'adult': { min: 19, max: 64 },
+      'seniors': { min: 65, max: 100 },
+      'senior': { min: 65, max: 100 }
+    };
+
+    // Get all related keywords for an interest (use shared helper)
+    function getInterestKeywords(interest: string): string[] {
+      return getInterestKeywordsShared(interest);
     }
-    function interactivity(cat: string, desc: string): 'interactive'|'hands-on'|'passive'|'unknown' {
+
+    // Extract all topics from exhibit text (comprehensive analysis)
+    function extractAllTopics(ex: any): string[] {
+      const texts = [
+        ex.name || '',
+        ex.description || '',
+        ex.category || '',
+        ex.exhibitType || '',
+        (ex.interactiveFeatures || []).join(' ')
+      ].filter(t => t);
+
+      const combined = texts.join(' ').toLowerCase();
+      const topics: Set<string> = new Set();
+
+      // Extract all domain keywords
+      Object.values(INTEREST_DOMAINS).flat().forEach(keyword => {
+        if (combined.includes(keyword)) {
+          topics.add(keyword);
+        }
+      });
+
+      return Array.from(topics);
+    }
+
+    // Check if exhibit STRICTLY matches user interests
+    function matchesUserInterests(ex: any, userInterests: string[]): { matches: boolean; matchScore: number; matchedInterests: string[] } {
+      if (!userInterests || userInterests.length === 0) {
+        return { matches: true, matchScore: 0.5, matchedInterests: [] };
+      }
+
+      const exhibitTopics = extractAllTopics(ex);
+      const matchedInterests: string[] = [];
+      let totalMatchScore = 0;
+
+      for (const interest of userInterests) {
+        const interestKeywords = getInterestKeywords(interest);
+        let interestMatched = false;
+        let bestMatchScore = 0;
+
+        for (const keyword of interestKeywords) {
+          const keywordLower = keyword.toLowerCase();
+
+          // Check in exhibit name (strong match)
+          if (textIncludes(ex.name, keywordLower)) {
+            interestMatched = true;
+            bestMatchScore = Math.max(bestMatchScore, 1.0);
+          }
+
+          // Check in description (strong match)
+          if (textIncludes(ex.description, keywordLower)) {
+            interestMatched = true;
+            bestMatchScore = Math.max(bestMatchScore, 0.9);
+          }
+
+          // Check in category (moderate match)
+          if (textIncludes(ex.category, keywordLower)) {
+            interestMatched = true;
+            bestMatchScore = Math.max(bestMatchScore, 0.7);
+          }
+
+          // Check in topics extracted (moderate match)
+          if (exhibitTopics.some(t => t.includes(keywordLower) || keywordLower.includes(t))) {
+            interestMatched = true;
+            bestMatchScore = Math.max(bestMatchScore, 0.6);
+          }
+
+          // Check in interactive features
+          const features = Array.isArray(ex.interactiveFeatures) ? ex.interactiveFeatures : [];
+          if (features.some((f: string) => textIncludes(String(f), keywordLower))) {
+            interestMatched = true;
+            bestMatchScore = Math.max(bestMatchScore, 0.5);
+          }
+        }
+
+        if (interestMatched) {
+          matchedInterests.push(interest);
+          totalMatchScore += bestMatchScore;
+        }
+      }
+
+      const matchScore = totalMatchScore / userInterests.length;
+      // STRICT: At least ONE interest must match clearly (score > 0.4)
+      const matches = matchedInterests.length > 0 && matchScore >= 0.4;
+
+      return { matches, matchScore, matchedInterests };
+    }
+
+    // Check age appropriateness strictly
+    function isAgeAppropriate(ex: any, userAgeBand: string): boolean {
+      if (!userAgeBand) return true;
+
+      const userAgeGroup = AGE_GROUPS[userAgeBand.toLowerCase()];
+      if (!userAgeGroup) return true;
+
+      const exAgeRange = ex.ageRange || '';
+      if (!exAgeRange) return true; // No age restriction = suitable for all
+
+      const exAgeLower = exAgeRange.toLowerCase();
+
+      // Check explicit age matches
+      if (userAgeBand.includes('child') || userAgeBand.includes('kid')) {
+        return exAgeLower.includes('child') || exAgeLower.includes('kid') ||
+          exAgeLower.includes('family') || exAgeLower.includes('all');
+      }
+      if (userAgeBand.includes('teen')) {
+        return exAgeLower.includes('teen') || exAgeLower.includes('adult') ||
+          exAgeLower.includes('all');
+      }
+      if (userAgeBand.includes('adult') && !userAgeBand.includes('senior')) {
+        return !exAgeLower.includes('child') || exAgeLower.includes('all');
+      }
+      if (userAgeBand.includes('senior')) {
+        return !exAgeLower.includes('child') || exAgeLower.includes('all');
+      }
+
+      return true; // Default allow if unclear
+    }
+
+    // Check group type compatibility
+    function isGroupTypeCompatible(ex: any, userGroupType: string): boolean {
+      if (!userGroupType) return true;
+
+      const groupLower = userGroupType.toLowerCase();
+      const exType = (ex.exhibitType || '').toLowerCase();
+      const exDesc = (ex.description || '').toLowerCase();
+
+      // Family groups need safe, accessible exhibits
+      if (groupLower.includes('family')) {
+        if (exDesc.includes('dangerous') || exDesc.includes('hazard')) return false;
+        return true; // Most exhibits are family-friendly if not explicitly dangerous
+      }
+
+      // Research groups prefer educational exhibits
+      if (groupLower.includes('research') || groupLower.includes('student')) {
+        return exDesc.includes('educational') || exDesc.includes('learning') ||
+          exDesc.includes('research') || exType.includes('interactive') ||
+          true; // Allow most exhibits for research
+      }
+
+      return true; // Default allow
+    }
+
+    function interactivity(cat: string, desc: string): 'interactive' | 'hands-on' | 'passive' | 'unknown' {
       if (cat.includes('hands') || desc.includes('hands-on')) return 'hands-on';
       if (cat.includes('interactive') || desc.includes('interactive')) return 'interactive';
       if (cat.includes('passive') || desc.includes('observational')) return 'passive';
       return 'unknown';
     }
-    function familyFriendliness(intx: string, desc: string): 'low'|'medium'|'high' {
-      if (desc.includes('safety') || desc.includes('safe')) return 'high';
-      if (intx === 'hands-on') return 'high';
-      if (intx === 'interactive') return 'medium';
-      return 'medium';
-    }
-    function noiseLevel(intx: string): 'low'|'medium'|'high' {
+
+    function noiseLevel(intx: string): 'low' | 'medium' | 'high' {
       if (intx === 'hands-on' || intx === 'interactive') return 'medium';
       return 'low';
     }
 
+    // Check if interests include astronomy/space-related terms
+    const hasAstronomyInterest = interests.some((interest: string) => {
+      const interestLower = interest.toLowerCase();
+      return ['stars', 'star', 'astronomy', 'space', 'planets', 'planet', 'taramandal'].some(
+        kw => interestLower.includes(kw)
+      );
+    });
+
+    // ENHANCED PRECISE SCORING FUNCTION
     function score(ex: any) {
       const name = (ex.name || '').toLowerCase();
       const desc = (ex.description || '').toLowerCase();
       const cat = (ex.category || '').toLowerCase();
-      const topics = extractTopics([name, desc, cat]);
       const intx = interactivity(cat, desc);
-      const fam = familyFriendliness(intx, desc);
       const noise = noiseLevel(intx);
 
-      const reasons: string[] = ['On current floor'];
-      let s = 40; // floor
+      // CRITICAL: Taramandal priority - if astronomy interest exists, give maximum score
+      const isTaramandal = name.includes('taramandal') ||
+        cat.includes('taramandal') ||
+        ex.id === 'cmf97ohja0003snwdwzd9jhb7';
 
-      // Group type and age
+      if (isTaramandal && hasAstronomyInterest) {
+        // Maximum priority for Taramandal when astronomy interests are present
+        return {
+          score: 10000.0,
+          reasons: ['Taramandal - Maximum priority for astronomy interests'],
+          topics: ['astronomy', 'space', 'stars', 'planets'],
+          interestMatch: {
+            matches: true, matchScore: 1.0, matchedInterests: interests.filter((i: string) =>
+              ['astronomy', 'space', 'stars', 'planets'].some(kw => i.toLowerCase().includes(kw))
+            )
+          }
+        };
+      }
+
+      const reasons: string[] = [];
+      let s = 0; // Start from 0, strict filtering
+
+      // ========== STRICT FILTERS (Must Pass) ==========
+
+      // CRITICAL: Taramandal bypasses strict interest matching if astronomy interest exists
+      const isTaramandalForFilter = name.includes('taramandal') ||
+        cat.includes('taramandal') ||
+        ex.id === 'cmf97ohja0003snwdwzd9jhb7';
+
+      // 1. STRICT INTEREST MATCHING - Exhibit MUST match at least ONE interest
+      // EXCEPTION: Taramandal always passes if astronomy interest exists
+      const interestMatch = matchesUserInterests(ex, interests);
+      if (!interestMatch.matches && !(isTaramandalForFilter && hasAstronomyInterest)) {
+        return { score: -1000, reasons: ['Does not match any user interests'], topics: [] }; // Reject
+      }
+
+      // 2. STRICT AGE FILTERING
+      if (!isAgeAppropriate(ex, ageBand)) {
+        return { score: -500, reasons: [`Not age-appropriate for ${ageBand}`], topics: [] }; // Reject
+      }
+
+      // 3. STRICT GROUP TYPE COMPATIBILITY
+      if (!isGroupTypeCompatible(ex, groupType)) {
+        return { score: -300, reasons: [`Not suitable for ${groupType} groups`], topics: [] }; // Reject
+      }
+
+      // ========== SCORING (Only for passing exhibits) ==========
+
+      // Base score for passing filters
+      s += 50;
+      reasons.push('Passes all filters');
+
+      // Interest matching score (40% weight)
+      s += interestMatch.matchScore * 100 * 0.4;
+      if (interestMatch.matchedInterests.length > 0) {
+        reasons.push(`Strong match for: ${interestMatch.matchedInterests.join(', ')}`);
+      }
+
+      // Age appropriateness bonus (15% weight)
+      if (isAgeAppropriate(ex, ageBand)) {
+        const ageScore = 1.0; // Perfect match if passed filter
+        s += ageScore * 100 * 0.15;
+        reasons.push(`Perfect for ${ageBand}`);
+      }
+
+      // Group type bonus (10% weight)
       const isFamily = groupType.includes('family') || ageBand.includes('child');
-      const isResearch = groupType.includes('research');
-      const isTech = groupType.includes('student') || groupType.includes('tech') || interests.some(i => ['robotics','ai','technology','coding','programming','electronics','automation','ml','machine learning'].includes((i||'').toLowerCase()));
-      if (isFamily) {
-        if (intx === 'hands-on') { s += 20; reasons.push('Hands-on for families'); }
-        if (intx === 'interactive') { s += 12; reasons.push('Interactive for families'); }
-        if (fam === 'high') { s += 6; reasons.push('Family-friendly'); }
-      }
-      if (isResearch) {
-        if (topics.includes('geology') || topics.includes('earth') || topics.includes('physics') || topics.includes('technology')) {
-          s += 18; reasons.push('Research topic');
-        }
-        if ((ex.averageTime || 0) >= 5) { s += 5; reasons.push('Deeper content'); }
-      }
-      if (isTech) {
-        if (topics.some(t => ['robot','robotics','automation','ai','artificial intelligence','machine learning','ml','technology','electronics','coding','programming'].includes(t))) {
-          s += 28; reasons.push('Technology/Robotics focus');
-        }
-        if (topics.some(t => ['dinosaur','paleontology','cave','amarnath','nature','environment'].includes(t))) {
-          s -= 24; reasons.push('Not relevant to robotics/AI');
-        }
-        if (topics.includes('geology') && !interests.includes('geology')) {
-          s -= 12; reasons.push('Geology not in interests');
-        }
+      if (isFamily && (intx === 'hands-on' || intx === 'interactive')) {
+        s += 15;
+        reasons.push('Family-friendly interactive exhibit');
       }
 
-      // Interests
-      for (const interest of interests) {
-        if (textIncludes(name, interest) || textIncludes(desc, interest) || textIncludes(cat, interest)) {
-          s += 6; reasons.push(`Matches interest: ${interest}`);
-        }
+      const isTech = groupType.includes('student') || groupType.includes('tech') ||
+        interests.some(i => ['robotics', 'ai', 'technology', 'coding', 'programming'].includes((i || '').toLowerCase()));
+      if (isTech && interestMatch.matchedInterests.some(i =>
+        ['robotics', 'ai', 'technology', 'coding', 'programming'].includes((i || '').toLowerCase()))) {
+        s += 20;
+        reasons.push('Perfect for tech interests');
       }
 
-      // Interactivity preference
-      if (interactivityPref && intx === interactivityPref) { s += 6; reasons.push('Interactivity match'); }
+      // Interactivity preference match (10% weight)
+      if (interactivityPref && intx === interactivityPref) {
+        s += 12;
+        reasons.push(`Matches preferred interactivity: ${interactivityPref}`);
+      }
 
-      // Time fit (rough)
+      // Time fit (15% weight)
       const avgTime = Number(ex.averageTime || 5);
-      if (avgTime <= Math.max(5, timeBudget / Math.max(1, groupSize))) {
-        s += 8; reasons.push('Fits time budget');
+      const timePerExhibit = timeBudget / Math.max(1, groupSize);
+      if (avgTime <= timePerExhibit) {
+        s += 15;
+        reasons.push('Fits time budget');
+      } else if (avgTime <= timePerExhibit * 1.5) {
+        s += 8;
+        reasons.push('Reasonable time requirement');
       }
 
-      // Mobility / crowd
-      if (mobility.includes('wheelchair')) { s += 4; reasons.push('Accessibility assumed'); }
-      if (noiseTolerance === 'low' && noise === 'low') { s += 4; reasons.push('Quiet experience'); }
+      // Accessibility (5% weight)
+      if (mobility.includes('wheelchair')) {
+        // Check if exhibit has accessibility features
+        const hasAccessibility = desc.includes('accessible') || desc.includes('wheelchair') ||
+          (ex.accessibility && ex.accessibility.toLowerCase().includes('wheelchair'));
+        if (hasAccessibility) {
+          s += 8;
+          reasons.push('Wheelchair accessible');
+        }
+      }
 
-      // Quality signals
-      s += Math.min(10, Math.max(0, Number(ex.rating || 0)));
+      // Noise tolerance (5% weight)
+      if (noiseTolerance === 'low' && noise === 'low') {
+        s += 8;
+        reasons.push('Quiet experience');
+      }
 
-      return { score: s, reasons, topics };
+      // Quality signals (5% weight)
+      const rating = Number(ex.rating || 0);
+      s += Math.min(10, rating);
+      if (rating > 4) {
+        reasons.push(`Highly rated (${rating.toFixed(1)})`);
+      }
+
+      // Floor bonus (small)
+      if (ex.mapLocation?.floor === selectedFloor || selectedFloor === 'all') {
+        s += 5;
+        if (!reasons.some(r => r.includes('floor'))) {
+          reasons.push('On selected floor');
+        }
+      }
+
+      return { score: s, reasons, topics: extractAllTopics(ex), interestMatch };
     }
 
     // If embeddings are available, blend semantic similarity into the score
     let scored: any[];
-    let userVec = buildUserVector(interests);
+    let userVec = buildUserVector(interests, ageBand, groupType);
 
     // Parallel: try Gemma if enabled
     let gemmaItems: Array<{ id: string | number; score: number }> = [];
@@ -339,7 +691,7 @@ router.post('/recommend', rateLimitRecommend, validateRecommendPayload, async (r
         const query = buildGemmaQuery({ ageBand, groupType, interests, timeBudget, interactivity: interactivityPref, accessibility: accessibilityPref, noiseTolerance }, globalTimeBudget || selectedFloor === 'all' ? undefined : selectedFloor);
         gemmaItems = await gemmaRecommend(query, 50);
       }
-    } catch {}
+    } catch { }
 
     const SIM_WEIGHT = envNum('SIM_WEIGHT', 0.45);
     const RULE_WEIGHT = envNum('RULE_WEIGHT', 0.35);
@@ -349,15 +701,21 @@ router.post('/recommend', rateLimitRecommend, validateRecommendPayload, async (r
       const weights = { sim: SIM_WEIGHT, rule: RULE_WEIGHT, gemma: GEMMA_WEIGHT };
       scored = exhibits.map((ex: any) => {
         const rule = score(ex);
+
+        // Skip exhibits that failed strict filters (negative scores)
+        if (rule.score < 0) {
+          return null;
+        }
+
         const emb = (EMBEDDINGS || []).find(e => e.id === ex.id);
         const sim = emb ? cosine(userVec as number[], emb.vector || []) : 0;
         const gem = gemmaItems.find(g => String(g.id) === String(ex.id));
         const gemScore = gem ? Math.max(0, Number(gem.score || 0)) * 100 : 0;
         const blended = weights.rule * rule.score + weights.sim * Math.max(0, sim * 100) + weights.gemma * gemScore;
-        const reasons = [...(rule.reasons||[]), `Semantic sim: ${sim.toFixed(2)}`];
+        const reasons = [...(rule.reasons || []), `Semantic sim: ${sim.toFixed(2)}`];
         if (gem) reasons.push('Gemma match');
         return { ...ex, reasons, score: blended };
-      }).filter((ex: any) => ex.score > 0)
+      }).filter((ex: any) => ex !== null && ex.score > 0)
         .sort((a: any, b: any) => b.score - a.score);
     } else {
       const RULE_ONLY = envNum('RULE_ONLY_WEIGHT', 0.7);
@@ -365,15 +723,43 @@ router.post('/recommend', rateLimitRecommend, validateRecommendPayload, async (r
       const weights = { rule: RULE_ONLY, gemma: GEMMA_ONLY };
       scored = exhibits.map((ex: any) => {
         const rule = score(ex);
+
+        // Skip exhibits that failed strict filters (negative scores)
+        if (rule.score < 0) {
+          return null;
+        }
+
         const gem = gemmaItems.find(g => String(g.id) === String(ex.id));
         const gemScore = gem ? Math.max(0, Number(gem.score || 0)) * 100 : 0;
         const blended = weights.rule * rule.score + weights.gemma * gemScore;
-        const reasons = [...(rule.reasons||[])];
+        const reasons = [...(rule.reasons || [])];
         if (gem) reasons.push('Gemma match');
         return { ...ex, reasons, score: blended };
       })
-        .filter((ex: any) => ex.score > 0)
+        .filter((ex: any) => ex !== null && ex.score > 0)
         .sort((a: any, b: any) => b.score - a.score);
+    }
+
+    // CRITICAL: Ensure Taramandal is first if astronomy interest exists
+    if (hasAstronomyInterest) {
+      const taramandalIdx = scored.findIndex((ex: any) => {
+        const name = (ex.name || '').toLowerCase();
+        const cat = (ex.category || '').toLowerCase();
+        return name.includes('taramandal') ||
+          cat.includes('taramandal') ||
+          ex.id === 'cmf97ohja0003snwdwzd9jhb7';
+      });
+
+      if (taramandalIdx > 0) {
+        // Move Taramandal to first position
+        const taramandal = scored.splice(taramandalIdx, 1)[0];
+        scored.unshift(taramandal);
+        console.log(`Backend: Moved Taramandal to first position (was at ${taramandalIdx + 1})`);
+      } else if (taramandalIdx === 0) {
+        console.log(`Backend: Taramandal already at first position`);
+      } else {
+        console.log(`Backend: WARNING - Astronomy interest present but Taramandal not found in scored results`);
+      }
     }
 
     // Greedy selection under time budget
@@ -391,8 +777,8 @@ router.post('/recommend', rateLimitRecommend, validateRecommendPayload, async (r
     console.log(`Total time used: ${timeUsed} minutes out of ${timeBudget} minutes budget`);
     console.log('Selected exhibits:', selected.map(e => ({ id: e.id, name: e.name, floor: e.mapLocation?.floor, time: e.averageTime })));
 
-    const recommendedExhibits = selected.map(e => ({ 
-      id: e.id, 
+    const recommendedExhibits = selected.map(e => ({
+      id: e.id,
       name: e.name,
       description: e.description,
       category: e.category,
@@ -405,7 +791,7 @@ router.post('/recommend', rateLimitRecommend, validateRecommendPayload, async (r
       difficulty: e.difficulty,
       interactiveFeatures: e.interactiveFeatures,
       // AI recommendation data
-      reasons: e.reasons, 
+      reasons: e.reasons,
       score: e.score
     }));
 
@@ -417,7 +803,7 @@ router.post('/recommend', rateLimitRecommend, validateRecommendPayload, async (r
         if (!fs.existsSync(tempDir)) {
           fs.mkdirSync(tempDir, { recursive: true });
         }
-        
+
         // Save to file
         fs.writeFileSync(TEMP_RECOMMENDATIONS_FILE, JSON.stringify({
           timestamp: Date.now(),
@@ -425,13 +811,13 @@ router.post('/recommend', rateLimitRecommend, validateRecommendPayload, async (r
           timeBudget: timeBudget,
           exhibits: recommendedExhibits
         }, null, 2));
-        
+
         console.log(`Backend: Saved ${recommendedExhibits.length} recommended exhibits to temp file`);
       } catch (error) {
         console.error('Backend: Error saving recommendations to file:', error);
       }
     }
-    
+
     res.json({
       success: true,
       floor: selectedFloor,
@@ -459,9 +845,9 @@ router.get('/recommendations/file', async (req, res) => {
 
     const fileContent = fs.readFileSync(TEMP_RECOMMENDATIONS_FILE, 'utf8');
     const data = JSON.parse(fileContent);
-    
+
     console.log(`Backend: Reading ${data.exhibits?.length || 0} recommended exhibits from temp file`);
-    
+
     res.json({
       success: true,
       timestamp: data.timestamp,
@@ -471,8 +857,8 @@ router.get('/recommendations/file', async (req, res) => {
     });
   } catch (error: any) {
     console.error('Error reading recommendations file:', error);
-    res.status(500).json({ 
-      success: false, 
+    res.status(500).json({
+      success: false,
       message: error.message || 'Error reading recommendations file',
       exhibits: []
     });
@@ -486,15 +872,15 @@ router.delete('/recommendations/file', async (req, res) => {
       fs.unlinkSync(TEMP_RECOMMENDATIONS_FILE);
       console.log('Backend: Deleted temp recommendations file');
     }
-    
+
     res.json({
       success: true,
       message: 'Recommendations file deleted'
     });
   } catch (error: any) {
     console.error('Error deleting recommendations file:', error);
-    res.status(500).json({ 
-      success: false, 
+    res.status(500).json({
+      success: false,
       message: error.message || 'Error deleting recommendations file'
     });
   }
@@ -767,7 +1153,7 @@ router.delete('/:id/exhibits/:exhibitId', async (req, res) => {
 // GET /api/tours/recommend/report - Detailed per-exhibit report for a floor
 router.get('/recommend/report', async (req, res) => {
   try {
-    const selectedFloor = String(req.query.floor || '').toLowerCase() as 'outside'|'ground'|'first';
+    const selectedFloor = String(req.query.floor || '').toLowerCase() as 'outside' | 'ground' | 'first';
     if (!selectedFloor) {
       return res.status(400).json({ success: false, message: 'floor is required' });
     }
@@ -797,37 +1183,37 @@ router.get('/recommend/report', async (req, res) => {
       difficulty: e.difficulty || '',
       interactiveFeatures: (e as any).interactiveFeatures ? JSON.parse((e as any).interactiveFeatures) : [],
     }))
-    .filter((ex: any) => ex.mapLocation && ex.mapLocation.floor === selectedFloor);
+      .filter((ex: any) => ex.mapLocation && ex.mapLocation.floor === selectedFloor);
 
     function extractTopics(texts: string[]): string[] {
       const text = texts.join(' ').toLowerCase();
       const keywords = [
-        'geology','rock','strata','mountain','earth','dinosaur','paleontology','cave','amarnath',
-        'robot','robotics','automation','ai','artificial intelligence','machine learning','ml','technology','electronics','coding','programming',
-        'physics','space','astronomy','planet','environment','nature','biology','chemistry','history'
+        'geology', 'rock', 'strata', 'mountain', 'earth', 'dinosaur', 'paleontology', 'cave', 'amarnath',
+        'robot', 'robotics', 'automation', 'ai', 'artificial intelligence', 'machine learning', 'ml', 'technology', 'electronics', 'coding', 'programming',
+        'physics', 'space', 'astronomy', 'planet', 'environment', 'nature', 'biology', 'chemistry', 'history'
       ];
       return keywords.filter(k => text.includes(k));
     }
-    function interactivity(cat: string, desc: string): 'interactive'|'hands-on'|'passive'|'unknown' {
+    function interactivity(cat: string, desc: string): 'interactive' | 'hands-on' | 'passive' | 'unknown' {
       if (cat.includes('hands') || desc.includes('hands-on')) return 'hands-on';
       if (cat.includes('interactive') || desc.includes('interactive')) return 'interactive';
       if (cat.includes('passive') || desc.includes('observational')) return 'passive';
       return 'unknown';
     }
-    function familyFriendliness(intx: string, desc: string): 'low'|'medium'|'high' {
+    function familyFriendliness(intx: string, desc: string): 'low' | 'medium' | 'high' {
       if (desc.includes('safety') || desc.includes('safe')) return 'high';
       if (intx === 'hands-on') return 'high';
       if (intx === 'interactive') return 'medium';
       return 'medium';
     }
-    function noiseLevel(intx: string): 'low'|'medium'|'high' {
+    function noiseLevel(intx: string): 'low' | 'medium' | 'high' {
       if (intx === 'hands-on' || intx === 'interactive') return 'medium';
       return 'low';
     }
 
     const isFamily = groupType.includes('family') || ageBand.includes('child');
     const isResearch = groupType.includes('research');
-    const isTech = groupType.includes('student') || groupType.includes('tech') || interests.some((i: string) => ['robotics','ai','technology','coding','programming','electronics','automation','ml','machine learning'].includes((i||'').toLowerCase()));
+    const isTech = groupType.includes('student') || groupType.includes('tech') || interests.some((i: string) => ['robotics', 'ai', 'technology', 'coding', 'programming', 'electronics', 'automation', 'ml', 'machine learning'].includes((i || '').toLowerCase()));
 
     const detailed = exhibits.map((ex: any) => {
       const name = (ex.name || '').toLowerCase();
@@ -852,10 +1238,10 @@ router.get('/recommend/report', async (req, res) => {
         if ((ex.averageTime || 0) >= 5) { score += 5; reasons.push('Deeper content'); }
       }
       if (isTech) {
-        if (topics.some((t: string) => ['robot','robotics','automation','ai','artificial intelligence','machine learning','ml','technology','electronics','coding','programming'].includes(t))) {
+        if (topics.some((t: string) => ['robot', 'robotics', 'automation', 'ai', 'artificial intelligence', 'machine learning', 'ml', 'technology', 'electronics', 'coding', 'programming'].includes(t))) {
           score += 28; reasons.push('Technology/Robotics focus');
         }
-        if (topics.some((t: string) => ['dinosaur','paleontology','cave','amarnath','nature','environment'].includes(t))) {
+        if (topics.some((t: string) => ['dinosaur', 'paleontology', 'cave', 'amarnath', 'nature', 'environment'].includes(t))) {
           score -= 24; reasons.push('Not relevant to robotics/AI');
         }
         if (topics.includes('geology') && !interests.includes('geology')) {

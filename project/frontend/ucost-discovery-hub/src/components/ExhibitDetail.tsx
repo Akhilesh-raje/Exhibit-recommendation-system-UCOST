@@ -10,7 +10,15 @@ interface ExhibitDetailProps {
 }
 
 export function ExhibitDetail({ exhibitId, onBack, onAddToTour }: ExhibitDetailProps) {
-  const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+  // Use centralized API config for desktop compatibility
+  const API_BASE_URL = (() => {
+    try {
+      const { getApiUrl } = require('@/lib/desktop-config');
+      return getApiUrl();
+    } catch {
+      return import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+    }
+  })();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [exhibit, setExhibit] = useState<any | null>(null);
@@ -62,18 +70,18 @@ export function ExhibitDetail({ exhibitId, onBack, onAddToTour }: ExhibitDetailP
         <div className="absolute top-20 left-20 w-32 h-32 bg-orange-400 rounded-full animate-float opacity-20"></div>
         <div className="absolute top-32 right-24 w-24 h-24 bg-blue-400 rounded-full animate-float-delayed opacity-25"></div>
         <div className="absolute bottom-32 left-32 w-20 h-20 bg-purple-400 rounded-full animate-float opacity-30"></div>
-        
+
         {/* Observatory/Building */}
         <div className="absolute bottom-20 right-20 w-40 h-32">
           <div className="w-full h-24 bg-blue-800 rounded-t-3xl opacity-60"></div>
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-12 h-16 bg-blue-700 rounded-full opacity-80"></div>
           <Telescope className="absolute top-2 left-1/2 transform -translate-x-1/2 w-6 h-6 text-white opacity-60" />
         </div>
-        
+
         {/* Stars */}
         <Sparkles className="absolute top-24 left-1/3 w-6 h-6 text-yellow-300 animate-pulse" />
-        <Sparkles className="absolute top-48 right-1/3 w-4 h-4 text-blue-300 animate-pulse" style={{animationDelay: '1s'}} />
-        <Sparkles className="absolute bottom-48 left-1/4 w-5 h-5 text-purple-300 animate-pulse" style={{animationDelay: '2s'}} />
+        <Sparkles className="absolute top-48 right-1/3 w-4 h-4 text-blue-300 animate-pulse" style={{ animationDelay: '1s' }} />
+        <Sparkles className="absolute bottom-48 left-1/4 w-5 h-5 text-purple-300 animate-pulse" style={{ animationDelay: '2s' }} />
       </div>
 
       <div className="container mx-auto px-8 py-12 relative z-10 flex items-center justify-center min-h-screen">
@@ -85,7 +93,7 @@ export function ExhibitDetail({ exhibitId, onBack, onAddToTour }: ExhibitDetailP
               <h1 className="text-6xl font-bold text-white mb-6">
                 {uiExhibit.name}
               </h1>
-              
+
               {/* Fun Fact Banner */}
               <Card className="inline-block bg-white/90 backdrop-blur-sm border-0 px-6 py-4 rounded-2xl mb-8">
                 <div className="flex items-center gap-3">
@@ -126,7 +134,7 @@ export function ExhibitDetail({ exhibitId, onBack, onAddToTour }: ExhibitDetailP
                 <Lightbulb className="mr-3 h-6 w-6" />
                 FUN FACTS
               </Button>
-              
+
               <Button
                 size="xl"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-xl font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"

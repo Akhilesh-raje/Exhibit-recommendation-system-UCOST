@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Users, GraduationCap, Heart, FlaskConical, Rocket, Sparkles, Settings } from "lucide-react";
 import { useCapacitor } from "@/hooks/useCapacitor";
+import { ChatbotBubble } from "./ChatbotBubble";
 
 interface WelcomeScreenProps {
   onStartJourney: () => void;
@@ -63,23 +64,27 @@ export function WelcomeScreen({
 
       <div className="container mx-auto px-4 md:px-8 py-8 md:py-12 relative z-10 flex items-center justify-center min-h-screen">
         <div className="max-w-6xl w-full">
-          {/* Robot Mascot & Header - Mobile responsive */}
+          {/* Logo & Header - Mobile responsive */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-8 md:mb-16">
-            {/* Robot Character - Mobile optimized size */}
+            {/* Official UCOST Logo */}
             <div className="relative">
-              <div className="w-24 h-24 md:w-32 md:h-32 bg-blue-400 rounded-full flex items-center justify-center border-6 md:border-8 border-blue-300 animate-bounce-gentle">
-                <div className="flex gap-1 md:gap-2">
-                  <div className="w-3 h-3 md:w-4 md:h-4 bg-yellow-400 rounded-full"></div>
-                  <div className="w-3 h-3 md:w-4 md:h-4 bg-yellow-400 rounded-full"></div>
-                </div>
-              </div>
-              <div className="absolute -bottom-1 md:-bottom-2 left-1/2 transform -translate-x-1/2 w-6 h-3 md:w-8 md:h-4 bg-blue-300 rounded-full"></div>
+              <img 
+                src="/logo.png" 
+                alt="UCOST Logo" 
+                className="w-32 h-32 md:w-40 md:h-40 object-contain animate-bounce-gentle"
+                onError={(e) => {
+                  // Fallback to SVG if PNG doesn't load
+                  if (e.currentTarget.src !== '/logo.svg') {
+                    e.currentTarget.src = '/logo.svg';
+                  }
+                }}
+              />
             </div>
             
             {/* Title - Mobile responsive text */}
             <div className="text-center">
               <h1 className="text-3xl md:text-6xl font-bold text-white mb-2 md:mb-4">
-                Welcome to UCOST
+                Welcome to Regional Science Centre (RSC) Dehradun
               </h1>
               
               <p className="text-lg md:text-2xl text-muted-foreground mb-4 md:mb-8">
@@ -136,6 +141,9 @@ export function WelcomeScreen({
           </div>
         </div>
       </div>
+
+      {/* Chatbot Bubble */}
+      <ChatbotBubble />
     </div>
   );
 }

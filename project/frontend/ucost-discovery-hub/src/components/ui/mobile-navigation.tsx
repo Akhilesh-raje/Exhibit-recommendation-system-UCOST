@@ -81,7 +81,16 @@ export const MobileNavigation: React.FC = () => {
         <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur border-b pt-safe">
           <div className="flex items-center justify-between h-14 px-4">
             <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-lg bg-primary" />
+              <img 
+                src="/logo.png" 
+                alt="UCOST Logo" 
+                className="h-8 w-8 object-contain"
+                onError={(e) => {
+                  if (e.currentTarget.src !== '/logo.svg') {
+                    e.currentTarget.src = '/logo.svg';
+                  }
+                }}
+              />
               <span className="font-semibold">UCOST</span>
             </div>
             <MobileButton

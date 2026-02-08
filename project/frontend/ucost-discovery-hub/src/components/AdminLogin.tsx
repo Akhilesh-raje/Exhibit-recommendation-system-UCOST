@@ -5,6 +5,7 @@ import { Label } from '@/components/ui/label';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Lock, User, Key, RefreshCw, Eye, EyeOff } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { getApiUrl } from '@/lib/desktop-config';
 
 interface AdminLoginProps {
   isOpen: boolean;
@@ -42,7 +43,7 @@ export default function AdminLogin({ isOpen, onClose, onSuccess }: AdminLoginPro
       if (credentials.username === 'admin' && credentials.password === 'ucost@2025') {
         // Store a simple token
         localStorage.setItem('adminToken', 'demo-token');
-        
+
         toast({
           title: "Welcome Admin!",
           description: "Successfully logged in to admin panel.",
@@ -76,7 +77,7 @@ export default function AdminLogin({ isOpen, onClose, onSuccess }: AdminLoginPro
     const currentTimeCode = getCurrentTimeCode();
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/verify-secret-code', {
+      const response = await fetch(`${getApiUrl()}/auth/verify-secret-code`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -115,12 +116,12 @@ export default function AdminLogin({ isOpen, onClose, onSuccess }: AdminLoginPro
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/test-reset-credentials', {
+      const response = await fetch(`${getApiUrl()}/auth/test-reset-credentials`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
           secretCode: secretCode,
           newUsername: customUsername,
           newPassword: customPassword
@@ -130,11 +131,11 @@ export default function AdminLogin({ isOpen, onClose, onSuccess }: AdminLoginPro
       const data = await response.json();
 
       if (response.ok) {
-        setNewCredentials({ 
-          username: data.credentials.username, 
-          password: data.credentials.password 
+        setNewCredentials({
+          username: data.credentials.username,
+          password: data.credentials.password
         });
-        
+
         toast({
           title: "Credentials Set Successfully!",
           description: "Your new credentials have been set.",
@@ -181,7 +182,7 @@ export default function AdminLogin({ isOpen, onClose, onSuccess }: AdminLoginPro
             Admin Access
           </DialogTitle>
         </DialogHeader>
-        
+
         {!showForgotCredentials ? (
           // Login Form
           <form onSubmit={handleLogin} className="space-y-4">
@@ -200,7 +201,7 @@ export default function AdminLogin({ isOpen, onClose, onSuccess }: AdminLoginPro
                 />
               </div>
             </div>
-            
+
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
               <div className="relative">
@@ -225,7 +226,7 @@ export default function AdminLogin({ isOpen, onClose, onSuccess }: AdminLoginPro
                 </Button>
               </div>
             </div>
-            
+
             <div className="flex gap-2 pt-4">
               <Button
                 type="button"
@@ -243,7 +244,7 @@ export default function AdminLogin({ isOpen, onClose, onSuccess }: AdminLoginPro
                 {isLoading ? "Logging in..." : "Login"}
               </Button>
             </div>
-            
+
             <div className="text-center">
               <Button
                 type="button"
@@ -275,7 +276,7 @@ export default function AdminLogin({ isOpen, onClose, onSuccess }: AdminLoginPro
                     "A save in time saves nine"
                   </p>
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="secretCode">Secret Code</Label>
                   <div className="relative">
@@ -320,7 +321,7 @@ export default function AdminLogin({ isOpen, onClose, onSuccess }: AdminLoginPro
                     Enter the secret code and your desired credentials
                   </p>
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="customUsername">New Username</Label>
                   <div className="relative">
@@ -361,7 +362,7 @@ export default function AdminLogin({ isOpen, onClose, onSuccess }: AdminLoginPro
                     </Button>
                   </div>
                 </div>
-                
+
                 <div className="flex gap-2 pt-4">
                   <Button
                     type="button"

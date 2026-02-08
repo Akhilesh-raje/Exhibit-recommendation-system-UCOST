@@ -1,0 +1,3370 @@
+id,name,description,category,location,floor,ageRange,exhibitType,environment,difficulty,durationMinutes,averageTimeMinutes,visitorCount,rating,feedbackCount,language,accessibility,maintenanceNotes,safetyNotes,educationalValue,curriculumLinks,materials,dimensions,weightKg,powerRequirements,temperatureRange,humidityRange,lastMaintenance,nextMaintenance,cost,sponsor,designer,manufacturer,warrantyExpiry,insuranceInfo,riskAssessment,emergencyContact,images,imagesCount,interactiveFeatures,coordinatesRaw,coordinateX,coordinateY,coordinateNotes,nearbyFacilities,routeInstructions,createdAt,updatedAt,isActive,exhibitCode,scientificName,virtualTour,videos,audioGuides
+cmei944jk0000x3ls4qzke5tu,Debug Exhibit,Inserted via test_exhibits.js,,,,,,,,,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,,{},,,,,{},2025-08-19T07:57:43.038Z,2025-08-19T08:54:15.557Z,false,,,,,
+cmei951b70000kv2ayjc1vlku,Debug Exhibit,Inserted via test_exhibits.js,,,,,,,,,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,,{},,,,,{},2025-08-19T07:58:25.507Z,2025-08-19T08:54:18.183Z,false,,,,,
+cmeqmh1260000i9ggjonczjg3,,,,,outside,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,,"{""floor"":""outside"",""x"":39.0625,""y"":55.400000000000006}",39.0625,55.400000000000006,,,{},2025-08-25T04:33:49.465Z,2025-08-25T04:33:49.465Z,true,,,,,
+cmewnmmbf000vhnnp6lwbao1k,3G vs 4G – The Mobile Internet Revolution,"The shift from 3G to 4G marked a major leap in mobile internet speed and connectivity.
+
+3G (Third Generation): Brought mobile internet browsing, video calling, and multimedia messaging.
+
+4G (Fourth Generation): Enabled high-speed streaming, online gaming, HD video calls, and mobile apps to work smoothly.
+
+This evolution made smartphones powerful tools for communication, learning, and entertainment, shaping the digital lifestyle we enjoy today.
+
+✨ Key Differences
+
+Feature	3G 📱	4G 🚀
+Speed	~2 Mbps	Up to 100 Mbps
+Internet	Basic browsing, email	HD streaming, video calls, gaming
+Latency	High (slower response)	Low (fast response)
+Impact	First mobile internet	True mobile broadband experience
+
+🎯 Learning Outcome
+
+Understand how mobile networks evolved.
+
+See how internet speed impacts daily life applications.
+
+Recognize how 4G paved the way for 5G and beyond.
+
+⚡ Short Museum Panel (70 words)
+
+3G and 4G are mobile network generations that changed how we use phones. 3G introduced internet browsing, video calls, and online messaging. 4G brought much faster speeds, enabling HD video streaming, mobile apps, online gaming, and smooth video calls. This leap transformed smartphones into powerful mini-computers. The jump from 3G to 4G shaped today’s connected world and set the stage for 5G innovations.",ai-and-robotics,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756461166356-98748687.jpg,1,,"{""floor"":""first"",""x"":4.083333333333333,""y"":28.333333333333332}",4.083333333333333,28.333333333333332,,,{},2025-08-29T09:52:46.971Z,2025-08-29T09:52:46.971Z,true,,,,,
+cmf97q5bu0004snwdrse4ovgo,AI Lab,"The AI Lab is a modern learning space where visitors can explore the world of Artificial Intelligence (AI) and Machine Learning through interactive exhibits and hands-on activities.
+
+Equipped with computers, sensors, robots, and AI-based applications, the lab helps understand how machines can see, hear, learn, and make decisions.
+
+Visitors can try activities like image recognition, speech interaction, robotics, data analysis, and coding with AI tools.
+
+The lab inspires students to explore cutting-edge technologies that are shaping the future in areas like healthcare, communication, transport, and education.
+
+The AI Lab encourages creativity, experimentation, and innovation, preparing young minds for the technology-driven world of tomorrow.",ai-and-robotics,"Dehradun, Uttarakhand, India",ground,researchers,hands-on,indoor,,8,8,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1757220517195-916548588.jpg,1,,"{""floor"":""ground"",""x"":2.083333333333333,""y"":50.83333333333333}",2.083333333333333,50.83333333333333,,,{},2025-09-07T04:48:38.010Z,2025-09-07T04:48:38.010Z,true,,,,,
+cmewnj4fp000thnnpu6okg4qv,Artificial Intelligence – Machines that Think,"Artificial Intelligence (AI) is the ability of machines to learn, reason, and make decisions like humans. Instead of following fixed instructions, AI uses algorithms and data to recognize patterns, solve problems, and improve over time.
+
+✨ Applications
+
+Daily Life: Voice assistants (Siri, Alexa), recommendation systems (YouTube, Netflix)
+
+Healthcare: Disease prediction, robotic surgery
+
+Transport: Self-driving cars, traffic management
+
+Education & Work: Smart tutoring, AI-driven research
+
+Creativity: Music, art, and story generation
+
+🎯 Learning Outcome
+
+Understand how AI is inspired by the human brain.
+
+Explore its role in automation, decision-making, and creativity.
+
+Imagine a future where humans and AI work together.
+
+⚡ Short Student-Friendly Museum Panel (70 words)
+
+Artificial Intelligence (AI) allows computers to think, learn, and adapt like humans. It powers everyday tools such as Google search, chatbots, and self-driving cars. By analyzing massive amounts of data, AI can recognize faces, predict diseases, and even create art. AI is transforming industries and daily life, making technology more intelligent and interactive than ever before.",ai-and-robotics,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756461002965-234817720.jpg,1,,"{""floor"":""first"",""x"":2.4166666666666665,""y"":19.166666666666668}",2.4166666666666665,19.166666666666668,,,{},2025-08-29T09:50:03.829Z,2025-08-29T09:50:03.829Z,true,,,,,
+cmewnpb1m000xhnnp1ri5226w,Factory Automation – Smart Machines in Manufacturing,"Factory Automation is the use of machines, robots, sensors, and computer systems to perform industrial tasks with little or no human intervention. Instead of relying on manual labor, factories now use automated assembly lines where machines work with precision, speed, and accuracy.
+
+Automation involves:
+
+Robotic arms – for welding, painting, packaging.
+
+Conveyor belts & sensors – for moving and inspecting products.
+
+Programmable Logic Controllers (PLCs) – to control machines.
+
+AI & IoT – for smart monitoring and predictive maintenance.
+
+✨ Benefits of Factory Automation
+
+High productivity and speed.
+
+Improved quality with fewer errors.
+
+Reduced labor cost.
+
+Safer working conditions.
+
+⚡ Short Museum Panel (70 words)
+
+Factory Automation uses machines, robots, and computer systems to carry out manufacturing tasks with minimal human involvement. Automated production lines improve efficiency, accuracy, and safety while reducing costs. Robots weld cars, sensors check product quality, and AI systems predict maintenance needs. From automotive plants to electronics assembly, automation is revolutionizing industries and shaping the future of smart manufacturing.",ai-and-robotics,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756461291771-301734142.jpg,1,,"{""floor"":""first"",""x"":5.75,""y"":28.666666666666668}",5.75,28.666666666666668,,,{},2025-08-29T09:54:52.329Z,2025-08-29T09:54:52.329Z,true,,,,,
+cmewgyfnf0000qsr996urezmu,Film Corner,"The Film Corner is a dedicated space where short scientific films, documentaries, and educational videos are screened. It offers visitors an engaging way to explore complex scientific concepts, biographies of great scientists, environmental issues, and new technologies through visual storytelling.
+
+The corner is designed like a mini theatre with comfortable seating and quality audio-visual systems to make the experience immersive. Programs are scheduled at intervals, ensuring that groups of visitors can watch together.
+
+✨ Learning Outcome
+
+Understand science and technology through visual and narrative media.
+
+Encourage curiosity and discussion about scientific developments.
+
+Learn about the lives and contributions of scientists in an engaging format.
+
+Experience how films can simplify complex scientific ideas for the general public.",ai-and-robotics,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756449959272-486212212.jpg,1,Audio Guide; Live Demonstrations; Video Content; Guided Tours,"{""floor"":""first"",""x"":9.916666666666666,""y"":43.666666666666664}",9.916666666666666,43.666666666666664,,,{},2025-08-29T06:46:00.878Z,2025-08-29T06:46:00.878Z,true,,,,,
+cmewnsc7b000zhnnpw3gce2wi,Home Automation,"Home Automation uses IoT devices, sensors, and controllers to automate everyday household functions such as lighting, appliances, security, and energy management. A central system (microcontroller like Arduino/Raspberry Pi, or a smart hub) connects to devices via Wi-Fi, Bluetooth, or Zigbee.
+
+Visitors can see how lights turn on with a clap or motion sensor, appliances can be controlled by voice assistants, and doors lock automatically with RFID or biometrics.
+
+✨ Why It’s Exciting
+
+Makes homes smarter, safer, and energy-efficient.
+
+Demonstrates IoT in real-world applications.
+
+Interactive demo encourages visitors to try controlling lights/fans using voice or mobile app.
+
+⚡ Short Museum Panel (70 words)
+
+Home Automation showcases how IoT makes homes smarter and more efficient. Using sensors, controllers, and wireless communication, household devices like lights, fans, and locks can be controlled automatically or via smartphone/voice commands. Visitors can interact with a demo model to see real-time automation in action—such as motion-activated lights or app-based appliance control. This technology represents the future of convenient, secure, and energy-saving living spaces.",ai-and-robotics,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756461433105-648056955.jpg,1,,"{""floor"":""first"",""x"":6.75,""y"":21}",6.75,21,,,{},2025-08-29T09:57:13.799Z,2025-08-29T09:57:13.799Z,true,,,,,
+cmewnnyzn000whnnpfg1ukel0,Robotics – Machines that Think and Act,"Robotics is the science of designing and building machines that can sense, think, and act. Robots are used in factories, hospitals, space exploration, defense, agriculture, and even households.
+
+A robot usually has:
+
+Sensors – to detect the environment (like cameras, proximity sensors).
+
+Processor/AI – to make decisions.
+
+Actuators – motors/arms that perform tasks.
+
+Robotics combines mechanical engineering, electronics, computer science, and AI to create intelligent machines.
+
+✨ Applications of Robotics
+
+Industry: Car assembly, precision manufacturing.
+
+Healthcare: Surgical robots, robotic prosthetics.
+
+Exploration: Mars rovers, underwater robots.
+
+Everyday life: Cleaning robots, drones, smart assistants.
+
+⚡ Short Museum Panel (70 words)
+
+Robotics is the branch of science and engineering that creates machines capable of performing human-like tasks. Robots use sensors, processors, and actuators to sense their environment, make decisions, and take action. They are used in factories, hospitals, defense, agriculture, and space missions. From industrial arms to Mars rovers, robotics is transforming industries and daily life, bringing us closer to a future where humans and intelligent machines work together.",ai-and-robotics,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756461229381-140930786.jpg,1,,"{""floor"":""first"",""x"":5.916666666666667,""y"":28.833333333333332}",5.916666666666667,28.833333333333332,,,{},2025-08-29T09:53:50.051Z,2025-08-29T09:53:50.051Z,true,,,,,
+cmewnkpjr000uhnnp1wuek9dt,Virtual Reality – Stepping Into Another World,"Virtual Reality (VR) is a computer-generated 3D environment that people can explore and interact with using special headsets and controllers. Unlike watching a screen, VR makes you feel as if you’re inside the digital world—whether it’s walking on Mars, exploring the deep ocean, or experiencing history.
+
+✨ Applications
+
+Education: Virtual labs, history tours, anatomy exploration
+
+Entertainment: VR games, movies, theme park rides
+
+Healthcare: Surgery training, therapy for phobias
+
+Industry: Architecture visualization, flight simulation, military training
+
+Social: Virtual meetings, concerts, and shared digital spaces
+
+🎯 Learning Outcome
+
+Experience how technology can trick human senses into believing digital worlds are real.
+
+Discover VR’s role in learning, training, and entertainment.
+
+Understand the future of human-computer interaction.
+
+⚡ Short Student-Friendly Museum Panel (70 words)
+
+Virtual Reality (VR) uses headsets and sensors to transport people into a computer-generated 3D world. Instead of watching a screen, VR makes you feel like you are inside the experience—whether flying through space, exploring history, or playing immersive games. VR is transforming education, healthcare, and entertainment, opening doors to new ways of learning, working, and having fun.",ai-and-robotics,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756461077044-137541615.jpg,1,,"{""floor"":""first"",""x"":8.583333333333334,""y"":26}",8.583333333333334,26,,,{},2025-08-29T09:51:17.847Z,2025-08-29T09:51:17.847Z,true,,,,,
+cmeibbsqi00019wf68zewum1j,Canteen,"The canteen at RSC Dehradun provides visitors with a comfortable space to relax and enjoy light meals, snacks, and beverages during their visit. It is especially useful for school groups and families who spend several hours exploring the science park, galleries, and theatres. With affordable food options and group-friendly seating, it supports a full-day learning experience at the center.
+
+Location: Ground Floor / Outdoor Campus (near entrance/exit area)
+
+Theme: Visitor Facility (Food & Refreshments)
+
+Type: Service / Amenity
+
+Complexity Level: Basic
+
+Target Age Group: All ages (students, families, researchers, staff)
+
+Interactivity Score: 2 (service-based, not educational)
+
+Duration: 10–30 minutes (average snack/meal break)
+
+Learning Outcome: Supports long visits by offering refreshments and rest opportunities.
+
+Features:
+
+Vegetarian snacks & meals
+
+Tea/coffee, beverages
+
+Seating area for groups
+
+Affordable pricing for students
+
+Tags: facility, food, refreshment, rest, break, outdoor",biology,"Dehradun, Uttarakhand, India",outside,families,interactive,both,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1755593978718-541457280.jpg,1,,"{""floor"":""outside"",""x"":19.1875,""y"":52.6}",19.1875,52.6,,,{},2025-08-19T08:59:40.216Z,2025-08-20T10:18:39.782Z,true,,,,,
+cmewmdw4y000bhnnprtea4ppo,Design a Baby – Genetics of the Future,"Modern advances in genomics, CRISPR gene editing, and IVF technology have opened the door to the idea of “designing babies.” This means selecting or altering traits in embryos — such as disease resistance, eye color, intelligence, or physical abilities.
+
+Key Features of the Exhibit:
+
+Interactive Screen – “Choose the Traits”
+
+Visitors can pick traits (eye color, height, disease resistance) and see how a “virtual baby” changes.
+
+CRISPR Wall Display
+
+Animated explanation of how CRISPR edits DNA.
+
+Ethical Choice Corner
+
+Touchscreens ask visitors:
+
+Would you remove genetic diseases?
+
+Would you enhance traits like intelligence or beauty?
+
+Where should we draw the line?
+
+Future of Humanity Timeline
+
+Possible futures: Eradication of genetic disorders vs Social inequality by gene editing.
+
+💡 Interactive Element
+
+Build-a-Baby Game: Like a simulation where visitors drag genetic “blocks” (disease resistance, IQ, hair color) onto an embryo model and see the outcome.
+
+Debate Polling: Visitors vote “Ethical” or “Not Ethical” on scenarios, and live results are displayed.
+
+✨ Learning Outcome
+
+Understand the science behind genetic engineering in humans.
+
+Explore benefits (disease-free generations) vs risks (designer inequality, loss of diversity).
+
+Encourage ethical reflection on how far technology should go.",biology,"Dehradun, Uttarakhand, India",first,families,hands-on,indoor,,8,8,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756459078511-48551484.jpg; exhibit-1756459078570-687575417.jpg; exhibit-1756459078660-561392808.jpg,3,,"{""floor"":""first"",""x"":1.9166666666666665,""y"":46.33333333333333}",1.9166666666666665,46.33333333333333,,,{},2025-08-29T09:18:00.179Z,2025-08-29T09:18:00.179Z,true,,,,,
+cmewlxa6s0004hnnp9m6eybsf,Drug Design,"The Drug Design exhibit introduces visitors to the fascinating process of how modern medicines are developed—from identifying disease-causing agents to creating safe and effective drugs.
+
+The display typically explains steps such as:
+
+Target Identification – finding the biological molecule (like a protein or enzyme) linked to a disease.
+
+Drug Discovery – designing or screening chemical compounds that can interact with the target.
+
+Molecular Docking – visualizing how a drug molecule ""fits"" into the disease-causing protein (like a lock and key).
+
+Preclinical & Clinical Trials – testing safety and effectiveness in labs and then in humans.
+
+Approval & Distribution – ensuring drugs meet medical regulations before reaching patients.
+
+Interactive panels may allow visitors to try virtual drug docking—seeing how shape and structure determine whether a medicine will be effective.
+
+✨ Learning Outcome
+
+Understand the science behind medicine development.
+
+Learn how chemistry, biology, and computer simulations work together in drug design.
+
+Appreciate the challenges of time, cost, and safety in making new medicines.",biology,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756458304598-867922031.jpg,1,,"{""floor"":""first"",""x"":4.25,""y"":43.5}",4.25,43.5,,,{},2025-08-29T09:05:05.236Z,2025-08-29T09:05:05.236Z,true,,,,,
+cmeib4glr0001jsz45lv6s4l9,Elliptical Speaking Fish,"Location: Outdoor Science Park (Ground area, near entry path)
+
+Theme: Physics / Acoustics (Sound reflection)
+
+Type: Interactive, two-person activity
+
+Complexity Level: Basic (all ages can try)
+
+Target Age Group: Kids, Teens, Families
+
+Interactivity Score: 5 (visitors must participate)
+
+Duration: ~3–4 minutes per try
+
+Learning Outcome:
+
+Demonstrates how sound waves travel and reflect along an ellipse.
+
+When two people stand at the focal points of the structure and speak, their voices are carried directly to each other — even if they whisper.
+
+Teaches principles of acoustics, geometry of ellipses, and sound propagation.
+
+Features:
+
+Outdoor installation
+
+Physical model (large elliptical dish setup with fish-shaped acoustic reflector)
+
+Tags: acoustics, ellipse, sound reflection, whispering, outdoor exhibit",biology,"Dehradun, Uttarakhand, India",outside,families,interactive,outdoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1755593637780-921483115.jpg,1,Live Demonstrations,"{""floor"":""outside"",""x"":27.9375,""y"":50.6}",27.9375,50.6,,,{},2025-08-19T08:53:57.882Z,2025-08-20T10:18:39.766Z,false,,,,,
+cmewm8pbi0008hnnp6mloe412,Minimal Invasive Surgery (MIS),"Minimal Invasive Surgery (MIS) represents a revolution in modern medicine, where doctors perform surgical procedures through tiny incisions instead of large cuts. This method reduces pain, scarring, recovery time, and risk of infection.
+
+Key Features of the Exhibit:
+
+Demonstration Models: Comparison between open surgery vs MIS using physical or AR models.
+
+Endoscopy & Laparoscopy Tools: Display of cameras, robotic arms, and micro-instruments.
+
+Robotic Surgery: Visual/interactive demo of robotic-assisted surgery (e.g., Da Vinci Surgical System).
+
+Applications:
+
+Removal of gallbladder, appendix, kidney stones.
+
+Heart bypass with smaller incisions.
+
+Neurosurgery with precision tools.
+
+Future of MIS: Incorporating AI-guided robots, nanobots, and augmented reality navigation.
+
+💡 Interactive Element:
+
+Visitors can try a “hand–eye coordination” simulator, mimicking how surgeons control robotic instruments.
+
+Touchscreen animation: “Journey of a tiny surgical camera inside the body.”
+
+✨ Learning Outcome
+
+Understand how MIS minimizes trauma to the body.
+
+Appreciate the role of technology and robotics in healthcare.
+
+Inspire interest in medical engineering and surgical innovation.",biology,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756458836742-536533176.jpg; exhibit-1756458836821-757945850.jpg,2,,"{""floor"":""first"",""x"":1.9166666666666665,""y"":48.16666666666667}",1.9166666666666665,48.16666666666667,,,{},2025-08-29T09:13:58.062Z,2025-08-29T09:13:58.062Z,true,,,,,
+cmewmc5zk000ahnnp64o2u024,Stem Cells – Nature’s Master Cells,"Stem cells are special cells that can self-renew and transform into different types of cells in the body. They hold immense promise for regenerative medicine, treating blood disorders, spinal cord injuries, and even growing artificial organs.
+
+Key Features of the Exhibit:
+
+3D Model of Cell Differentiation: Show how a single stem cell can become a muscle cell, nerve cell, or blood cell.
+
+Medical Applications Wall: Infographics about treatments (leukemia therapy, tissue repair, Parkinson’s research).
+
+Interactive Screen: “Choose a stem cell → Decide what it becomes → See how it repairs the body.”
+
+Ethical Discussion Corner: Explore debates around embryonic vs adult stem cells.
+
+💡 Interactive Element
+
+Touchscreen Simulator: Visitors drag a stem cell into different body zones (heart, brain, skin) and watch animations of repair/regeneration.
+
+Quiz: “Can stem cells cure aging?” – Explore possibilities and myths.
+
+✨ Learning Outcome
+
+Understand the unique ability of stem cells to regenerate tissues.
+
+Explore medical breakthroughs in stem cell therapy.
+
+Reflect on the ethical, scientific, and future implications of stem cell research.",biology,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756458998349-292861399.jpg; exhibit-1756458998449-95580180.jpg,2,,"{""floor"":""first"",""x"":4.916666666666666,""y"":47.5}",4.916666666666666,47.5,,,{},2025-08-29T09:16:39.632Z,2025-08-29T09:16:39.632Z,true,,,,,
+cmewmg8eh000chnnpahsum6sd,The Augmented Human,"The Augmented Human represents a fusion of biology and technology. Scientists are developing artificial organs, bionic limbs, brain-computer interfaces, and exoskeletons to restore abilities — and even go beyond natural human limits.
+
+This exhibit shows a human body model with transparent layers:
+
+Skeleton: Highlighted with titanium implants, robotic exoskeleton supports.
+
+Organs: Artificial heart, 3D-printed lungs, synthetic kidney, retinal implants.
+
+Nervous System: Brain chip connected to computers.
+
+Muscles: Myoelectric sensors controlling robotic arms and legs.
+
+🦾 Exhibit Zones
+
+Life-size Augmented Human Model
+
+Transparent mannequin showing bones, muscles, and cybernetic implants.
+
+Visitors press buttons to light up: Artificial Heart, Bionic Eye, Brain Chip, Robotic Arm, Exoskeleton Frame.
+
+AR Interaction (Augmented Reality)
+
+Visitors use a tablet/AR glasses to “scan” the model.
+
+The screen shows live animations: blood flowing through an artificial heart, signals firing in a brain chip, robotic arms moving.
+
+Organ Replacement Wall
+
+Realistic 3D-printed samples of artificial heart valves, prosthetic limbs, and neural implants.
+
+Visitors can touch and explore.
+
+Future Scenarios Corner
+
+What if humans could:
+
+Run 100 km without fatigue?
+
+See infrared light with bionic eyes?
+
+Upload memories with brain-computer chips?
+
+💡 Interactive Elements
+
+Try the Exoskeleton Simulator: Visitors wear a light robotic arm or glove that enhances grip strength.
+
+Design Your Own Augmented Human (Touchscreen): Add cybernetic upgrades and see how the body transforms.
+
+✨ Learning Outcome
+
+Understand how bioengineering restores lost human functions (prosthetics, organ transplants).
+
+Explore futuristic possibilities of human augmentation (super strength, enhanced senses, digital brain).
+
+Reflect on the ethical questions: Where does healing end and “superhuman engineering” begin?",biology,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756459188211-464688335.jpg; exhibit-1756459188265-54858919.jpg,2,,"{""floor"":""first"",""x"":2.4166666666666665,""y"":42.333333333333336}",2.4166666666666665,42.333333333333336,,,{},2025-08-29T09:19:49.385Z,2025-08-29T09:19:49.385Z,true,,,,,
+cmez40j5e0017hnnp4918gdz3,24-Hour Geological Clock,"The 24-hour Geological Clock compresses the 4.6 billion-year history of Earth into a single day (24 hours). Each hour represents about 191 million years. This visualization helps us understand how long Earth has existed compared to how recently humans appeared.
+
+🕒 Geological Timeline (24-Hour Clock):
+
+00:00 (Midnight) – 🌌 Earth forms (4.6 billion years ago).
+
+04:00 – 🌑 Oldest rocks form on Earth’s crust.
+
+05:30 – 🌊 First evidence of life (microbes in oceans).
+
+08:00 – 🌱 Photosynthesis begins, oxygen slowly increases.
+
+14:00 (2 PM) – 🧫 First multicellular organisms.
+
+17:30 (5:30 PM) – 🦑 Cambrian Explosion, rapid diversification of life.
+
+20:30 (8:30 PM) – 🐟 First vertebrates, life moves from water to land.
+
+21:00 (9 PM) – 🌳 Forests form, insects thrive.
+
+22:00 (10 PM) – 🦖 Dinosaurs rule Earth.
+
+23:39 (11:39 PM) – ☄️ Asteroid impact, dinosaurs go extinct.
+
+23:58 (11:58 PM) – 🐒 Early humans evolve.
+
+23:59:59 (Last second) – 🏙️ Recorded human history begins.
+
+🔍 Key Insight:
+
+If Earth’s history is 24 hours, humans have existed for less than 2 seconds.
+
+Most of Earth’s time was dominated by microbes and simple life forms.
+
+The “clock” shows how recent our presence is in the planet’s vast history.",earth-science,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756609621571-624669074.jpg,1,,"{""floor"":""first"",""x"":85.75,""y"":22}",85.75,22,,,{},2025-08-31T03:07:02.258Z,2025-08-31T03:07:02.258Z,true,,,,,
+cmeibm45b00049wf64jjkrirn,Acharya Jagadish Chandra Bose (J.C. Bose),"This exhibit celebrates Acharya J.C. Bose, the Indian scientist who proved that plants are alive and respond to touch, light, and sound. He also pioneered the use of microwaves and built instruments to detect very weak signals. His invention of the Crescograph amazed the world by showing plant growth in real time. Visitors can explore his pathbreaking work in radio science and plant biology, which continues to inspire modern research.",earth-science,"Dehradun, Uttarakhand, India",outside,researchers,passive,outdoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1755594460233-875047704.jpg,1,,"{""floor"":""outside"",""x"":47.6875,""y"":34.2}",47.6875,34.2,,,{},2025-08-19T09:07:41.565Z,2025-08-20T10:18:39.808Z,true,,,,,
+cmez4h7ul001ahnnp491fv9i4,Anatomy of a Glacier,"A glacier is a massive, slow-moving body of ice formed from accumulated snowfall that compacts into ice over centuries. Glaciers are called “rivers of ice” and play a crucial role in shaping landscapes, feeding rivers, and sustaining life.
+
+Main Parts of a Glacier
+
+Accumulation Zone
+
+The upper part of a glacier where snowfall is greater than melting.
+
+Snow compacts into firn (granular ice) and then into solid glacial ice.
+
+Acts as the ""birthplace"" of the glacier.
+
+Ablation Zone
+
+The lower part of the glacier where melting, sublimation, or calving (breaking of icebergs) occurs.
+
+Ice is lost here, balancing the glacier’s growth.
+
+Firn Line / Snow Line
+
+The dividing line between the accumulation zone and ablation zone.
+
+Marks where the glacier neither gains nor loses mass.
+
+Glacier Tongue / Snout
+
+The end of the glacier that extends into valleys or plains.
+
+Acts like the ""foot"" of the glacier.
+
+Crevasses
+
+Deep cracks in the ice due to stress and movement.
+
+Dangerous but also reveal internal glacier flow.
+
+Moraines
+
+Deposits of rocks and debris carried by the glacier.
+
+Types:
+
+Lateral Moraines (along sides)
+
+Medial Moraines (middle, formed when two glaciers meet)
+
+Terminal Moraine (at the snout, marking maximum extent).
+
+Glacial Meltwater Streams
+
+Streams formed by melting ice, feeding rivers like the Ganga, Yamuna, and Indus in the Himalayas.
+
+Functions of Glaciers
+
+Act as freshwater reservoirs.
+
+Carve out U-shaped valleys and fjords.
+
+Regulate climate and water cycles.
+
+Source of many Indian rivers.
+
+🔹 Visualization Idea for Exhibit:
+
+A 3D cross-sectional model of a glacier with labeled parts (accumulation zone, ablation zone, snout, moraines, etc.).
+
+Flow arrows to show ice movement.
+
+Interactive demo: Press button → light up specific glacier parts.",earth-science,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756610399815-518354397.jpg,1,,"{""floor"":""first"",""x"":90.58333333333334,""y"":21.5}",90.58333333333334,21.5,,,{},2025-08-31T03:20:00.765Z,2025-08-31T03:20:00.765Z,true,,,,,
+cmez3sl390015hnnpsebq7h0i,Earth – Origin and Growth,"This exhibit unfolds the story of Earth, from cosmic dust to the modern biosphere:
+
+🔹 Birth of Earth (4.6 billion years ago)
+
+3D holographic animation of solar nebula forming planets.
+
+Interactive rotating model showing Earth’s molten early surface.
+
+🔹 Formation of Oceans & Atmosphere
+
+Simulation of volcanic eruptions releasing gases → forming primitive atmosphere.
+
+AR demo where visitors “pour” virtual water to see oceans form.
+
+🔹 Origin of Life (3.8–3.5 billion years ago)
+
+Animated model of primordial soup leading to first microbes.
+
+“Microscope stations” with AR to explore early microorganisms.
+
+🔹 Growth of Life & Evolution
+
+Touchscreen timeline:
+
+Cambrian explosion (diverse life forms)
+
+Age of dinosaurs
+
+Rise of mammals & humans.
+
+Fossil replicas and 3D-printed ancient creatures.
+
+🔹 Earth’s Dynamic Changes
+
+Interactive continental drift table showing Pangaea → today’s continents.
+
+Earthquake & volcano AR simulation to feel Earth’s “living” nature.
+
+🔹 Human Age & Future
+
+Growth of civilizations (agriculture → industry → digital age).
+
+A reflective zone: “What’s Next for Earth?” → visitors vote on screens about climate, space colonization, sustainability.
+
+🌟 Why It’s Exciting
+
+Connects cosmos, geology, biology, and human history in one story.
+
+Combines visual effects + interactive learning.
+
+Sparks curiosity about both Earth’s past and its future.
+
+⚡ Short Museum Panel (70 words)
+
+Earth: Origin and Growth takes you on a 4.6-billion-year journey — from cosmic dust and molten beginnings to oceans, life, and civilizations. Witness the birth of continents, the rise of dinosaurs, and the emergence of humankind. Through interactive models, fossils, and AR experiences, discover how Earth has transformed across time. This exhibit reminds us that our planet is ever-changing — and our future depends on how we shape its next chapter.",earth-science,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756609250793-510459930.jpg,1,,"{""floor"":""first"",""x"":82.25,""y"":21}",82.25,21,,,{},2025-08-31T03:00:51.526Z,2025-08-31T03:00:51.526Z,true,,,,,
+cmewlzvub0005hnnp90mplad3,Hydroponic Farming,"The Hydroponic Farming exhibit demonstrates how plants can be grown without soil, using nutrient-rich water solutions instead. This modern farming method allows crops to grow faster, use less water, and produce higher yields in smaller spaces.
+
+Visitors see different hydroponic systems like:
+
+NFT (Nutrient Film Technique) – thin streams of nutrient water flow past plant roots.
+
+Deep Water Culture – plant roots are suspended directly in nutrient water.
+
+Drip System – nutrients are dripped slowly near plant roots.
+
+Vertical Farming Setup – maximizing space by growing crops in stacked layers.
+
+The exhibit usually displays crops like lettuce, spinach, herbs, and strawberries thriving in a soil-free setup, showcasing sustainable urban farming.
+
+✨ Learning Outcome
+
+Understand how plants absorb nutrients directly from water.
+
+See how hydroponics saves up to 90% more water compared to traditional farming.
+
+Learn about future solutions for urban food security and space farming.",earth-science,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756458425758-172967668.jpg,1,,"{""floor"":""first"",""x"":6.75,""y"":53}",6.75,53,,,{},2025-08-29T09:07:06.612Z,2025-08-29T09:07:06.612Z,true,,,,,
+cmewmaiz80009hnnpozh45rep,Mining in the Ocean,"The ocean floor hides vast mineral resources, including manganese nodules, cobalt, nickel, copper, and rare earth metals, which are critical for batteries, electronics, and renewable energy technologies. Deep-sea mining explores these resources using advanced submarines and robotic machines.
+
+Key Features of the Exhibit:
+
+3D Seafloor Model: Showing hydrothermal vents, polymetallic nodules, and mining zones.
+
+Mining Robots: Miniature models of robotic arms/vehicles that collect minerals.
+
+Video/AR Display: How mining machines work at depths of 4,000–6,000 meters.
+
+Benefits: Source of critical minerals for electric vehicles, solar panels, and electronics.
+
+Concerns: Environmental impact on marine ecosystems, biodiversity loss, and ocean health.
+
+💡 Interactive Element
+
+Visitors can control a mini robotic arm (simulator) to “pick up” nodules from a sandbox-like ocean model.
+
+Side panel quiz: “Should we mine the ocean or recycle better?”
+
+✨ Learning Outcome
+
+Understand the importance of deep-sea resources in future technologies.
+
+Learn about the ethical dilemma: economic benefits vs environmental risks.
+
+Inspire innovation in sustainable alternatives (like recycling and biomining).",earth-science,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756458921025-112544816.jpg; exhibit-1756458921105-794617067.jpg; exhibit-1756458921202-982528230.jpg,3,,"{""floor"":""first"",""x"":4.583333333333333,""y"":46.666666666666664}",4.583333333333333,46.666666666666664,,,{},2025-08-29T09:15:23.156Z,2025-08-29T09:15:23.156Z,true,,,,,
+cmeibo43v00059wf6eg8hgl2f,Satyendra Nath Bose,"This exhibit honors Satyendra Nath Bose (1894–1974), one of India’s most brilliant physicists, best known for his work with Albert Einstein that laid the foundation for Bose–Einstein Statistics and the discovery of the Bose–Einstein Condensate (BEC).
+
+The gallery section introduces visitors to his life, research journey, and contributions:
+
+How Bose derived the statistics of photons and sent his paper directly to Einstein.
+
+Einstein’s recognition and collaboration, leading to the birth of quantum statistics.
+
+His impact on particle physics — the naming of “Bosons” after him.",earth-science,"Dehradun, Uttarakhand, India",outside,researchers,passive,outdoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1755594553516-47396199.jpg,1,,"{""floor"":""outside"",""x"":46.6875,""y"":33.4}",46.6875,33.4,,,{},2025-08-19T09:09:14.827Z,2025-08-20T10:18:39.815Z,true,,,,,
+cmewls3tr0002hnnp8c0zcb48,Soil Parameter,"The Soil Parameter exhibit demonstrates how different soil properties are measured and why they are crucial for agriculture, construction, and environmental studies. Visitors learn about important soil parameters such as:
+
+Soil Texture (sand, silt, clay composition)
+
+Moisture Content (amount of water held in the soil)
+
+pH Value (acidity or alkalinity affecting plant growth)
+
+Nutrient Levels (nitrogen, phosphorus, potassium, etc.)
+
+Soil Temperature (influences seed germination and microbial activity)
+
+Through models and interactive sensors, the exhibit explains how scientists and farmers assess soil quality to decide which crops grow best in different regions and how to maintain soil fertility.
+
+✨ Learning Outcome
+
+Understand how soil properties affect plant growth and ecosystem balance.
+
+Learn how soil testing helps in sustainable agriculture and land use planning.
+
+Appreciate the role of science and technology in food security.",earth-science,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756458062009-373611741.jpg; exhibit-1756458062187-415865764.jpg,2,,"{""floor"":""first"",""x"":6.083333333333334,""y"":45.83333333333333}",6.083333333333334,45.83333333333333,,,{},2025-08-29T09:01:03.695Z,2025-08-29T09:01:03.695Z,true,,,,,
+cmez49ljd0018hnnp2ajozdxn,The Soil & Physiography of the Himalayas,"1️⃣ Origin of Himalayan Rocks
+
+The Himalayas were formed about 50 million years ago when the Indian Plate collided with the Eurasian Plate.
+
+This collision lifted up ancient sedimentary rocks from the Tethys Sea.
+
+Rocks found in the Himalayas include:
+
+Sedimentary rocks (limestone, shale, sandstone) → from ancient seas.
+
+Metamorphic rocks (gneiss, schist, marble) → formed by pressure & heat.
+
+Igneous rocks (granite, basalt) → deep-seated and uplifted.
+
+2️⃣ Soils of the Himalayas
+
+The soil is young, immature, and thin due to steep slopes, erosion, and landslides.
+
+Alluvial soils – found in valleys & foothills, fertile.
+
+Brown forest soils – in middle Himalayas, suitable for cultivation.
+
+Mountain meadow soils – in higher altitudes, rich in organic matter (humus).
+
+Glacial soils – found in high Himalayan regions near glaciers.
+
+3️⃣ Himalayan Physiography (Three Zones)
+
+The Himalayas are divided into three parallel ranges/zones:
+
+🔹 a) Greater Himalayas (Himadri)
+
+Highest range (Mt. Everest, Kanchenjunga).
+
+Average height: 6,000 m and above.
+
+Composed mainly of crystalline rocks (granite, gneiss).
+
+Glaciers and perpetual snow present.
+
+🔹 b) Lesser Himalayas (Himachal)
+
+Average height: 3,500–5,000 m.
+
+Formed of slates, limestone, quartzite.
+
+Valleys like Kangra, Kullu, Kashmir Valley.
+
+🔹 c) Outer Himalayas (Shiwaliks)
+
+Lowest range (900–1,200 m).
+
+Made of unconsolidated sediments (sandstone, conglomerates).
+
+Formed from debris brought down by rivers.
+
+Known for Duns (valleys) like Dehradun.
+
+4️⃣ Key Insight
+
+The Himalayas are geologically young and still rising.
+
+Rocks here are a mixture of old marine sediments and newly metamorphosed formations.
+
+Soils are not very developed due to erosion and landslides, but valleys are fertile.
+
+The physiographic division reflects the gradual rise from plains to the highest peaks.",earth-science,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756610044104-673858144.jpg,1,,"{""floor"":""first"",""x"":92.75,""y"":25}",92.75,25,,,{},2025-08-31T03:14:05.256Z,2025-08-31T03:14:05.256Z,true,,,,,
+cmez3xyvp0016hnnpwp8aqp2c,Top 10 Highest Himalayan Peaks,"This exhibit showcases the ten tallest mountain peaks of the Himalayas — the world’s youngest and highest mountain range. Stretching across five countries (India, Nepal, Bhutan, China, and Pakistan), the Himalayas are home to awe-inspiring peaks that have challenged and inspired explorers, mountaineers, and spiritual seekers for centuries.
+
+Highlights:
+
+Mount Everest (8,848 m) – The highest peak in the world, located on the Nepal–China border.
+
+K2 (8,611 m) – Known as the “Savage Mountain,” the second-highest, located in Pakistan-administered Kashmir.
+
+Kangchenjunga (8,586 m) – India’s highest peak, on the India–Nepal border.
+
+Lhotse (8,516 m) – Near Everest, famed for its steep faces.
+
+Makalu (8,485 m) – A pyramid-shaped mountain near Everest.
+
+Cho Oyu (8,188 m) – The “Turquoise Goddess,” located on the Nepal–China border.
+
+Dhaulagiri I (8,167 m) – Known for its dramatic rise above the Kali Gandaki Gorge in Nepal.
+
+Manaslu (8,163 m) – The “Mountain of the Spirit,” in Nepal.
+
+Nanga Parbat (8,126 m) – The “Killer Mountain,” located in Pakistan.
+
+Annapurna I (8,091 m) – A dangerous yet majestic peak in Nepal.
+
+Scientific & Cultural Importance:
+
+These peaks influence climate, rivers, and biodiversity across Asia.
+
+Sacred in Hinduism and Buddhism, many are worshiped as abodes of gods.
+
+The Himalayas act as a natural barrier and a source of fresh water for billions.",earth-science,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756609501817-888741611.jpg,1,,"{""floor"":""first"",""x"":82.08333333333333,""y"":28.166666666666668}",82.08333333333333,28.166666666666668,,,{},2025-08-31T03:05:02.677Z,2025-08-31T03:05:02.677Z,true,,,,,
+cmezfxktb0001374k8521626m,🌊⛰️ Riverbeds of the Himalayas,"🏞️ What is a Riverbed?
+
+The riverbed is the ground at the bottom of a river where water flows.
+
+In the Himalayas, riverbeds are made of rocks, pebbles, sand, and silt carried down from the mountains.
+
+🌀 Himalayan Riverbeds
+
+Himalayan rivers like the Ganga, Yamuna, Brahmaputra, and Indus rush down steep slopes.
+
+Their fast flow erodes rocks and deposits gravel and sand in the riverbeds.
+
+In the plains, riverbeds become wider, with fertile silt that supports farming.
+
+💎 Treasures of Riverbeds
+
+Pebbles & boulders: Worn smooth by flowing water.
+
+Fossils & minerals: Found in some Himalayan riverbeds.
+
+Shaligrams (ammonite fossils) are found in riverbeds of the Gandaki River in Nepal.
+
+🌱 Why are Riverbeds Important?
+
+Provide freshwater for drinking and farming.
+
+Create fertile soil for agriculture.
+
+Home to aquatic life like fish and plants.
+
+Support traditional livelihoods (fishing, sand collection, small irrigation).
+
+⚡ Did you know?
+In monsoon, Himalayan riverbeds can change shape overnight due to floods, forming new channels and islands!",earth-science,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756629636012-669983802.jpg; exhibit-1756629636194-992603500.jpg,2,,"{""floor"":""first"",""x"":94.25,""y"":31.833333333333336}",94.25,31.833333333333336,,,{},2025-08-31T08:40:39.837Z,2025-08-31T08:40:39.837Z,true,,,,,
+cmezfw12e0000374kath5uxii,🦴⛰️ Himalayan Fossils,"Ancient Seas in the Sky
+
+Believe it or not, the Himalayas were once under the sea!
+
+Around 50 million years ago, the Indian Plate collided with the Eurasian Plate, pushing up the ocean floor to form the mountains.
+
+That’s why you can find marine fossils — seashells, corals, and even ammonites — high up in the Himalayas, thousands of meters above sea level.
+
+🌀 Ammonites – The Sacred Fossils
+
+Fossils of spiral-shaped sea creatures called ammonites (locally known as Shaligrams) are found in rivers like the Gandaki in Nepal.
+
+In Hindu tradition, these fossils are considered sacred symbols of Lord Vishnu.
+
+They link science, culture, and spirituality in a unique way.
+
+🌿 Traces of Ancient Life
+
+Fossils of plants, reptiles, and mammals have also been discovered, revealing how the Himalayas evolved from tropical forests to icy peaks.
+
+These fossils help scientists reconstruct past climates and understand how life adapted to rising mountains.",earth-science,"Dehradun, Uttarakhand, India",first,families,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756629563168-539756.jpg; exhibit-1756629563608-796922857.jpg; exhibit-1756629563921-198753595.jpg,3,,"{""floor"":""first"",""x"":90.08333333333334,""y"":28.833333333333332}",90.08333333333334,28.833333333333332,,,{},2025-08-31T08:39:27.587Z,2025-08-31T08:39:27.587Z,true,,,,,
+cmewn1e4s000khnnp953u5426,Nuclear Energy and Efficient Power Distribution,"This exhibit explains how nuclear energy is generated by controlled nuclear fission reactions inside a reactor and then distributed efficiently through advanced power grids. Nuclear power plants produce enormous amounts of energy with minimal carbon emissions. Modern smart grids ensure that this electricity is transmitted efficiently, minimizing wastage and balancing demand across cities and industries.
+
+✨ Applications
+
+Large-Scale Electricity – powers entire cities from a single plant.
+
+Low Carbon Footprint – sustainable alternative to coal and oil.
+
+Efficient Distribution – smart grids reduce power loss and ensure reliable supply.
+
+🎯 Learning Outcome
+
+Understand how nuclear fission produces usable energy.
+
+Recognize the role of safety & efficiency in nuclear plants.
+
+Learn how modern power grids distribute electricity effectively.",energy,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756460175700-62451594.jpg,1,,"{""floor"":""first"",""x"":0.9166666666666666,""y"":21.833333333333332}",0.9166666666666666,21.833333333333332,,,{},2025-08-29T09:36:16.588Z,2025-08-29T09:36:16.588Z,true,,,,,
+cmeifi1000003gjwk2cwfalhb,Amarnath Cave,"This exhibit is a constructed cave model built to represent the holy Amarnath Cave in Kashmir. Inside the model, a symbolic ice-lingam structure has been shown, reflecting the natural ice stalagmite formation that occurs in the real Amarnath Cave.
+
+The purpose of this depiction is to familiarize visitors with the cultural and spiritual importance of Amarnath Yatra and to highlight the natural phenomenon of stalagmite formation. It does not recreate the full cave but offers a miniaturized symbolic view for educational and cultural awareness.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1755600988364-138296917.jpg,1,,"{""floor"":""first"",""x"":92.91666666666667,""y"":46.166666666666664}",92.91666666666667,46.166666666666664,,,{},2025-08-19T10:56:29.312Z,2025-08-20T10:18:39.860Z,true,,,,,
+cmez4oajg001dhnnpzu1sbvez,Biodiversity of Uttarakhand,"Uttarakhand, often called the “Abode of the Gods”, is not only culturally rich but also one of the most ecologically diverse regions of India. The unique geography — ranging from the Shivalik hills to the Greater Himalayas — supports a wide range of flora and fauna.
+
+Flora 🌱
+
+Over 3,000 species of flowering plants, including rhododendrons, orchids, and medicinal herbs.
+
+Dense forests of pine, deodar, oak, and sal.
+
+Rich source of Ayurvedic medicinal plants like ashwagandha, kutki, and jatamansi.
+
+Fauna 🐾
+
+Home to rare and endangered species:
+
+Snow Leopard
+
+Musk Deer
+
+Himalayan Monal (state bird)
+
+Bengal Tiger (Corbett Tiger Reserve)
+
+Over 500 species of birds, making it a paradise for birdwatchers.
+
+Protected Areas & National Parks 🏞️
+
+Jim Corbett National Park – India’s first national park.
+
+Nanda Devi Biosphere Reserve – UNESCO World Heritage Site.
+
+Valley of Flowers – famous for its alpine meadows and seasonal blooms.
+
+Rajaji National Park – rich in elephants and birdlife.
+
+Significance 🌍
+
+Provides ecological balance and climate regulation.
+
+Source of Himalayan rivers that sustain life downstream.
+
+Supports local culture, traditions, and livelihoods through forests, agriculture, and eco-tourism.
+
+📌 Conclusion: Uttarakhand’s biodiversity is its true treasure — a delicate balance of mountains, forests, wildlife, and people, making it one of the richest natural heritage regions in the world. 🌿✨",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756610729915-816735072.jpg,1,,"{""floor"":""first"",""x"":79.91666666666667,""y"":36.5}",79.91666666666667,36.5,,,{},2025-08-31T03:25:30.843Z,2025-08-31T03:25:30.843Z,true,,,,,
+cmeidtzf00000gjwkywuls12v,Bird in Cage,"The Bird in Cage exhibit is a classic optical illusion that excites children and adults alike. A simple card with a bird on one side and a cage on the other is fixed on strings. When the card is rapidly rotated, our eyes merge the two separate images into one — making it look like the bird is sitting inside the cage. This phenomenon occurs because the human eye retains an image for a brief moment even after it disappears. The exhibit beautifully demonstrates persistence of vision, the very principle that makes motion pictures and animations possible.",environment,"Dehradun, Uttarakhand, India",outside,researchers,passive,outdoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1755598185915-413145070.jpg,1,,"{""floor"":""outside"",""x"":30.562499999999996,""y"":59.4}",30.562499999999996,59.4,,,{},2025-08-19T10:09:47.913Z,2025-08-20T10:18:39.832Z,true,,,,,
+cmeie1duc0002gjwkj2ko9wqr,Corythosaurus,"The exhibit displays a life-sized Corythosaurus model, often with its distinctive helmet-like crest. Information panels explain how paleontologists study fossilized bones and compare them with modern species (like birds and reptiles) to understand dinosaur behavior, diet, and environment. Children particularly enjoy the scale of the dinosaur, helping them imagine a world where these giants roamed.",environment,"Dehradun, Uttarakhand, India",outside,families,passive,outdoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1755598531632-808195609.jpg,1,,"{""floor"":""outside"",""x"":45.8125,""y"":64.4}",45.8125,64.4,,,{},2025-08-19T10:15:33.204Z,2025-08-20T10:18:39.847Z,true,,,,,
+cmewluqzt0003hnnptsynidiz,Food Irrigation,"The Food Irrigation exhibit highlights the vital role of irrigation systems in modern agriculture and food production. Water is a key resource for growing crops, and its efficient use ensures both higher yield and sustainability.
+
+The exhibit demonstrates different irrigation techniques such as:
+
+Traditional Irrigation – canals, surface flooding.
+
+Sprinkler Irrigation – mimicking rainfall using rotating sprinklers.
+
+Drip Irrigation – water delivered directly to the roots, conserving water.
+
+Smart Irrigation – automated systems using soil moisture sensors and satellite data.
+
+Interactive displays may allow visitors to control water flow through different irrigation methods and observe how water efficiency and crop growth vary.
+
+✨ Learning Outcome
+
+Understand the importance of irrigation in food security.
+
+Compare traditional vs modern irrigation techniques.
+
+Learn how water conservation and efficient irrigation help fight drought and climate change.",environment,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756458186235-23043417.jpg,1,,"{""floor"":""first"",""x"":7.75,""y"":48.66666666666667}",7.75,48.66666666666667,,,{},2025-08-29T09:03:07.049Z,2025-08-29T09:03:07.049Z,true,,,,,
+cmez4jnl0001bhnnp7998xxcl,Frozen Himalayas ❄️🏔️,"The Himalayas, also called the “Third Pole,” contain the largest amount of frozen water outside the Arctic and Antarctic. These frozen landscapes — glaciers, snowfields, and permafrost — form the lifeline of Asia.
+
+Key Features of the Frozen Himalayas
+1. Snow-Capped Peaks
+
+Home to the world’s highest mountains (Mount Everest, Kanchenjunga, Nanda Devi, etc.).
+
+Snow cover reflects sunlight and regulates Earth’s temperature balance (albedo effect).
+
+2. Glaciers of the Himalayas
+
+More than 9,500 glaciers.
+
+Examples: Siachen, Gangotri, Zemu, Baltoro.
+
+Called the “Water Towers of Asia” because they feed rivers like the Ganga, Indus, and Brahmaputra.
+
+3. Permafrost
+
+Permanently frozen ground at high altitudes.
+
+Stores carbon and water — sensitive to climate change.
+
+4. Frozen Rivers and Lakes
+
+Lakes like Pangong Tso and Tso Moriri partially freeze in winter.
+
+Frozen rivers like the Zanskar (Chadar Trek) provide unique cultural and adventure experiences.
+
+Importance of the Frozen Himalayas
+
+🌊 Water Source → Sustains 1.3 billion people through rivers.
+
+🌾 Agriculture → Meltwater irrigates the Indo-Gangetic plains.
+
+⚡ Hydropower → Provides energy through Himalayan rivers.
+
+🐾 Ecosystem → Supports snow leopard, Himalayan tahr, musk deer, etc.
+
+🌍 Climate Regulator → Controls monsoon patterns and global climate.
+
+Threats to the Frozen Himalayas
+
+Glacier Retreat due to global warming.
+
+Glacial Lake Outburst Floods (GLOFs) causing disasters.
+
+Shrinking snowline → affecting rivers and farming.
+
+Rising temperatures → melting permafrost.
+
+Exhibit / Display Idea
+
+A giant 3D Himalayan model showing snow peaks, glaciers, frozen rivers.
+
+Interactive screens: Before & After images of glacier retreat.
+
+Short film: “Frozen Himalayas – Lifeline of Asia”.
+
+✨ The “Frozen Himalayas” is both a symbol of beauty and a warning of climate change.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756610513565-179224673.jpg,1,,"{""floor"":""first"",""x"":91.91666666666667,""y"":32.83333333333333}",91.91666666666667,32.83333333333333,,,{},2025-08-31T03:21:54.468Z,2025-08-31T03:21:54.468Z,true,,,,,
+cmewm1x0a0006hnnpdkwe3mga,Future Farming,"The Future Farming exhibit explores how advanced technologies are transforming the way food is grown, harvested, and delivered. It shows the shift from traditional methods to smart, efficient, and sustainable practices that will feed the world’s growing population.
+
+The exhibit highlights concepts such as:
+
+Smart Farming (Precision Agriculture) – using drones, IoT sensors, and AI to monitor soil health, crop growth, and irrigation.
+
+Vertical & Hydroponic Farming – growing crops in stacked structures without soil.
+
+Aeroponics – plants suspended in air and sprayed with nutrient mist.
+
+Robotics & Automation – AI-powered robots for planting, harvesting, and crop monitoring.
+
+Genetic Engineering & CRISPR – developing disease-resistant and high-yield crops.
+
+Climate-Resilient Agriculture – techniques to grow food in harsh climates.
+
+A mini interactive model or AR display may allow visitors to see how these future farms look — from skyscraper farms in cities to automated greenhouses in deserts.
+
+✨ Learning Outcome
+
+Understand how technology integrates with agriculture.
+
+Learn about sustainability solutions for global food security.
+
+Explore how farming may look in 2050 and beyond.",environment,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756458520673-133658506.jpg,1,,"{""floor"":""first"",""x"":5.916666666666667,""y"":51}",5.916666666666667,51,,,{},2025-08-29T09:08:41.434Z,2025-08-29T09:08:41.434Z,true,,,,,
+cmeiaal7i0000osbs6mgxph2x,Himalaya Gallery,"This gallery is thematic, combining science, geography, biodiversity, culture, and exploration history related to the Himalayas, with special emphasis on Uttarakhand.
+
+🔹 Key Exhibit Themes
+
+Geography & Exploration
+
+Highest 10 Himalayan Peaks
+
+Mountain Passes
+
+Khumbu Glacier
+
+Everest Expedition Models
+
+Surveying & Mapping (Nain Singh Rawat, Radhanath Sikdar)
+
+Nature & Environment
+
+Himalayan Biodiversity
+
+Uttarakhand Endemic Species
+
+Herbal & Healing Flora
+
+Glacial & Frozen Zones
+
+Himalayan Climate Zones
+
+River Systems & Lakes
+
+Disaster & Natural Calamity Patterns
+
+Culture & Heritage
+
+Amarnath Cave Replica (Ice Lingam)
+
+Folklore & Traditional Knowledge Systems
+
+Sacred Sites & Pilgrimage Trails
+
+Regional Superfoods & Traditional Diets
+
+Sustainability & Human Practices
+
+Water Harvesting Techniques
+
+Himalayan Adventure Sports
+
+Uttarakhand Tourism Highlights",environment,"Dehradun, Uttarakhand, India",first,families,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1755592244172-300777207.png,1,Audio Guide; Interactive Touch; Live Demonstrations; Video Content; 3D Models; Guided Tours,"{""floor"":""first"",""x"":83.41666666666666,""y"":25.5}",83.41666666666666,25.5,,,{},2025-08-19T08:30:44.187Z,2025-08-20T10:18:39.721Z,false,,,,,
+cmeib0abp0000jsz4oq4x1n8y,Himalaya Gallery,"This gallery is thematic, combining science, geography, biodiversity, culture, and exploration history related to the Himalayas, with special emphasis on Uttarakhand.
+
+🔹 Key Exhibit Themes
+
+Geography & Exploration
+
+Highest 10 Himalayan Peaks
+
+Mountain Passes
+
+Khumbu Glacier
+
+Everest Expedition Models
+
+Surveying & Mapping (Nain Singh Rawat, Radhanath Sikdar)
+
+Nature & Environment
+
+Himalayan Biodiversity
+
+Uttarakhand Endemic Species
+
+Herbal & Healing Flora
+
+Glacial & Frozen Zones
+
+Himalayan Climate Zones
+
+River Systems & Lakes
+
+Disaster & Natural Calamity Patterns
+
+Culture & Heritage
+
+Amarnath Cave Replica (Ice Lingam)
+
+Folklore & Traditional Knowledge Systems
+
+Sacred Sites & Pilgrimage Trails
+
+Regional Superfoods & Traditional Diets
+
+Sustainability & Human Practices
+
+Water Harvesting Techniques
+
+Himalayan Adventure Sports
+
+Uttarakhand Tourism Highlights",environment,"Dehradun, Uttarakhand, India",first,families,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1755593442972-970955999.jpg,1,Audio Guide; Interactive Touch; Live Demonstrations; Video Content; 3D Models; Guided Tours,"{""floor"":""first"",""x"":86.75,""y"":26}",86.75,26,,,{},2025-08-19T08:50:43.122Z,2025-08-20T10:18:39.758Z,true,,,,,
+cmez523gf001ihnnpv8j9t5ua,Himalayan Way of Life,"The Himalayas are not just mountains; they are home to millions of people whose lives are deeply intertwined with nature. Despite harsh terrain and climatic challenges, the Himalayan communities have developed unique traditions, sustainable practices, and rich cultural heritage that reflect resilience and harmony with their environment.
+
+Key Features of the Exhibit
+1. Traditional Settlements
+
+Villages perched on hill slopes, built with locally available stone, mud, and wood.
+
+Architecture designed for cold climates — sloping roofs, small windows, and thick walls.
+
+2. Agriculture & Livelihoods
+
+Terrace farming for crops like rice, barley, and maize.
+
+Cultivation of cash crops: apples, tea, cardamom, saffron.
+
+Pastoralism: Nomadic groups like the Gaddis and Bhotiyas herd sheep, yak, and goats.
+
+3. Food & Cuisine
+
+Simple, energy-rich diets: dal, rice, barley bread, yak butter tea, and fermented foods.
+
+Regional delicacies: Momos, Thukpa, Mandua roti, and local herbs.
+
+4. Clothing & Lifestyle
+
+Wool-based clothing for warmth: pashmina, yak wool shawls, and hand-knitted sweaters.
+
+Jewelry and ornaments with cultural symbolism.
+
+5. Religion & Spirituality
+
+Influence of Hinduism, Buddhism, and tribal animistic beliefs.
+
+Monasteries, temples, and sacred peaks (like Kailash, Nanda Devi).
+
+Festivals: Losar, Hemis, Phool Dei, and Jagar (folk rituals).
+
+6. Arts & Crafts
+
+Handwoven carpets, wooden carvings, stone pottery, and Thangka paintings.
+
+Folk dances like Chholiya and music with traditional instruments (damau, hudka).
+
+7. Challenges of Modern Life
+
+Migration due to lack of resources and opportunities.
+
+Climate change impacts: retreating glaciers, reduced agricultural productivity.
+
+Efforts toward sustainable tourism, eco-villages, and organic farming.
+
+Interactive Elements for Exhibit
+
+3D village model showing traditional Himalayan homes.
+
+Virtual kitchen corner with aroma screens displaying local foods.
+
+Touch screens showcasing folk dances, music, and rituals.
+
+VR Trek experience: A walk through Himalayan villages and monasteries.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756611373881-505638535.jpg,1,,"{""floor"":""first"",""x"":97.58333333333333,""y"":37.666666666666664}",97.58333333333333,37.666666666666664,,,{},2025-08-31T03:36:14.846Z,2025-08-31T03:36:14.846Z,true,,,,,
+cmez4m7o1001chnnpmk92jm6v,Lakes of the Himalayas 🏔️💧,"The Himalayas are dotted with hundreds of lakes, ranging from tiny glacial tarns to large freshwater and saltwater bodies.
+
+Types of Himalayan Lakes
+
+Glacial Lakes
+
+Formed by melting glaciers.
+
+Example: Gurudongmar (Sikkim), Tso Moriri (Ladakh), Chandratal (Himachal).
+
+Tectonic Lakes
+
+Formed due to earth’s crust movements.
+
+Example: Nainital, Bhimtal (Kumaon Hills, Uttarakhand).
+
+Moraine-Dammed Lakes
+
+Created when debris left by glaciers blocks water.
+
+Example: Gokyo Lakes (Nepal Himalayas).
+
+Saltwater (High-Altitude) Lakes
+
+Found in cold deserts of Ladakh & Tibet.
+
+Example: Pangong Tso (India-China), Tso Kar (Ladakh).
+
+Famous Lakes in the Himalayas
+Jammu & Kashmir
+
+Dal Lake → Srinagar’s jewel, houseboats and shikaras.
+
+Wular Lake → One of Asia’s largest freshwater lakes.
+
+Mansar & Surinsar → Sacred lakes.
+
+Ladakh
+
+Pangong Tso → Famous blue lake, part in China.
+
+Tso Moriri → High-altitude freshwater lake, bird habitat.
+
+Tso Kar → Salt lake, wetland ecosystem.
+
+Himachal Pradesh
+
+Rewalsar Lake → Sacred to Hindus, Sikhs, Buddhists.
+
+Chandratal → “Moon Lake”, glacial.
+
+Renuka Lake → Largest natural lake in Himachal.
+
+Uttarakhand (Land of Lakes)
+
+Nainital → Shaped like an eye.
+
+Bhimtal, Naukuchiatal, Sattal → Cluster of scenic lakes.
+
+Hemkund Sahib Lake → Sacred Sikh pilgrimage.
+
+Sikkim & Arunachal Pradesh
+
+Gurudongmar Lake (Sikkim) → One of the highest lakes in the world.
+
+Tsongmo / Changu Lake (Sikkim) → Sacred glacial lake.
+
+Shonga-tser Lake (Arunachal) → Formed by 1950 Assam earthquake.
+
+Nepal Himalayas
+
+Tilicho Lake → World’s highest lake (~4900m).
+
+Gokyo Lakes → UNESCO World Heritage Site.
+
+Rara Lake → Nepal’s largest lake.
+
+Importance of Himalayan Lakes
+
+🌊 Water Reservoirs → Source of rivers and streams.
+
+🌱 Biodiversity → Wetlands for migratory birds, fish.
+
+🕉️ Sacred Value → Pilgrimage spots (Hemkund, Mansarovar, Gurudongmar).
+
+🌍 Tourism → Trekking, boating, spiritual tourism.
+
+⚠️ Climate Indicators → Sensitive to global warming, glacier retreat, GLOF risks.
+
+Exhibit Idea: “Lakes of the Himalayas”
+
+3D Relief Map → Lakes glowing in blue on the Himalayan belt.
+
+Interactive Touchscreen → Tap a lake to see pictures, myths, biodiversity.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756610632993-653207905.jpg,1,,"{""floor"":""first"",""x"":80.91666666666667,""y"":33.166666666666664}",80.91666666666667,33.166666666666664,,,{},2025-08-31T03:23:53.808Z,2025-08-31T03:23:53.808Z,true,,,,,
+cmewm6pzy0007hnnp3u9skdyj,Meeting Ever-Increasing Needs,"The exhibit illustrates humanity’s growing demand for food, water, energy, housing, and healthcare, driven by population growth, urbanization, and industrialization. It emphasizes the challenges of balancing resources with sustainable living.
+
+Key themes covered:
+
+Population Explosion – how the global population crossed 8 billion and its effects.
+
+Food Security – increasing need for sustainable farming (linked with hydroponics, future farming).
+
+Energy Demand – reliance on renewable energy sources like solar, wind, and hydrogen.
+
+Water Scarcity – efficient irrigation, desalination, and water recycling.
+
+Housing & Urbanization – smart cities, vertical expansion, and eco-friendly construction.
+
+Healthcare & Medicine – growing demand for affordable and accessible treatment.
+
+Circular Economy – reusing, recycling, and reducing waste to sustain future generations.
+
+The exhibit can use infographics, 3D population counters, and interactive charts showing how demand has risen over time and projections for 2050 and 2100.
+
+✨ Learning Outcome
+
+Realize the pressure on natural resources due to rising demand.
+
+Understand the role of science and technology in solving future needs.
+
+Inspire visitors to think about sustainability and responsible consumption.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756458744799-838769298.jpg,1,,"{""floor"":""first"",""x"":1.5833333333333335,""y"":54.50000000000001}",1.5833333333333335,54.50000000000001,,,{},2025-08-29T09:12:25.629Z,2025-08-29T09:12:25.629Z,true,,,,,
+cmez4dt200019hnnp57bm9jir,Saga of Surveying,"The exploration and mapping of the mighty Himalayas was one of the most remarkable achievements of the 19th century. This saga is not only about mountains and maps but also about courage, scientific brilliance, and human determination. Three names stand out in this journey of surveying the ""roof of the world""—Radhanath Sikdar, Nain Singh Rawat, and Kishen Singh Milamwal.
+
+1. Radhanath Sikdar (1813 – 1870)
+
+An Indian mathematician and surveyor from Bengal.
+
+Known as the first person to calculate the height of Peak XV (later named Mount Everest) in 1852, proving it to be the world’s tallest mountain (29,002 ft at that time).
+
+Worked with Sir George Everest and Andrew Waugh during the Great Trigonometrical Survey of India (GTSI).
+
+His mathematical genius laid the foundation for accurate Himalayan cartography.
+
+📌 Legacy: Celebrated as the “unsung hero” who measured the highest peak of the world.
+
+2. Nain Singh Rawat (1830 – 1895)
+
+A legendary “Pundit Explorer” from Uttarakhand.
+
+Famous for his secret expeditions across Tibet, Central Asia, and the Himalayas, disguised as a trader.
+
+Mapped the course of the Tsangpo-Brahmaputra River, surveyed Lhasa (Tibet’s capital), and recorded trade routes and altitudes.
+
+Walked thousands of kilometers, counting his steps with a prayer wheel-like device to measure distance.
+
+📌 Recognition: Awarded the Patron’s Medal of the Royal Geographical Society, London, for his unparalleled contribution.
+
+3. Kishen Singh Milamwal (1850 – 1921)
+
+Cousin of Nain Singh Rawat, also trained as a Pundit Explorer.
+
+Conducted surveys in Tibet, Xinjiang, and Western China.
+
+Collected valuable data on geography, rivers, trade routes, and even cultural aspects of Central Asia.
+
+His notes remain crucial sources for historians and geographers studying the Himalayas and Tibet.
+
+📌 Contribution: Expanded the knowledge of areas then inaccessible to Europeans.
+
+Conclusion
+
+The saga of these Indian surveyors is a story of intellect, bravery, and endurance. With limited resources, under harsh climates, and often in disguise, they mapped the Himalayas and beyond, laying the foundation for modern geographical knowledge. Their legacy continues to inspire explorers and scientists across the world.",environment,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756610240838-197766662.jpg,1,,"{""floor"":""first"",""x"":93.08333333333333,""y"":27.500000000000004}",93.08333333333333,27.500000000000004,,,{},2025-08-31T03:17:21.624Z,2025-08-31T03:17:21.624Z,true,,,,,
+cmewmydse000jhnnp5x52sud4,Seaside Windmill,"The Seaside Windmill demonstrates how strong coastal winds are harnessed to generate clean, renewable electricity. Placed near shorelines, these windmills convert wind energy into mechanical rotation, which powers a generator to produce electricity.
+
+✨ Applications
+
+Sustainable Power – clean energy for coastal towns.
+
+Eco-friendly Alternative – reduces use of fossil fuels.
+
+Tourism & Innovation – often a landmark showcasing green technology.
+
+🎯 Learning Outcome
+
+Understand how wind energy is converted into electricity.
+
+Learn the importance of renewable energy for the future.
+
+Visualize why coastal regions are ideal for windmills.",environment,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756460035033-909335530.jpg; exhibit-1756460035111-86893870.jpg,2,,"{""floor"":""first"",""x"":1.25,""y"":29.333333333333332}",1.25,29.333333333333332,,,{},2025-08-29T09:33:56.174Z,2025-08-29T09:33:56.174Z,true,,,,,
+cmez4zole001hhnnpzr864be6,The Original Inhabitants of the Himalayas,"The Himalayas, apart from their grandeur, are also home to some of the world’s most ancient and resilient communities. These original inhabitants have adapted to the rugged terrain, harsh climate, and isolated valleys, creating unique cultures that are deeply connected to nature and spirituality.
+
+1. Major Indigenous Communities
+
+Bhotiyas
+
+Found in Uttarakhand and bordering Tibet.
+
+Traditionally nomadic traders between India and Tibet.
+
+Known for wool products (pashmina, carpets).
+
+Follow Tibetan Buddhism and Hinduism.
+
+Sherpas
+
+Famous mountain guides of Nepal.
+
+Inhabiting Solukhumbu and Khumbu valleys.
+
+Known for resilience in high altitudes.
+
+Tibetan Buddhist influence, monasteries central to culture.
+
+Lepchas
+
+Indigenous to Sikkim and Darjeeling Himalayas.
+
+Nature worshippers, strong belief in animism.
+
+Now also follow Buddhism and Christianity.
+
+Monpas and Apatanis (Arunachal Pradesh)
+
+Monpas practice Buddhism, live near Tawang.
+
+Apatanis famous for wet rice cultivation and unique traditions.
+
+Gaddis
+
+Semi-nomadic shepherds of Himachal Pradesh.
+
+Known for rearing sheep and goats, migrating with seasons.
+
+Kinnauras
+
+Found in Kinnaur district (Himachal Pradesh).
+
+Known for polyandry traditions (historically).
+
+Rich folk music and mythology (connection to Pandavas).
+
+Bhutias of Sikkim
+
+Tibetan origin, settled in Sikkim.
+
+Custodians of monasteries and lama traditions.
+
+Ladakhis (Changpas & Baltis)
+
+Changpas: Nomadic herders of yak and goats in high-altitude Ladakh.
+
+Baltis: Muslim community with Tibetan roots.
+
+2. Cultural Features
+
+Languages: Belong mostly to Tibeto-Burman and Indo-Aryan families.
+
+Occupations: Animal husbandry, agriculture, weaving, and trading.
+
+Religion: Blend of Hinduism, Buddhism, Bon traditions, and nature worship.
+
+Architecture: Stone and wood houses, monasteries, suspension bridges.
+
+Festivals: Losar (Tibetan New Year), Nanda Devi Raj Jat (Uttarakhand), Hemis festival (Ladakh).
+
+3. Adaptations to Himalayan Life
+
+High-altitude tolerance (Sherpas genetically adapted for oxygen).
+
+Warm clothing (yak wool, pashmina, felt).
+
+Terrace farming and unique irrigation systems.
+
+Use of local herbs and traditional medicine.
+
+4. Present Challenges
+
+Migration to cities due to lack of opportunities.
+
+Climate change affecting glaciers, rivers, and pastures.
+
+Cultural erosion with modernization.
+
+Tourism bringing both income and strain on ecosystems.
+
+Exhibit Ideas
+
+Life-size models of Bhotia traders, Sherpa climbers, and Lepcha farmers.
+
+Interactive maps showing where these communities live.
+
+Artifacts: Wool products, traditional dresses, tools, and musical instruments.
+
+Audio-visuals: Folk songs, festival dances, and rituals.
+
+✨ Essence: The original inhabitants of the Himalayas are not just survivors of harsh landscapes but custodians of ancient wisdom, sustainable living, and cultural heritage that continues to inspire the world.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756611261282-154124770.jpg,1,,"{""floor"":""first"",""x"":79.41666666666667,""y"":41.333333333333336}",79.41666666666667,41.333333333333336,,,{},2025-08-31T03:34:22.274Z,2025-08-31T03:34:22.274Z,true,,,,,
+cmez541i1001jhnnpp1xe4dxa,Uttarakhand – Land of Gods & Glaciers,"Uttarakhand, nestled in the lap of the central Himalayas, is a state known for its sacred rivers, spiritual shrines, snow-capped mountains, and rich cultural heritage. It is both a center of pilgrimage and a treasure of biodiversity, where tradition and modernity coexist.
+
+Key Sections of the Exhibit
+1. Geography & Nature
+
+Origin of the Ganga (Gangotri Glacier) and Yamuna (Yamunotri Glacier).
+
+Majestic Himalayan peaks: Nanda Devi, Trisul, Kedarnath, Panchachuli.
+
+Rich forests: oak, rhododendron, and pine; home to leopards, musk deer, and snow leopards.
+
+National Parks: Jim Corbett (India’s first tiger reserve), Valley of Flowers (UNESCO site).
+
+2. Pilgrimage & Spirituality
+
+The Char Dham Yatra: Kedarnath, Badrinath, Gangotri, Yamunotri.
+
+Haridwar & Rishikesh: global yoga and meditation hubs.
+
+Famous temples: Jageshwar, Baijnath, Neelkanth, Naina Devi.
+
+3. People & Culture
+
+Communities: Garhwalis & Kumaonis.
+
+Languages: Garhwali, Kumaoni, Jaunsari, Hindi.
+
+Rich folklore, oral traditions, and epics sung by bards (Jagars, Pandav Nritya).
+
+Festivals: Kumbh Mela (Haridwar), Ghee Sankranti, Phool Dei, Bikhauti Mela.
+
+4. Food & Lifestyle
+
+Rustic, wholesome food: Mandua (finger millet) roti, Bhatt ki churkani, Aloo ke gutke, Kafuli.
+
+Drinks: Buransh (rhododendron juice), hemp-based bhang ki chutney.
+
+Handwoven woollens: pashmina shawls, ringal bamboo crafts.
+
+5. Adventure & Tourism
+
+Trekking routes: Roopkund, Valley of Flowers, Kedarkantha.
+
+River rafting in Rishikesh.
+
+Skiing in Auli.
+
+Wildlife safaris in Corbett and Rajaji parks.
+
+6. Modern Uttarakhand
+
+Emerging hydropower hub (due to Himalayan rivers).
+
+Focus on eco-tourism and yoga tourism.
+
+Migration issues: ghost villages due to urban shift.
+
+Climate challenges: glacier melting, Kedarnath flood (2013).
+
+Interactive Ideas for the Exhibit
+
+Digital Map Wall: Touch any part of Uttarakhand to explore its peaks, rivers, temples.
+
+VR Pilgrimage: Experience the Char Dham Yatra.
+
+Folk Music Corner: Listen to Garhwali and Kumaoni songs with traditional instruments (dhol, damau, hudka).
+
+Food Kiosk Simulation: Explore local recipes and virtual cooking demos.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756611464641-531797311.jpg,1,,"{""floor"":""first"",""x"":96.75,""y"":33.33333333333333}",96.75,33.33333333333333,,,{},2025-08-31T03:37:45.624Z,2025-08-31T03:37:45.624Z,true,,,,,
+cmeidxcoc0001gjwknyhxs9ro,Whispering Garden,"The Whispering Garden exhibit allows two visitors to communicate across a large distance using only whispers. The secret lies in the parabolic shape of the reflectors: sound waves originating at the focal point of one dish reflect and travel in a straight line to the focal point of the opposite dish. This creates a magical effect — a person speaking very softly can be heard clearly at the other end, while nearby people cannot.
+
+The exhibit introduces visitors to the principles of sound wave reflection, parabolic geometry, and acoustic focusing. The same principle is applied in whispering galleries in cathedrals, satellite dishes, and even modern sound systems.",environment,"Dehradun, Uttarakhand, India",outside,families,passive,outdoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1755598343685-450986833.jpg,1,,"{""floor"":""outside"",""x"":34.0625,""y"":65.4}",34.0625,65.4,,,{},2025-08-19T10:12:25.066Z,2025-08-20T10:18:39.841Z,true,,,,,
+cmez6zrxe001phnnp78tzl9n9,🌀 Gharat – The Traditional Watermill of the Himalayas,"🔹 What is a Gharat?
+
+A Gharat is a traditional water-powered mill used in the Himalayan villages to grind grains like wheat, maize, and barley into flour. It is one of the most ingenious examples of sustainable, eco-friendly technology rooted in local wisdom.
+
+🔹 How it Works
+
+Water Source – A stream or small river is diverted through a wooden channel (called naula or gool).
+
+Vertical Wooden Shaft – The water strikes a wooden turbine (called pankha), making it rotate.
+
+Grinding Stones – The rotating shaft moves the upper stone against the lower stone to grind grains.
+
+Output – Fine, freshly ground flour is collected for household use.
+
+🔹 Significance in Himalayan Life
+
+Self-sufficient Villages – Every village traditionally had a Gharat, making communities independent for food processing.
+
+Community Ownership – Often shared by multiple families, promoting cooperation.
+
+Eco-Friendly – Works entirely on water power (zero pollution, zero fuel).
+
+Cultural Value – Associated with folk songs, stories, and local rituals.
+
+🔹 Challenges Today
+
+Decline due to electric mills and migration from villages.
+
+Reduced water flow in mountain streams because of climate change and hydropower projects.
+
+Traditional skills of building and repairing gharats are vanishing.
+
+🔹 Revival Efforts
+
+NGOs and local communities are modernizing gharats by attaching small turbines to generate micro-hydropower along with grinding.
+
+Promotion of heritage tourism around working gharats.
+
+✨ In essence:
+The Gharat is more than a machine — it is a symbol of Himalayan resilience, sustainability, and community living",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756614624627-231576379.jpg,1,,"{""floor"":""first"",""x"":81.91666666666667,""y"":55.666666666666664}",81.91666666666667,55.666666666666664,,,{},2025-08-31T04:30:25.826Z,2025-08-31T04:30:25.826Z,true,,,,,
+cmez4wfai001ghnnpkmdvtr80,🌊 The Himalayan River Explorer,"The Himalayas, often called the Water Tower of Asia, give birth to some of the world’s greatest rivers. These rivers flow across diverse landscapes, carving valleys, supporting civilizations, and nurturing biodiversity. The Himalayan River Explorer exhibit highlights the origin, journey, and importance of these lifelines.
+
+1. Major Rivers Originating from the Himalayas
+
+The Ganga – Origin: Gangotri Glacier, Uttarakhand. Sacred river of India.
+
+The Yamuna – Origin: Yamunotri Glacier. Atributary of the Ganga.
+
+The Indus – Origin: Kailash region, Tibet → flows through Ladakh and Pakistan.
+
+The Brahmaputra – Origin: Angsi Glacier, Tibet (as Yarlung Tsangpo) → enters India in Arunachal Pradesh.
+
+The Sutlej – Origin: Lake Rakshastal near Kailash, Tibet.
+
+The Beas & Ravi – Origin: Himachal Himalayas, flow into Punjab plains.
+
+2. Features of Himalayan Rivers
+
+Youthful & Energetic – Steep gradients, fast currents.
+
+Glacial Origin – Fed by snowmelt, glaciers, and rainfall.
+
+Alluvial Plains – Form fertile plains in the Indo-Gangetic belt.
+
+Meanders & Deltas – Create world’s largest delta (Sundarbans) through Ganga-Brahmaputra.
+
+Hydropower Potential – Huge energy source due to steep falls.
+
+3. Importance
+
+Agriculture – Irrigation for millions of hectares.
+
+Hydropower – Major dams (Bhakra-Nangal, Tehri, Nathpa Jhakri).
+
+Cultural – Sacred role in Hinduism & Buddhism.
+
+Biodiversity – Home to species like Gangetic dolphin & rich riverine ecosystems.
+
+Transport & Trade – Navigable stretches aid local economies.
+
+4. Adventure & Exploration
+
+Rafting Hotspots – Rishikesh (Ganga), Beas (Kullu), Zanskar (Ladakh).
+
+Scientific Studies – Mapping glaciers, measuring flow, studying climate change impacts.
+
+Historic Explorers – Ancient surveyors and modern hydrologists have documented the rivers’ course.
+
+5. Challenges
+
+Climate Change – Glacial retreat threatens river flow.
+
+Pollution – Industrial & domestic waste degrading water quality.
+
+Overuse – Dams, canals, and excessive withdrawal stressing ecosystems.
+
+Floods – Himalayan rivers are prone to devastating floods (e.g., Uttarakhand 2013).
+
+Interactive Exhibit Ideas
+
+Digital River Journey Map – Touchscreen to trace each river from glacier to sea.
+
+Glacier-to-Delta VR Experience – Explore how snow becomes a mighty river.
+
+River Soundscape – Sounds of rushing streams, gurgling rapids, and monsoon floods.
+
+Miniature Models – Scale models of river valleys, dams, and deltas.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756611109392-827289622.jpg,1,,"{""floor"":""first"",""x"":82.91666666666667,""y"":41.833333333333336}",82.91666666666667,41.833333333333336,,,{},2025-08-31T03:31:50.251Z,2025-08-31T03:31:50.251Z,true,,,,,
+cmez7inlh001vhnnp68xuve3f,🌊🌍 Floods and Earthquakes in the Himalayas,"🌊 Floods: Nature’s Fury
+
+The Himalayas receive intense monsoon rains. When rivers overflow, flash floods sweep away villages, fields, and roads.
+
+Melting glaciers form glacial lakes. Sometimes the ice dams burst — called Glacial Lake Outburst Floods (GLOFs) — releasing walls of water that destroy everything in their path.
+
+Examples: Kedarnath Floods (2013), Chamoli Disaster (2021).
+
+👉 Floods reshape valleys, cut off communities, and change rivers overnight.
+
+🌍 Earthquakes: Shaking Mountains
+
+The Himalayas are still growing because of the collision between the Indian Plate and the Eurasian Plate.
+
+This collision stores enormous tectonic energy, released suddenly as earthquakes.
+
+Some of the world’s most powerful quakes have shaken the region — like the Nepal Earthquake of 2015 (magnitude 7.8), which killed thousands and moved Mount Everest by a few centimeters!
+
+👉 Earthquakes remind us the Himalayas are alive — still rising, shifting, and reshaping Earth.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756615505694-668534437.jpg,1,,"{""floor"":""first"",""x"":83.75,""y"":40.5}",83.75,40.5,,,{},2025-08-31T04:45:06.677Z,2025-08-31T04:45:06.677Z,true,,,,,
+cmez7gnpj001uhnnp5y370euv,🌍 Believe It or Not: Climate Change in the Himalayas,"⚡ The Himalayas are melting faster than anywhere else on Earth!
+
+❄️ Fact 1: Some glaciers here could vanish by 2100, losing up to 80% of their ice.
+
+💧 Fact 2: More than 1.9 billion people depend on Himalayan rivers for water — but the taps may run dry in the future.
+
+🌧️ Fact 3: Rainfall has gone crazy — flash floods, landslides, and droughts are hitting the same regions within months.
+
+🦋 Fact 4: The snow leopard’s kingdom is shrinking every year. Rare herbs and crops are disappearing forever.
+
+👨‍👩‍👧‍👦 Fact 5: Entire villages are being forced to move because their homes are sinking, flooding, or drying out.
+
+🚨 Fact 6: Scientists call the Himalayas the “Third Pole” — if they melt, the whole planet will feel it.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756615412740-728311542.jpg,1,,"{""floor"":""first"",""x"":82.91666666666667,""y"":43.166666666666664}",82.91666666666667,43.166666666666664,,,{},2025-08-31T04:43:33.511Z,2025-08-31T04:43:33.511Z,true,,,,,
+cmez7dozh001thnnpl4olk6pv,🌍 Climate Change in the Himalayas,"The Himalayas, known as the “Third Pole” because of their vast ice reserves, are warming faster than the global average. This is already reshaping landscapes, water systems, and the lives of millions.
+
+❄️ Glacier Retreat
+
+Himalayan glaciers are shrinking rapidly due to rising temperatures.
+
+Some glaciers could lose up to 80% of their mass by 2100 if warming continues.
+
+Increased glacier melt causes glacial lake outburst floods (GLOFs), threatening mountain communities.
+
+💧 Water Security Risks
+
+Rivers like the Ganga, Indus, and Brahmaputra depend on Himalayan snow & ice.
+
+Short-term: more melt → floods.
+
+Long-term: less ice → water shortages for agriculture, drinking, and hydropower.
+
+🌧️ Changing Weather Patterns
+
+Erratic monsoons: more intense rainfall, longer dry spells.
+
+Flash floods & landslides becoming frequent in Uttarakhand, Himachal, and Nepal.
+
+Droughts in traditionally fertile valleys.
+
+🦋 Biodiversity Under Threat
+
+Alpine plants, snow leopards, red pandas, and medicinal herbs are losing habitat.
+
+Species are being forced to migrate upward to cooler zones, reducing biodiversity.
+
+Traditional crops (millets, barley) are also affected by shifting climate zones.
+
+👨‍👩‍👧‍👦 Impact on People
+
+Mountain communities face crop failure, floods, and migration.
+
+Traditional knowledge like gharat (water mills) and seasonal farming calendars is disrupted.
+
+Cultural heritage at risk as villages relocate from disaster-prone areas.
+
+🌱 Hope & Action
+
+Promoting climate-resilient crops (millets, buckwheat).
+
+Expanding renewable energy in mountain regions.
+
+Community-based glacier conservation projects (like artificial glaciers/ice stupas in Ladakh).
+
+Global action to limit warming is critical for Himalayan survival.
+
+🔎 Exhibit Ideas
+
+Before & After Glacier Photos: Show retreat over decades.
+
+Interactive River Flow Model: Demonstrate effects of glacier melt on water supply.
+
+Biodiversity Wall: Highlight species under threat and community conservation efforts.
+
+Future Map: What the Himalayas might look like in 2100 if action isn’t taken",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756615274120-270218257.jpg,1,,"{""floor"":""first"",""x"":83.08333333333333,""y"":45.166666666666664}",83.08333333333333,45.166666666666664,,,{},2025-08-31T04:41:15.196Z,2025-08-31T04:41:15.196Z,true,,,,,
+cmez6twd4001nhnnp9ogqiqje,🌍 Shaping The Landform,"Discover how Earth’s surface transforms through natural processes!
+
+Nature constantly reshapes our planet through erosion, weathering, and deposition, giving rise to majestic snowy peaks, deep valleys, and serene lakes.
+
+Interactive Experience 🎮
+
+Form a heap of sand with your hands to build mountains, valleys, and basins.
+
+Watch as the 3D topographic map comes alive with graduated colours:
+
+🏔️ White = Snow/Ice (highest peaks)
+
+⛰️ Brown/Green = Land elevations
+
+💧 Blue = Flowing rivers & lakes
+
+As you sculpt the sand, water flows realistically, collecting in the low-lying areas to form lakes and rivers — just like in the real world!
+
+✨ Play, experiment, and explore to understand how landscapes are shaped over time.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756614350619-553506464.jpg,1,,"{""floor"":""first"",""x"":85.75,""y"":42.5}",85.75,42.5,,,{},2025-08-31T04:25:51.623Z,2025-08-31T04:25:51.623Z,true,,,,,
+cmez4qjaf001ehnnpklsgl2s6,🌏 Incredible Himalayas,"The Himalayas — “Abode of Snow” — are the youngest and loftiest mountain range in the world, stretching over 2,400 km across India, Nepal, Bhutan, and Tibet. They are not just mountains, but the life-giving spine of Asia.
+
+Geological Marvel ⛰️
+
+Formed about 50 million years ago when the Indian Plate collided with the Eurasian Plate.
+
+Still rising every year (about 5 mm annually).
+
+Composed of rocks like limestone, sandstone, schist, and gneiss.
+
+Physiographic Divisions 🏞️
+
+Trans-Himalayas – Cold desert region (Ladakh, Tibet).
+
+Greater Himalayas (Himadri) – Lofty peaks like Mount Everest, Kanchenjunga, Nanda Devi.
+
+Lesser Himalayas (Himachal) – Valleys of Kashmir, Kangra, Kumaon.
+
+Shivaliks – Outer foothills, rich in forests and wildlife.
+
+The Water Tower of Asia 💧
+
+Source of mighty rivers: Ganga, Yamuna, Indus, Brahmaputra.
+
+Glaciers like Gangotri, Siachen, and Zemu act as freshwater reservoirs.
+
+Biodiversity Hotspot 🌿
+
+Forests of pine, oak, deodar, and rhododendron.
+
+Wildlife like snow leopard, red panda, Himalayan monal, musk deer.
+
+Alpine meadows (bugyals) and the Valley of Flowers.
+
+Cultural & Spiritual Significance 🕉️
+
+Home to holy shrines: Amarnath, Kedarnath, Badrinath, Kailash Mansarovar.
+
+Rich in myths, folklore, and ancient wisdom.
+
+Known as the “Dev Bhoomi” (Land of Gods) in Uttarakhand and Himachal.
+
+Strategic & Economic Value ⚔️
+
+Natural frontier of India.
+
+Tourism, pilgrimage, hydropower, and herbal wealth boost the economy.
+
+📌 Conclusion: The Himalayas are not only a natural wonder but also the guardian of culture, spirituality, rivers, and life for millions across South Asia. Truly Incredible Himalayas! 🌄✨",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756610834600-213897974.jpg,1,,"{""floor"":""first"",""x"":88.75,""y"":36.833333333333336}",88.75,36.833333333333336,,,{},2025-08-31T03:27:15.495Z,2025-08-31T03:27:15.495Z,true,,,,,
+cmez77y18001shnnp2loxfuho,🌏 The Himalayas & Climate Influence,"The Himalayas are often called the “Climate Regulator of the Indian Subcontinent”. Their towering peaks and vast expanse act as a giant natural barrier, shaping weather, monsoons, and even the global climate.
+
+🌬️ Barrier to Cold Winds
+
+The Himalayas block icy winds from Central Asia.
+
+This prevents Northern India from becoming as cold as Siberia.
+
+Creates a moderate winter climate for the Indo-Gangetic plains.
+
+🌧️ Monsoon Rainfall
+
+The Himalayas intercept moisture-laden monsoon winds from the Indian Ocean.
+
+The air rises, cools, and causes heavy rainfall on the southern slopes.
+
+This feeds the great rivers: Ganga, Yamuna, Brahmaputra.
+
+Rain shadow regions (Ladakh, Spiti) remain dry & cold.
+
+❄️ Glaciers & Water Reservoir
+
+Home to over 15,000 glaciers, also called the “Third Pole.”
+
+Source of perennial rivers that sustain millions.
+
+Acts as a freshwater reserve, vital for agriculture & drinking water.
+
+☀️ Temperature & Microclimates
+
+Different altitudes create diverse microclimates: tropical valleys, alpine meadows, snowy peaks.
+
+Regulates seasonal cycles in the subcontinent.
+
+Protects fertile plains and ensures year-round cultivation.
+
+🌍 Global Impact
+
+The Himalayas influence the jet streams and larger wind systems.
+
+Play a role in stabilizing the monsoon system that feeds nearly 40% of the world’s population.
+
+Climate change here directly affects sea levels, biodiversity, and weather patterns worldwide.
+
+🔎 Interactive Exhibit Ideas
+
+3D Wind & Rainfall Simulation: Show how monsoon winds hit the Himalayas and cause rainfall.
+
+Glacier Model: Interactive model showing how melting glaciers feed rivers.
+
+Climate Comparison Wall: Without Himalayas vs With Himalayas (temperature & rainfall differences).",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756615006218-971477710.jpg,1,,"{""floor"":""first"",""x"":84.41666666666666,""y"":51}",84.41666666666666,51,,,{},2025-08-31T04:36:46.987Z,2025-08-31T04:36:46.987Z,true,,,,,
+cmez57in9001khnnp7xh4cff2,🌸 The Cultural Identities of the Himalayas,"The Himalayas, often called the abode of snow, are not only a geographic marvel but also a cradle of diverse cultures, traditions, and spiritual beliefs. Stretching across India, Nepal, Bhutan, Tibet, and Pakistan, the Himalayas are home to communities whose identities are deeply intertwined with the mountains.
+
+🌏 1. Ethnic Diversity
+
+Indo-Aryan Communities: Found in the lower Himalayas (Uttarakhand, Himachal Pradesh), practicing Hinduism with strong folk traditions.
+
+Tibeto-Burman Groups: Found in Ladakh, Sikkim, Bhutan, Arunachal Pradesh, sharing cultural similarities with Tibet.
+
+Indigenous Tribes: Bhutias, Lepchas, Sherpas, Bhotiyas, Monpas, and Gaddis preserve unique traditions, rituals, and oral histories.
+
+🕉️ 2. Spiritual and Religious Identity
+
+Hinduism: The Himalayas are considered the home of Lord Shiva (Mount Kailash), with sacred rivers like Ganga and Yamuna originating here.
+
+Buddhism: Monasteries in Ladakh, Sikkim, and Bhutan reflect Tibetan Buddhist culture, meditation practices, and thangka art.
+
+Animism & Folk Beliefs: Indigenous groups worship natural elements—mountains, rivers, forests—considered sacred spirits.
+
+🎶 3. Languages & Literature
+
+Languages: Hindi, Kumaoni, Garhwali, Nepali, Bhoti, Ladakhi, and Tibetan dialects.
+
+Folk Tales & Epics: Rich oral traditions narrate stories of gods, demons, and heroic ancestors.
+
+Scriptures: Ancient Buddhist manuscripts and Hindu texts preserved in monasteries and temples.
+
+🎨 4. Art & Architecture
+
+Wood Carvings: Temples of Himachal and Uttarakhand showcase intricate wooden designs.
+
+Stone & Pagoda Temples: Kathmandu Valley and Bhutanese dzongs exhibit Himalayan architectural styles.
+
+Handicrafts: Wool weaving, thangkas, carpets, jewelry, and handmade paper reflect artistic identity.
+
+🎉 5. Festivals & Celebrations
+
+Losar (Tibetan New Year – Sikkim, Ladakh, Bhutan)
+
+Kumbh Mela (Haridwar, sacred Hindu gathering)
+
+Harela & Phool Dei (Uttarakhand agricultural festivals)
+
+Hemis Festival (Ladakh, Buddhist masked dance festival)
+
+🥘 6. Food & Lifestyle
+
+Staples: Barley, buckwheat, rice, millet.
+
+Dishes: Momos, thukpa, gundruk, madua roti, chainsoo.
+
+Drinks: Butter tea (Tibetan influence), chhang (fermented barley drink).
+
+🗻 7. Music, Dance & Folklore
+
+Instruments: Dhol, damau, flute, dungchen.
+
+Dance Forms: Chholiya (Kumaon), Nati (Himachal), Cham (monastic masked dance).
+
+Folk Songs: Celebrate love, bravery, nature, and devotion to gods.
+
+🌿 8. Coexistence with Nature
+
+The cultural identities of the Himalayas are inseparable from the environment:
+
+Architecture adapted to cold climates.
+
+Pastoralism and terrace farming sustain livelihoods.
+
+Deep respect for rivers, forests, and mountains as sacred beings.
+
+✨ Conclusion
+The cultural identities of the Himalayas are a living museum of traditions, spirituality, and heritage. They showcase humanity’s ability to live in harmony with one of the most challenging yet inspiring landscapes on Earth.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756611626425-683553655.jpg,1,,"{""floor"":""first"",""x"":94.91666666666667,""y"":40.833333333333336}",94.91666666666667,40.833333333333336,,,{},2025-08-31T03:40:27.795Z,2025-08-31T03:40:27.795Z,true,,,,,
+cmez72x8x001qhnnpex65jn7q,🌿 Himalayan Amazing Biodiversity & Superfoods,"🌏 Himalayan Biodiversity
+
+The Himalayas stretch across India, Nepal, Bhutan, China, and Pakistan, covering diverse climates — from tropical foothills to icy peaks.
+
+Flora: Over 10,000 plant species, including medicinal plants like kutki, ashwagandha, jatamansi, and wild edibles like fiddlehead ferns (lingdu).
+
+Fauna: Rare and endangered species — snow leopard, red panda, Himalayan monal, musk deer, takin, Tibetan antelope.
+
+Forests: Ranging from tropical sal forests to alpine meadows and glaciers.
+
+Rivers & Lakes: Source of mighty rivers (Ganga, Brahmaputra, Indus) and unique high-altitude wetlands.
+
+🌟 Fun fact: The Himalayas are called the “Water Tower of Asia” since they feed billions of people downstream.
+
+🍃 Himalayan Superfoods
+
+Mountain people traditionally depend on highly nutritious, resilient crops and wild edibles. Some key Himalayan superfoods are:
+
+Buckwheat (Kuttu) 🌾
+
+Gluten-free, rich in protein, minerals, and antioxidants.
+
+Eaten as chapatis, porridge, or pancakes.
+
+Amaranth (Ramdana / Rajgira) 🌱
+
+High in protein, calcium, and iron.
+
+Used in laddoos, rotis, and festival foods.
+
+Himalayan Millets (Jhangora, Mandua, Kangni) 🌾
+
+Climate-resilient and highly nutritious.
+
+Rich in fiber and beneficial for diabetes.
+
+Sea Buckthorn (Leh Berry) 🍊
+
+Grows in cold deserts (Ladakh).
+
+Super rich in Vitamin C, Omega fatty acids, and antioxidants.
+
+Black Soybean (Bhat ki Dal) 🫘
+
+Traditional Kumaoni protein source.
+
+Improves heart and bone health.
+
+Wild Himalayan Honey 🍯
+
+Harvested from cliff bees.
+
+Known for medicinal and antibacterial properties.
+
+Yak Milk & Chhurpi (Hard Cheese) 🧀
+
+High protein, long shelf-life.
+
+A staple in high-altitude regions like Sikkim, Bhutan, and Nepal.
+
+Himalayan Herbal Teas (Rhododendron, Tulsi, Chamomile, Lemongrass) 🍵
+
+Known for detoxifying and immunity-boosting properties.
+
+🌱 Why Himalayan Superfoods are Special?
+
+Grown in pristine, chemical-free environments.
+
+Resilient crops adapted to extreme climates.
+
+High nutritional density (minerals, antioxidants, proteins).
+
+Linked to traditional knowledge & culture of mountain communities.
+
+✨ In short:
+The Himalayan biodiversity provides life-supporting ecosystems and foods that are not only staples for local people but also emerging as global superfoods for health and wellness.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756614771838-987288717.jpg,1,,"{""floor"":""first"",""x"":79.25,""y"":49.166666666666664}",79.25,49.166666666666664,,,{},2025-08-31T04:32:52.688Z,2025-08-31T04:32:52.688Z,true,,,,,
+cmez6wgrf001ohnnpaal2xryw,🌿 Traditional Knowledge in the Himalayas,"The Himalayas are not only a natural wonder but also a living library of wisdom where communities have, for centuries, developed unique ways to adapt to their environment. This traditional knowledge blends survival skills, spirituality, and sustainability.
+
+🔹 Key Areas of Traditional Knowledge
+
+Agriculture & Land Use
+
+Terrace farming on steep slopes.
+
+Use of organic manure and crop rotation.
+
+Cultivation of hardy crops like barley, buckwheat, and millets.
+
+Water Management
+
+Indigenous irrigation systems such as Kuhls (Himachal) and Guls (Kumaon & Garhwal).
+
+Snow-melt channels guiding water to fields.
+
+Herbal Medicine
+
+Rich knowledge of medicinal plants (like Kutki, Jatamansi, and Himalayan Yew).
+
+Practices of Ayurveda, Amchi (Tibetan medicine), and local healing traditions.
+
+Architecture & Housing
+
+Use of wood, stone, and mud for climate-resilient houses.
+
+“Kath-Kuni” style in Himachal — earthquake-resistant timber-stone houses.
+
+Livelihoods & Crafts
+
+Traditional weaving of wool (pashmina, angora).
+
+Basketry, wood carving, metalwork.
+
+Sustainable pastoralism: sheep, yak, and goat rearing.
+
+Ecological Wisdom
+
+Sacred groves and forests preserved through local customs.
+
+Rituals that restrict overexploitation of rivers, glaciers, and wildlife.
+
+Cultural & Spiritual Practices
+
+Oral traditions, folklore, and chants that pass down ecological knowledge.
+
+Festivals tied to seasonal cycles and agricultural rhythms.
+
+✨ Why it Matters Today
+Traditional knowledge in the Himalayas is not just about the past — it offers sustainable solutions to modern challenges like climate change, biodiversity conservation, and disaster management.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756614470426-755341910.jpg,1,,"{""floor"":""first"",""x"":86.41666666666666,""y"":48.16666666666667}",86.41666666666666,48.16666666666667,,,{},2025-08-31T04:27:51.386Z,2025-08-31T04:27:51.386Z,true,,,,,
+cmez758xj001rhnnp8rblth66,🏔️ Adventure Sports in the Himalayas,"The mighty Himalayas are not only about snow peaks and spirituality – they are also a global hub for adventure seekers. From serene treks to adrenaline-pumping sports, the region offers thrilling opportunities for exploration.
+
+⛰️ Major Adventure Sports
+1. Trekking & Mountaineering
+
+Popular trails: Valley of Flowers, Roopkund, Kedarkantha, Everest Base Camp.
+
+Experience: Walking through alpine meadows, glaciers, and high passes.
+
+Challenge: Harsh weather, altitude, rugged terrain.
+
+2. River Rafting & Kayaking
+
+Rivers: Ganga, Alaknanda, Teesta, Beas.
+
+Thrill: Rapids of Grade II to V.
+
+Highlight: Rishikesh – India’s rafting capital.
+
+3. Skiing & Snowboarding
+
+Destinations: Auli, Gulmarg, Solang Valley.
+
+Winter sports with snow-covered slopes and ski-lifts.
+
+Training centers for beginners & pros.
+
+4. Paragliding & Air Sports
+
+Destinations: Bir-Billing (Himachal), Nainital, Pithoragarh.
+
+Offers a bird’s eye view of valleys and peaks.
+
+Adventure + serenity in the skies.
+
+5. Rock Climbing & Bouldering
+
+Natural rock faces and artificial climbing walls.
+
+Popular among youth & training expeditions.
+
+6. Cycling & Mountain Biking
+
+Routes: Manali-Leh highway, Kumaon, Garhwal trails.
+
+Mix of endurance, adventure, and stunning landscapes.
+
+7. Other Sports
+
+Ice climbing, heli-skiing, zip-lining, and camping under starry Himalayan skies.
+
+🌍 Adventure + Sustainability
+
+Promoting eco-friendly adventure tourism.
+
+Respecting local culture and biodiversity.
+
+Safety measures & responsible trekking.
+
+🔎 Interactive Exhibit Idea
+
+Virtual Reality Ride: Experience rafting in Rishikesh or flying over Bir-Billing.
+
+Climbing Wall Installation: A mini rock climbing wall for visitors.
+
+AR Sand Model: Show mountain slopes for skiing & trekking paths.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756614880136-709173256.jpg,1,,"{""floor"":""first"",""x"":80.58333333333333,""y"":47.16666666666667}",80.58333333333333,47.16666666666667,,,{},2025-08-31T04:34:41.138Z,2025-08-31T04:34:41.138Z,true,,,,,
+cmez5gnyi001mhnnpvxt8rx2d,🏔️ Mount Everest – “The Roof of the World”,"Height: 8,848.86 m (29,031 ft) — the highest peak on Earth.
+
+Location: Border of Nepal (Sagarmatha) and Tibet (Chomolungma).
+
+Symbol of human endurance, ambition, and exploration.
+
+❌ Lost on Everest
+
+Countless climbers have perished in their attempt due to avalanches, blizzards, altitude sickness, and exhaustion.
+
+“Death Zone” above 8,000 m – oxygen levels too low to sustain human life.
+
+Famous tragedies:
+
+1924: George Mallory & Andrew Irvine disappeared – mystery of whether they reached the summit remains.
+
+1996: Deadliest storm (documented in Into Thin Air).
+
+2014 & 2015 avalanches killed dozens.
+
+Today, the frozen bodies of climbers still remain along the trail, serving as grim reminders.
+
+✅ Success Stories
+
+1953: Sir Edmund Hillary (NZ) & Tenzing Norgay (Nepal) – first confirmed ascent.
+
+Junko Tabei (Japan), 1975: First woman to summit.
+
+Reinhold Messner (Italy): First solo ascent without oxygen (1980).
+
+Kami Rita Sherpa (Nepal): Record-holder with 28+ ascents.
+
+Inspires climbers, adventurers, and dreamers worldwide.
+
+🏕️ Climbing Journey – Camps on Everest
+
+The ascent is gradual, with camps at increasing altitudes for acclimatization:
+
+Base Camp (5,364 m / 17,600 ft): Start point, medical checks, preparation.
+
+Camp I (6,065 m): After Khumbu Icefall – dangerous crevasses.
+
+Camp II (6,400 m): Advanced Base – “Valley of Silence.”
+
+Camp III (7,200 m): Lhotse Face – steep icy wall.
+
+Camp IV (7,920 m): “South Col” – entry to Death Zone.
+
+Summit Push (8,848 m): Via Hillary Step – ultimate goal.
+
+🌟 Symbolism of Everest
+
+Represents human resilience against extreme odds.
+
+A sacred site for Sherpas and Tibetans (considered the “Mother Goddess of the World”).
+
+A testing ground for science, endurance, and survival.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756612053759-486991035.jpg,1,,"{""floor"":""first"",""x"":84.75,""y"":54.50000000000001}",84.75,54.50000000000001,,,{},2025-08-31T03:47:34.601Z,2025-08-31T03:47:34.601Z,true,,,,,
+cmez4tpcb001fhnnp29rrzpji,🏔️ Mountain Passes and Bridges,"🌄 Mountain Passes
+
+A pass is a navigable gap or route through a mountain range, acting as a gateway for trade, travel, and cultural exchange.
+
+✅ Types of Passes
+
+Glacial Passes – Formed by glaciers (e.g., Zoji La in Kashmir).
+
+River-cut Passes – Created by rivers cutting through mountains (e.g., Nathu La).
+
+Valley Passes – Wide, open valleys acting as routes (e.g., Shipki La).
+
+Desert Passes – Dry passes with minimal vegetation (e.g., Khardung La).
+
+⭐ Features
+
+Found at high altitudes (often above 3,000 m).
+
+Serve as trade and military routes.
+
+Subject to heavy snowfall, landslides, and avalanches.
+
+Link different cultures and economies.
+
+📌 Examples in Himalayas (India):
+
+Khardung La – Ladakh (highest motorable pass ~ 5,359 m).
+
+Zoji La – Connects Kashmir to Ladakh.
+
+Nathu La – Sikkim-Tibet trade route.
+
+Shipki La – Connects Himachal with Tibet.
+
+Jelep La – Important Indo-China pass in Sikkim.
+
+🌉 Bridges
+
+A bridge is a structure built to span physical obstacles (rivers, valleys, or roads) for transport and communication.
+
+✅ Types of Bridges
+
+Beam Bridge – Simple, supported at both ends. (e.g., small rural bridges).
+
+Arch Bridge – Curved structure, strong and durable.
+
+Suspension Bridge – Deck hung by cables (e.g., Lakshman Jhula, Rishikesh).
+
+Cable-Stayed Bridge – Modern bridges with towers supporting cables.
+
+Truss Bridge – Strong, made of steel triangles.
+
+Cantilever Bridge – Projects horizontally (balanced arms).
+
+Floating / Pontoon Bridge – Built over floating structures, temporary.
+
+⭐ Features
+
+Provide connectivity across rivers, valleys, or gorges.
+
+Designed based on span length, load capacity, and terrain.
+
+Can be permanent (steel/concrete) or temporary (wood/rope/portable military bridges).
+
+Critical for transport, defense, and tourism.
+
+📌 Examples in Himalayas (India):
+
+Bailey Bridges – Portable military bridges in Ladakh & Arunachal.
+
+Lakshman Jhula – Famous suspension bridge in Rishikesh, Uttarakhand.
+
+Chenab Rail Bridge – World’s highest rail bridge in Jammu & Kashmir.
+
+Atal Setu (Basohli) – Modern cable-stayed bridge in J&K.
+
+✨ Conclusion:
+
+Passes = Nature’s gateways through mountains.
+
+Bridges = Human-made connectors over barriers.
+Together, they have shaped trade, culture, defense, and connectivity in India and the world. 🌏",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756610982403-701967159.jpg,1,,"{""floor"":""first"",""x"":90.91666666666667,""y"":41.5}",90.91666666666667,41.5,,,{},2025-08-31T03:29:43.308Z,2025-08-31T03:29:43.308Z,true,,,,,
+cmez5dckv001lhnnpv24o9w6c,🧵 Traditional Crafts of the Himalayas,"The Himalayan region is not just known for its towering peaks and scenic beauty but also for its rich heritage of traditional crafts. These crafts are a living reflection of the people’s creativity, resilience, and deep connection with nature. From textiles to woodwork, every piece tells a story of generations who sustained their lives amidst the mountains.
+
+🎨 Major Crafts of the Himalayas
+1. Textiles and Weaving
+
+Wool Weaving (Pashmina & Angora): Soft, warm, and world-renowned for quality.
+
+Shawls & Carpets: Kashmiri pashmina shawls, Kullu and Kinnauri woolens.
+
+Thangka Painting: Intricate Buddhist scroll paintings in Tibet, Ladakh, and Sikkim.
+
+2. Woodwork
+
+Carved wooden windows, doors, and furniture in Himachal & Uttarakhand.
+
+Used in temples, monasteries, and homes.
+
+Designs often depict mythological, floral, and geometric patterns.
+
+3. Metalwork
+
+Brass and Copperware: Utensils, puja items, and ritual objects.
+
+Bell-making & Weapons: Used in temples and by traditional communities.
+
+4. Pottery & Earthenware
+
+Locally made clay pots for storage and cooking.
+
+Eco-friendly and adapted for mountain lifestyle.
+
+5. Handicrafts & Bamboo Work
+
+Baskets, mats, and household items crafted from bamboo and cane.
+
+Widely used in the Northeast Himalayan belt.
+
+6. Jewelry & Ornaments
+
+Heavy silver jewelry (e.g., Hansuli, Chandan Haar) in Garhwal & Kumaon.
+
+Tibetan turquoise & coral ornaments symbolizing protection and prosperity.
+
+🌿 Features of Himalayan Crafts
+
+Eco-friendly: Materials sourced locally – wool, wood, bamboo, clay.
+
+Utility-oriented: Crafted to serve daily needs of mountain life.
+
+Symbolic: Designs inspired by spirituality, nature, and mythology.
+
+Community-driven: Skills passed down generations within families.
+
+✨ Importance
+
+Preserves cultural identity of Himalayan people.
+
+Provides livelihood to artisans.
+
+Attracts tourism and global recognition.
+
+Strengthens connection to nature and sustainable living.",environment,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756611899044-192300569.jpg,1,,"{""floor"":""first"",""x"":94.91666666666667,""y"":43.833333333333336}",94.91666666666667,43.833333333333336,,,{},2025-08-31T03:44:59.886Z,2025-08-31T03:44:59.886Z,true,,,,,
+cmeibjvrr00039wf6rr87gtkm,Birbal Sahni (Father of Indian Paleobotany),"This exhibit celebrates Prof. Birbal Sahni (1891–1949), a pioneering Indian scientist who laid the foundation of paleobotany (the study of fossil plants) in India. He made significant contributions to understanding India’s ancient plant life, fossils, and geological history. Sahni was also the founder of the Birbal Sahni Institute of Palaeosciences (Lucknow), one of the world’s leading research centers in paleobotany. The exhibit introduces visitors to his life, work, and how his research helped decode India’s prehistoric vegetation and its role in Earth’s evolutionary story.
+
+Location: Biography Section / Indian Scientists Gallery
+
+Theme: Biology / History of Science
+
+Type: Informational + Interactive Display (panels, fossil replicas, models)
+
+Complexity Level: Easy to Moderate (conceptual + historical)
+
+Target Age Group: 12+ (students, researchers, general public)
+
+Interactivity Score: 4 (mostly informative, with fossil displays and replicas)
+
+Duration: 8–12 minutes
+
+Learning Outcome:
+
+Learn about Birbal Sahni’s life and scientific contributions.
+
+Understand the basics of paleobotany and its role in reconstructing Earth’s past.
+
+Appreciate India’s scientific heritage and its global contributions.
+
+Features:
+
+Life-size portrait/statue of Birbal Sahni
+
+Fossil plant samples and replicas
+
+Timeline of discoveries in paleobotany
+
+QR-based interactive media (documentaries, 3D fossils)
+
+Tags: biology, paleobotany, fossils, Indian scientists, history of science",geology,"Dehradun, Uttarakhand, India",outside,researchers,passive,outdoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1755594355856-804243566.jpg,1,,"{""floor"":""outside"",""x"":47.8125,""y"":35.4}",47.8125,35.4,,,{},2025-08-19T09:05:57.397Z,2025-08-20T10:18:39.798Z,true,,,,,
+cmewmj9bk000dhnnpmjbqx0gq,Resource Mapping with Remote Sensing,"Remote sensing is the science of observing Earth’s surface from a distance — typically using satellites or drones equipped with sensors. It helps us map and monitor natural resources like forests, minerals, water, agriculture, and urban expansion.
+
+This exhibit shows how satellites “see” Earth in different spectral bands (visible, infrared, microwave) and how this data is used for resource mapping and planning.
+
+🛰️ Exhibit Zones
+
+Satellite View Wall
+
+A large digital screen with real satellite images (Landsat, Sentinel, IRS).
+
+Visitors can slide between visible light, infrared, and radar images to see hidden patterns.
+
+Example:
+
+Forest cover in visible vs. infrared (infrared highlights healthy vegetation).
+
+Water bodies in radar (penetrates clouds).
+
+Interactive Resource Mapping Table
+
+Touchscreen map of India (or global).
+
+Visitors can select themes:
+
+Water Resources – rivers, groundwater potential zones.
+
+Mineral Mapping – iron, bauxite, coal belts.
+
+Agriculture – crop health using NDVI (vegetation index).
+
+Urban Growth – city sprawl from 1980–2020.
+
+Drone vs. Satellite Corner
+
+A display comparing high-resolution drone images with wide-area satellite images.
+
+Visitors learn how scale and resolution matter.
+
+Hands-On Activity: Be a Remote Sensing Scientist
+
+Visitors choose an area (e.g., Himalayas, Rajasthan, Coastal belt).
+
+The system highlights resource maps:
+
+Himalayas → glaciers, snow cover monitoring.
+
+Rajasthan → groundwater mapping, desertification.
+
+Coastal → mangroves, fishery zones.
+
+💡 Interactive Elements
+
+Spectral Bands Explorer: Visitors switch filters (Red, Green, Blue, Infrared) to reveal hidden resource patterns.
+
+Time-Lapse Slider: Show deforestation, urbanization, shrinking glaciers over decades.
+
+Augmented Reality (AR Globe): A 3D globe where users point and see live satellite-based resource maps.
+
+✨ Learning Outcome
+
+Understand how remote sensing works (electromagnetic spectrum, sensors).
+
+Learn how governments use it for agriculture, mining, disaster management, and urban planning.
+
+Realize the importance of sustainable resource management through space technology.",geology,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756459329808-658212282.jpg,1,,"{""floor"":""first"",""x"":3.5833333333333335,""y"":41.16666666666667}",3.5833333333333335,41.16666666666667,,,{},2025-08-29T09:22:10.544Z,2025-08-29T09:22:10.544Z,true,,,,,
+cmezl6jc6000h5vbi68716cmv,All Roads Lead to Rome,"The exhibit demonstrates a unique property of ellipses using two strikers and a curved boundary. The curved boundary is shaped like an ellipse, with the two circular marks representing its foci.
+
+Place the strikers on the two foci.
+
+When one striker is shot toward the elliptical boundary, it always reflects and hits the striker on the other focus, regardless of the direction it is shot.
+
+This experiment visually illustrates the reflective property of ellipses, which is also applicable to light rays, sound waves, and other reflections. The setup shows that every path from one focus leads to the other after reflection, hence the name “All Roads Lead to Rome.”",physics,"Dehradun, Uttarakhand, India",ground,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756638455360-256144394.jpg,1,,"{""floor"":""ground"",""x"":38.916666666666664,""y"":23.666666666666668}",38.916666666666664,23.666666666666668,,,{},2025-08-31T11:07:35.910Z,2025-08-31T11:07:35.910Z,true,,,,,
+cmezlxgsp000n5vbi2zddcbet,Ball Bounce,"This exhibit demonstrates the principles of momentum, energy transfer, and inelastic collisions using balls of different sizes:
+
+Single Ball:
+
+Lift and release one ball. It bounces back to a lower height than it was dropped due to energy loss from friction and inelastic impact.
+
+Multiple Balls:
+
+Lift two or more balls of different sizes and release them together.
+
+The smaller ball bounces higher while the larger ball bounces less.
+
+This happens because the momentum (mass × velocity) from the larger balls is transferred to the smaller ball, increasing its velocity.
+
+Extreme Analogy:
+
+Theoretically, stacking multiple heavy balls beneath a tiny ping pong ball and dropping them could accelerate the small ball to speeds high enough to escape Earth’s gravity, illustrating the power of momentum transfer.
+
+This experiment visually explains conservation of momentum, energy transfer, and collision dynamics in an engaging way.",physics,"Dehradun, Uttarakhand, India",ground,researchers,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756639711786-91480079.jpg,1,,"{""floor"":""ground"",""x"":49.75,""y"":54.50000000000001}",49.75,54.50000000000001,,,{},2025-08-31T11:28:32.329Z,2025-08-31T11:28:32.329Z,true,,,,,
+cmeid866v0000az6uzg2dnyld,C. V. Raman,"The C. V. Raman exhibit introduces visitors to the life and work of Sir Chandrasekhara Venkata Raman, one of India’s greatest physicists. A large display panel narrates his journey, from his research in optics to his Nobel-winning discovery of the Raman Effect, where light undergoes a change in wavelength after interacting with matter. The exhibit explains the principle with diagrams and sometimes a small optical demonstration. Visitors learn how Raman’s work laid the foundation for Raman Spectroscopy, widely used today in laboratories for identifying substances.",physics,"Dehradun, Uttarakhand, India",outside,researchers,passive,outdoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1755597169098-246827639.jpg,1,,"{""floor"":""outside"",""x"":46.8125,""y"":34.4}",46.8125,34.4,,,{},2025-08-19T09:52:50.261Z,2025-08-20T10:18:39.826Z,true,,,,,
+cmezgpkh500015vbiz29xfkfm,Chaotic Pendulum,"The Chaotic Pendulum is a pendulum system with multiple arms or joints that creates unpredictable motion. Unlike a simple pendulum (which swings smoothly and predictably), a chaotic pendulum’s movement is extremely sensitive to initial conditions—tiny changes in how it’s released lead to vastly different motions.
+
+The exhibit can feature:
+
+A mechanical pendulum with multiple joints, where visitors can set it swinging.
+
+A digital simulation showing how small initial changes cause huge differences in long-term motion.
+
+A comparison between simple harmonic motion vs. chaotic motion.
+
+✨ Why It’s Exciting
+
+Demonstrates chaos theory in an accessible, hands-on way.
+
+Shows how deterministic systems (obeying Newton’s laws) can still behave unpredictably.
+
+Connects physics to weather forecasting, fluid dynamics, and even financial markets.
+
+⚡ Short Museum Panel (70 words)
+
+Chaotic Pendulum reveals the beauty of chaos in motion. Unlike a simple pendulum, this system with multiple arms moves in complex, unpredictable patterns. Tiny differences in how it’s released lead to entirely different paths, illustrating chaos theory—the idea that deterministic systems can still behave unpredictably. This principle helps scientists understand weather, turbulence, and other real-world phenomena where small changes create big effects.",physics,"Dehradun, Uttarakhand, India",ground,researchers,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756630945011-196206514.jpg,1,,"{""floor"":""ground"",""x"":61.583333333333336,""y"":30.333333333333336}",61.583333333333336,30.333333333333336,,,{},2025-08-31T09:02:25.768Z,2025-08-31T09:02:25.768Z,true,,,,,
+cmezj1p5000075vbiud3wj9lv,Color Shadows,"Stand in front of the screen and watch your shadow in colours! Instead of one dark shadow, your body casts several colored shadows—red, green, blue, cyan, magenta, yellow, and black.
+
+This happens because the exhibit uses three coloured lights – red, green, and blue.
+
+When your body blocks one light, the other two mix to form a new coloured shadow.
+
+Example: Blocking green light leaves red + blue = magenta shadow. Blocking red light leaves green + blue = cyan shadow.
+
+When all three lights shine together, the screen looks white.
+
+When you block all three, you see a black shadow.
+
+✨ What You Learn
+
+Additive colour mixing: Red, Green, and Blue are the primary colours of light.
+
+Their combinations create secondary colours: Cyan, Magenta, and Yellow.
+
+This principle is the basis of television screens, monitors, and projectors.",physics,"Dehradun, Uttarakhand, India",ground,families,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756634869790-626994996.jpg; exhibit-1756634870042-601150588.jpg,2,,"{""floor"":""ground"",""x"":55.41666666666667,""y"":22.5}",55.41666666666667,22.5,,,{},2025-08-31T10:07:50.916Z,2025-08-31T10:07:50.916Z,true,,,,,
+cmezin7ex00065vbigduksq1n,Colours Through Polarisation,"Visitors see a scenery made of transparent adhesive tape pieces on glass. A polarised light is projected from behind. When viewed through a rotating polarising sheet (the analyzer), the objects in the scenery appear in changing colours.
+
+This happens because the adhesive tape rotates the planes of polarisation of different colours of light by different amounts. As the analyzer rotates, it selectively allows certain colours to pass, producing the brilliant, shifting rainbow-like display.
+
+✨ What You Learn
+
+How polarisation affects light.
+
+The principle of birefringence (different polarisation shifts for different wavelengths).
+
+Real-world applications: polarised sunglasses, stress analysis in materials, 3D cinema glasses.",physics,"Dehradun, Uttarakhand, India",ground,researchers,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756634193791-600071100.jpg,1,,"{""floor"":""ground"",""x"":64.25,""y"":31.666666666666664}",64.25,31.666666666666664,,,{},2025-08-31T09:56:34.740Z,2025-08-31T09:56:34.740Z,true,,,,,
+cmezlituq000k5vbi0wduo3pt,Concave and Convex Mirrors,"This exhibit demonstrates the image-forming properties of concave and convex mirrors:
+
+Concave Mirror (अवतल दर्पण):
+
+A mirror curved inward like a bowl.
+
+Can magnify objects when close and form real inverted images when objects are farther away.
+
+Demonstrates focusing of light to a point (focal point).
+
+Convex Mirror (उत्तल दर्पण):
+
+A mirror curved outward.
+
+Always forms smaller, upright images.
+
+Shows diverging of light rays and wider field of view.
+
+Visitors can observe how different curvatures change the size, orientation, and type of image, helping understand reflection, focal points, and image formation.",physics,"Dehradun, Uttarakhand, India",ground,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756639029034-109522982.jpg,1,,"{""floor"":""ground"",""x"":41.583333333333336,""y"":53.166666666666664}",41.583333333333336,53.166666666666664,,,{},2025-08-31T11:17:09.410Z,2025-08-31T11:17:09.410Z,true,,,,,
+cmeib9qy400009wf6odovx6vc,Elliptical Speaking Fish,"Location: Outdoor Science Park (Ground area, near entry path)
+
+Theme: Physics / Acoustics (Sound reflection)
+
+Type: Interactive, two-person activity
+
+Complexity Level: Basic (all ages can try)
+
+Target Age Group: Kids, Teens, Families
+
+Interactivity Score: 5 (visitors must participate)
+
+Duration: ~3–4 minutes per try
+
+Learning Outcome:
+
+Demonstrates how sound waves travel and reflect along an ellipse.
+
+When two people stand at the focal points of the structure and speak, their voices are carried directly to each other — even if they whisper.
+
+Teaches principles of acoustics, geometry of ellipses, and sound propagation.
+
+Features:
+
+Outdoor installation
+
+Physical model (large elliptical dish setup with fish-shaped acoustic reflector)
+
+Tags: acoustics, ellipse, sound reflection, whispering, outdoor exhibit",physics,"Dehradun, Uttarakhand, India",outside,families,interactive,outdoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1755593882075-816199145.jpg,1,,"{""floor"":""outside"",""x"":27.8125,""y"":51.2}",27.8125,51.2,,,{},2025-08-19T08:58:04.584Z,2025-08-20T10:18:39.775Z,true,,,,,
+cmezk1stg00095vbirv98f05t,Energy Ball,"Watch the ball as it travels through loops, slopes, spirals, and jumps! The rolling ball demonstrates how energy changes its form but is never lost. At every stage, the ball’s motion shows the fascinating conversion between potential energy (energy stored due to height) and kinetic energy (energy of motion).
+
+Scientific Principle:
+
+When the ball is lifted to the top, it gains potential energy.
+
+As it rolls down, this potential energy is converted into kinetic energy, making it move faster.
+
+On climbing slopes, loops, or spirals, kinetic energy is again converted back into potential energy.
+
+Friction and sound also show how some energy is transformed into heat and vibrations.
+
+What to Observe:
+
+The ball speeds up as it goes down (more kinetic energy).
+
+It slows down as it climbs up (converting kinetic back to potential).
+
+Loops and spirals highlight the continuous energy transformation cycle.
+
+Learning Outcome:
+This exhibit beautifully demonstrates the law of conservation of energy — energy can change its form but cannot be created or destroyed.",physics,"Dehradun, Uttarakhand, India",ground,researchers,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756636554538-324810627.jpg,1,,"{""floor"":""ground"",""x"":53.75,""y"":31.5}",53.75,31.5,,,{},2025-08-31T10:35:55.284Z,2025-08-31T10:35:55.284Z,true,,,,,
+cmf97ktoa0001snwdn288wiab,Exhibit Development Lab & Stores,"The Exhibit Development Lab & Stores is the creative and technical hub where science exhibits are designed, developed, tested, and maintained.
+
+Exhibit Development Lab:
+
+A space for designing, prototyping, and assembling interactive science models.
+
+Engineers, designers, and educators collaborate here to convert scientific principles into hands-on exhibits.
+
+Exhibits are tested for accuracy, durability, and visitor engagement before being displayed.
+
+Stores Section:
+
+Functions as the inventory and resource unit, maintaining tools, raw materials, spare parts, and components required for exhibit creation and repair.
+
+Ensures the smooth functioning and upkeep of all exhibits in the science center.
+
+Together, the lab and stores form the backbone of exhibit innovation and maintenance, ensuring visitors always experience engaging, working, and updated science displays.",physics,"Dehradun, Uttarakhand, India",ground,researchers,hands-on,indoor,,8,8,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1757220268810-437965987.jpg,1,,"{""floor"":""ground"",""x"":10.083333333333332,""y"":21.166666666666668}",10.083333333333332,21.166666666666668,,,{},2025-09-07T04:44:29.625Z,2025-09-07T04:44:29.625Z,true,,,,,
+cmezkcn5z000b5vbigbfkba5t,Float the Balls,"Mechanism:
+An air blower is connected to a bicycle. When a visitor pedals the bicycle, the blower generates a stream of air that passes through a transparent vertical pipe.
+
+Demonstration:
+As the blower pushes air upward, a lightweight ball inside the pipe rises. The faster the visitor pedals, the stronger the airflow, and the higher the ball floats. When pedaling slows or stops, the airflow decreases, and the ball falls back down.
+
+Observation:
+
+Pedaling speed controls the airflow strength.
+
+Higher pedaling speed → higher air pressure → ball rises higher.
+
+If pedaling stops, air pressure reduces → ball comes down.
+
+Principle:
+This exhibit demonstrates the effect of air pressure and flow on objects. The rising of the ball is due to the upward force of air pressure, overcoming the downward force of gravity. It shows the practical application of fluid dynamics and Bernoulli’s principle in a fun, interactive way.",physics,"Dehradun, Uttarakhand, India",ground,families,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756637060384-40868267.jpg,1,,"{""floor"":""ground"",""x"":75.41666666666667,""y"":36.833333333333336}",75.41666666666667,36.833333333333336,,,{},2025-08-31T10:44:21.175Z,2025-08-31T10:44:21.175Z,true,,,,,
+cmezlnj9n000l5vbi214mpxt6,Floating Ball,"The “Floating Ball” exhibit demonstrates Bernoulli’s Principle using a light ball and an air jet.
+
+Press the switch to release a high-speed air stream from a flexible nozzle.
+
+The ball floats in the air as the surrounding higher-pressure air pushes it into the low-pressure stream.
+
+You can bend the nozzle to make the ball move around, showing how air pressure keeps it suspended.
+
+This experiment visually illustrates how airflow and pressure differences can levitate objects.",physics,"Dehradun, Uttarakhand, India",ground,families,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756639248404-94001584.jpg,1,,"{""floor"":""ground"",""x"":38.58333333333333,""y"":49.5}",38.58333333333333,49.5,,,{},2025-08-31T11:20:48.968Z,2025-08-31T11:20:48.968Z,true,,,,,
+cmezi144000055vbi3pxjt4zm,Foucault Pendulum,"The Foucault Pendulum is a large, freely swinging pendulum that demonstrates the rotation of the Earth. Suspended from a tall support, the pendulum swings back and forth in a fixed plane. However, due to Earth’s rotation beneath it, the pendulum’s swing path appears to gradually rotate over time.
+
+Visitors can observe pegs or markers being knocked down by the pendulum as proof of the Earth turning on its axis — a simple yet profound way to visualize our planet’s motion in space.
+
+✨ Why It’s Exciting
+
+A real-time proof of Earth’s rotation, visible to the naked eye.
+
+Combines science, mechanics, and elegance.
+
+Creates awe — “the Earth is moving beneath my feet.”",physics,"Dehradun, Uttarakhand, India",ground,researchers,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756633163097-16546784.jpg,1,,"{""floor"":""ground"",""x"":62.083333333333336,""y"":31}",62.083333333333336,31,,,{},2025-08-31T09:39:24.048Z,2025-08-31T09:39:24.048Z,true,,,,,
+cmezlf1c6000j5vbi92ms2e5w,Fresnel Mirror,"The “Fresnel Mirror” exhibit demonstrates reflection and multiple images using two plane mirrors placed at a small angle.
+
+When you look into the mirrors, light from your body reflects between the two mirrors multiple times, creating several images of yourself.
+
+The number and arrangement of images depend on the angle between the mirrors.
+
+This exhibit illustrates how light can undergo multiple reflections, forming multiple visible images.
+
+It’s a hands-on way to understand angles of reflection and the principle behind Fresnel mirrors used in optics.",physics,"Dehradun, Uttarakhand, India",ground,researchers,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756638851865-457946778.jpg,1,,"{""floor"":""ground"",""x"":37.416666666666664,""y"":39.666666666666664}",37.416666666666664,39.666666666666664,,,{},2025-08-31T11:14:12.486Z,2025-08-31T11:14:12.486Z,true,,,,,
+cmezlrfsq000m5vbij30euvml,Globe,"The “Globe” exhibit is a three-dimensional model of the Earth that helps visualize its geography, rotation, and axis tilt.
+
+You can observe continents, oceans, and major countries on the spherical surface.
+
+Rotating the globe demonstrates the Earth’s rotation, helping understand day and night cycles.
+
+It also illustrates the tilt of the Earth’s axis, which is responsible for seasons.
+
+This hands-on model helps visitors understand Earth’s shape, movement, and spatial relationships in a simple, visual way.",physics,"Dehradun, Uttarakhand, India",ground,families,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756639430534-538905091.jpg,1,,"{""floor"":""ground"",""x"":56.91666666666667,""y"":57.99999999999999}",56.91666666666667,57.99999999999999,,,{},2025-08-31T11:23:51.097Z,2025-08-31T11:23:51.097Z,true,,,,,
+cmezl2vdh000g5vbi0nvqvgcq,Infinite Well,"The “Infinite Well” exhibit demonstrates the concept of an endless reflection using mirrors. A well is placed between two parallel mirrors, creating the illusion that it goes on infinitely. Visitors can see their reflections multiply repeatedly, giving a visual experience of an infinite tunnel. This simple setup illustrates how light reflects between mirrors to create the perception of endless depth.",physics,"Dehradun, Uttarakhand, India",ground,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756638284355-222856758.jpg,1,,"{""floor"":""ground"",""x"":43.25,""y"":26.166666666666664}",43.25,26.166666666666664,,,{},2025-08-31T11:04:44.885Z,2025-08-31T11:04:44.885Z,true,,,,,
+cmezkgb4h000c5vbigj25s1t0,Kaleidoscope,"Mechanism:
+
+A kaleidoscope is a simple optical device made with three rectangular mirrors placed at angles to each other inside a tube.
+
+Small colored glass pieces, beads, or objects are placed at one end.
+
+When you look through the other end, multiple reflections create beautiful symmetrical patterns.
+
+Demonstration:
+
+Rotate the tube gently.
+
+Observe how the arrangement of objects inside keeps changing, creating new patterns each time.
+
+Observation:
+
+The number of mirrors and their angle determines the type of symmetry (triangular, hexagonal, etc.).
+
+A small change in the objects produces a completely new, complex, and symmetrical design.
+
+Principle:
+
+Based on the principle of multiple reflections of light.
+
+The mirrors reflect the objects again and again, forming repeating patterns.
+
+Fun Fact:
+
+Kaleidoscopes are often used in art, design, and pattern-making for inspiration.",physics,"Dehradun, Uttarakhand, India",ground,researchers,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756637231709-970308120.jpg,1,,"{""floor"":""ground"",""x"":56.41666666666667,""y"":20.166666666666664}",56.41666666666667,20.166666666666664,,,{},2025-08-31T10:47:12.209Z,2025-08-31T10:47:12.209Z,true,,,,,
+cmezkloi9000d5vbi42ubw786,Magical Tap,"The tap appears to float in mid-air (or on a stand) with water continuously flowing from it.
+
+Despite the seemingly impossible flow, it is safe to touch and observe.
+
+Mechanism:
+
+The tap is usually hollow, and inside it, a transparent pipe or tube is connected to a pump or water reservoir hidden in the base.
+
+Water is pumped upward through the pipe and flows out of the tap, then collected in a hidden reservoir or recirculated.
+
+From the outside, the support for the tap is invisible, so it looks like it’s floating.",physics,"Dehradun, Uttarakhand, India",ground,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756637482192-169907790.jpg,1,,"{""floor"":""ground"",""x"":74.41666666666666,""y"":40}",74.41666666666666,40,,,{},2025-08-31T10:51:22.832Z,2025-08-31T10:51:22.832Z,true,,,,,
+cmezk7tvz000a5vbil4lr7kbq,Message from Depth,"👉 Instruction for Visitors:
+Push the handle back and forth and observe the bubbles rising in the tubes.
+
+✨ What Happens:
+
+As the bubbles rise upward, the pressure exerted on them by the surrounding liquid decreases. This is because liquid pressure depends on the height of the liquid column above the bubble.
+
+With less pressure from above, the bubbles expand and increase in size as they rise.
+
+Different liquids (having different densities and viscosities) make the bubbles behave differently.
+
+🔎 Key Observations:
+
+Bigger bubbles rise faster than smaller ones.
+
+This happens because the buoyant force (which pushes the bubble upward) increases faster for larger bubbles than the viscous drag (which resists the motion).
+
+📖 Scientific Principle:
+The exhibit demonstrates the relationship between pressure in liquids, buoyancy, and viscous drag. It shows how gases expand when pressure decreases and how the balance of forces affects motion in fluids.",physics,"Dehradun, Uttarakhand, India",ground,families,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756636835767-528025520.jpg,1,,"{""floor"":""ground"",""x"":59.75,""y"":43.666666666666664}",59.75,43.666666666666664,,,{},2025-08-31T10:40:36.605Z,2025-08-31T10:40:36.605Z,true,,,,,
+cmezlb10v000i5vbi3ep8rko7,Mirror Wall,"The “Mirror Wall” exhibit shows how reflections can create a broken image. Plane mirrors are placed on the wall at different angles.
+
+Light from your body reflects off the mirrors.
+
+Depending on the angles, the reflected light reaches your eyes from different directions.
+
+You only see the parts of your body for which the reflected light reaches your eyes, creating a fragmented or broken image.
+
+This exhibit demonstrates how angle of incidence and reflection affects what we see in mirrors.",physics,"Dehradun, Uttarakhand, India",ground,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756638664961-207154310.jpg,1,,"{""floor"":""ground"",""x"":40.75,""y"":39.166666666666664}",40.75,39.166666666666664,,,{},2025-08-31T11:11:05.455Z,2025-08-31T11:11:05.455Z,true,,,,,
+cmezkypxw000f5vbihx3kqsvn,Planetary Motion,"The “Planetary Motion” exhibit demonstrates the motion of planets around the Sun using a ball and a dome. A ball rolled on the dome follows an elliptical path, with the central well representing the Sun as one focus. The ball accelerates when closer to the well and slows down when farther away, illustrating how planets move faster near the Sun and slower at greater distances. This experiment provides a visual analogy for Kepler’s laws of planetary motion, showing the elliptical nature of orbits and the variation in orbital speed due to centripetal force.",physics,"Dehradun, Uttarakhand, India",ground,families,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756638090625-563453664.jpg,1,,"{""floor"":""ground"",""x"":45.58333333333333,""y"":42.5}",45.58333333333333,42.5,,,{},2025-08-31T11:01:31.218Z,2025-08-31T11:01:31.218Z,true,,,,,
+cmezm2w8t000p5vbijfcjljm7,Rising Arc,"The “Rising Arc” exhibit demonstrates how high-voltage electric arcs behave in air.
+
+When a high voltage (e.g., 25,000 volts) is applied across a gap, the air insulation breaks down, forming an electric arc.
+
+The arc initially strikes across the narrowest part of the gap, then rises upward due to heating of air and electromagnetic effects, extending its path.
+
+The arc continues to rise until the applied voltage is no longer sufficient to sustain it.
+
+This phenomenon is used in horn gap arresters for temporary earthing to protect electrical equipment from transient high voltage.
+
+It visually demonstrates the principles of electric discharge, air ionization, and high-voltage protection.",physics,"Dehradun, Uttarakhand, India",ground,researchers,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756639964743-799328209.jpg; exhibit-1756639964774-846053935.jpg,2,,"{""floor"":""ground"",""x"":33.08333333333333,""y"":50.5}",33.08333333333333,50.5,,,{},2025-08-31T11:32:45.629Z,2025-08-31T11:32:45.629Z,true,,,,,
+cmezlzkhc000o5vbi4t3as7w9,Sand Art,"This exhibit demonstrates patterns formed by motion and vibration using a small metallic ball on sand:
+
+A metallic ball is placed on a flat tray filled with fine sand.
+
+When the tray vibrates or the ball moves, the ball rolls over the sand, creating intricate and symmetrical patterns.
+
+The patterns show how motion, collisions, and vibrations interact to produce natural geometric designs.
+
+This exhibit visually illustrates concepts of wave motion, vibration, and pattern formation in a simple and artistic way.",physics,"Dehradun, Uttarakhand, India",ground,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756639809940-850843940.jpg,1,,"{""floor"":""ground"",""x"":36.916666666666664,""y"":56.833333333333336}",36.916666666666664,56.833333333333336,,,{},2025-08-31T11:30:10.416Z,2025-08-31T11:30:10.416Z,true,,,,,
+cmezhuzvl00045vbicx5a8ye3,Sympathetic Swing (X-Axis),"A sympathetic swing along the X-axis refers to the resonance phenomenon where one pendulum or swing oscillates side-to-side (left and right along the X-axis), and another pendulum or system, when tuned to the same natural frequency, starts oscillating without direct push. This happens because of energy transfer through coupling (a rigid rod, string, or common support).
+
+Working Principle:
+
+Two pendulums (or swings) are hung from the same support beam.
+
+If one pendulum oscillates along the X-axis (side-to-side), small vibrations travel through the support.
+
+If the other pendulum has the same natural frequency (length = same), it will gradually pick up the oscillations.
+
+This is sympathetic resonance — the second pendulum swings because of energy transfer, not because of direct force.
+
+Key Points:
+
+X-axis = left-to-right motion.
+
+Occurs due to resonance + coupling.
+
+Strongest when pendulums have identical lengths (same natural frequency).
+
+Applications:
+
+Physics experiments to demonstrate resonance.
+
+Explains phenomena like tuning forks vibrating in sympathy.
+
+Helps in designing vibration absorbers in machinery.
+
+Shows how energy transfers in coupled oscillators.
+
+⚖️ Example Analogy: If you strike one guitar string, another string tuned to the same frequency will vibrate without being touched. In swings (X-axis), one side-to-side oscillation creates a sympathetic swing in another.",physics,"Dehradun, Uttarakhand, India",ground,researchers,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756632877616-652377926.jpg,1,,"{""floor"":""ground"",""x"":61.416666666666664,""y"":31.5}",61.416666666666664,31.5,,,{},2025-08-31T09:34:38.607Z,2025-08-31T09:34:38.607Z,true,,,,,
+cmezgthta00025vbi58zegfka,Sympathetic Swing (Y-Axis Pendulum Coupling),"In a sympathetic swing, two or more pendulums are suspended from the same horizontal support (a string, bar, or flexible beam).
+
+When one pendulum is set into motion, the energy slowly transfers through the support to the other pendulum(s).
+
+Over time, the first pendulum slows down while the other starts swinging.
+
+Eventually, the energy transfers back.
+
+This creates a mesmerizing back-and-forth rhythm between them.
+
+If aligned on the Y-axis (vertical direction), the system demonstrates how oscillations in one pendulum influence others through coupling.
+
+🔬 Scientific Principle
+
+Resonance & Energy Transfer → oscillations travel through the flexible support.
+
+Coupled Oscillators → multiple systems sharing energy.
+
+Conservation of Energy → total energy remains constant, only redistributed.
+
+This effect is the same principle behind tuning forks, musical resonance, and even wireless energy transfer concepts.
+
+✨ Why It’s Exciting
+
+Looks magical — as if the pendulums are “communicating”.
+
+Demonstrates wave transfer, resonance, and synchronization.
+
+Connects to engineering applications: bridges swaying in sync, resonance in skyscrapers, and even synchronization of heart cells.
+
+⚡ Short Museum Panel (70 words)
+
+Sympathetic Swing shows how pendulums can “talk” through shared energy. When one pendulum starts swinging, its motion travels through the common support, slowly transferring energy to the other pendulum. The two then exchange swings in a rhythmic dance. This phenomenon demonstrates coupled oscillations and resonance, the same principles behind tuning forks, musical instruments, and even how structures like bridges or skyscrapers vibrate in sync.",physics,"Dehradun, Uttarakhand, India",ground,researchers,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756631127944-485672393.jpg,1,,"{""floor"":""ground"",""x"":61.25000000000001,""y"":31}",61.25000000000001,31,,,{},2025-08-31T09:05:28.941Z,2025-08-31T09:05:28.941Z,true,,,,,
+cmezgvlkp00035vbi9l8zgad7,Sympathetic Swing (Z-Axis),"A sympathetic swing along the Z-axis is a demonstration of resonance and coupled oscillations, where one pendulum or swing transfers its motion to another aligned along the vertical (Z) axis. Unlike the X-axis (side-to-side) or Y-axis (front-to-back) swings, the Z-axis motion involves up-and-down oscillations, which are less common in everyday swings but can be visualized in spring–mass systems, hanging pendulums with elastic supports, or experimental setups in physics labs.
+
+Working Principle:
+
+When one system oscillates vertically, it induces vibrations in another system through a coupled medium (like a spring, rod, or elastic connector).
+
+If both systems share the same natural frequency, sympathetic resonance occurs, and energy transfer makes the second system swing up and down.
+
+This is often studied in mechanical vibrations, seismology (vertical ground oscillations), and structural resonance experiments.
+
+Applications:
+
+Demonstrating coupled oscillators in physics.
+
+Studying resonance in vertical oscillations of bridges, towers, or machines.
+
+Analogies in quantum mechanics where energy states resonate.
+
+Earthquake-resistant engineering, where vertical sympathetic vibrations matter.",physics,"Dehradun, Uttarakhand, India",ground,researchers,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756631226414-873853867.jpg,1,,"{""floor"":""ground"",""x"":59.75,""y"":27.833333333333332}",59.75,27.833333333333332,,,{},2025-08-31T09:07:07.128Z,2025-08-31T09:07:07.128Z,true,,,,,
+cmeibhhfg00029wf6rx91dwe1,Tensegrity Structure,"The Tensegrity Structure is a fascinating outdoor exhibit that challenges our usual perception of balance and stability. At first glance, the structure appears to be floating or magically suspended in the air, supported only by cables and struts. In reality, it demonstrates the principle of tensional integrity (tensegrity), where a system of isolated rigid elements is held together by a network of continuous tension. This exhibit sparks curiosity by showing how structures can be both strong and lightweight, and inspires discussions about its applications in architecture, biology, and robotics.
+
+Location: Outdoor Science Park (Ground Floor Campus)
+
+Theme: Physics / Engineering (Mechanics & Structures)
+
+Type: Static + Interactive Demonstration
+
+Complexity Level: Moderate (conceptual, visual appeal)
+
+Target Age Group: 12+ (Middle school, high school, general visitors)
+
+Interactivity Score: 6 (visitors can touch/observe the stability and test balance)
+
+Duration: 5–10 minutes
+
+Learning Outcome:
+
+Understand tensional integrity – balance of forces.
+
+Appreciate applications in modern architecture, bridges, space stations, and nature (e.g., cells, bones).
+
+Encourage problem-solving and structural design thinking.
+
+Features:
+
+Suspended rods and cables
+
+Illusion of “floating” parts
+
+Hands-on stability check
+
+Tags: physics, mechanics, balance, architecture, engineering, outdoor exhibit",physics,"Dehradun, Uttarakhand, India",outside,researchers,passive,outdoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1755594242223-805276304.jpg; exhibit-1755594242439-5478891.jpg,2,,"{""floor"":""outside"",""x"":39.3125,""y"":42}",39.3125,42,,,{},2025-08-19T09:04:05.473Z,2025-08-20T10:18:39.791Z,true,,,,,
+cmezks3jk000e5vbivjsz3g2m,Tornado,"This exhibit creates a miniature tornado inside a transparent chamber.
+
+You can see the swirling air spiral up, sometimes with fog or smoke to make the vortex visible.
+
+It demonstrates the powerful rotation of air and how tornadoes form in nature.
+
+Mechanism:
+
+Airflow: Fans or air blowers at the base or sides create a circular motion of air inside the chamber.
+
+Vortex Formation: The rotating air stretches upward due to pressure differences, forming a vortex.
+
+Visualization: Smoke, fog, or mist is added so the air’s spiral motion becomes visible, making it look like a real tornado",physics,"Dehradun, Uttarakhand, India",ground,families,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756637781779-322157920.jpg,1,,"{""floor"":""ground"",""x"":47.583333333333336,""y"":50.5}",47.583333333333336,50.5,,,{},2025-08-31T10:56:22.255Z,2025-08-31T10:56:22.255Z,true,,,,,
+cmf97hl4j0000snwdybw8ye3q,Wave Motion,"The “Wave Motion” exhibit creates the illusion of a traveling wave using rotating rings.
+
+A set of red-colored rings are mounted on a shaft with eccentricity and angular phase shift.
+
+When the shaft rotates, the rings form a spiral staircase-like pattern.
+
+Depending on the direction of rotation, the spiral appears to be climbing upward or downward.
+
+This rotary motion creates the illusion of wave propagation, helping visualize how waves move through a medium.
+
+This exhibit demonstrates the difference between rotational motion and apparent wave motion, showing how waves transfer energy without transferring matter.",physics,"Dehradun, Uttarakhand, India",ground,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1757220117550-59382351.jpg,1,,"{""floor"":""ground"",""x"":25.25,""y"":53.5}",25.25,53.5,,,{},2025-09-07T04:41:58.578Z,2025-09-07T04:41:58.578Z,true,,,,,
+cmewnvpa00011hnnpui2q05q0,Into Mars & Resources of Space,"This exhibit takes visitors on a virtual journey to Mars, showcasing its landscapes, atmosphere, and potential for human settlement. Using VR headsets or holographic models, visitors can walk on Martian soil, explore Olympus Mons (the tallest volcano), and visit Valles Marineris (the largest canyon).
+
+The second part introduces space resources:
+
+Mars Resources → Water ice (for fuel & life support), regolith (for building habitats).
+
+Asteroids → Rich in iron, nickel, cobalt, and platinum group metals.
+
+Moon → Helium-3 as a future fusion fuel.
+
+Visitors learn how future astronauts and robots might mine and use these resources to support space colonization.
+
+✨ Why It’s Exciting
+
+Connects current Mars missions (Perseverance, Ingenuity, Artemis) with future colonization plans.
+
+Teaches how space mining could power industries and settlements.
+
+Inspires students about STEM careers in space technology.
+
+⚡ Short Museum Panel (70 words)
+
+Into Mars and Resources of Space takes you on a journey across the Red Planet and beyond. Explore Mars through VR landscapes and discover its hidden resources like water ice and regolith for future colonies. Learn how asteroids hold valuable metals and how the Moon may fuel tomorrow’s energy needs. This exhibit highlights the exciting frontier of space exploration and the resources that may sustain humanity’s journey beyond Earth.",space-and-astronomy,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756461589849-443143635.jpg,1,,"{""floor"":""first"",""x"":4.25,""y"":30.5}",4.25,30.5,,,{},2025-08-29T09:59:50.712Z,2025-08-29T09:59:50.712Z,true,,,,,
+cmewnuh300010hnnpdnhe7nvh,Journey to Universe,"Journey to Universe takes visitors on a virtual voyage through space—starting from Earth, traveling across the Solar System, passing through the Milky Way Galaxy, and exploring the cosmos beyond. Using VR headsets, 3D projection, or AR models, visitors can experience flying past planets, touching asteroids, and seeing black holes and nebulae up close.
+
+Interactive models (like rotating solar system, 3D holographic planets, or touchscreens) allow visitors to explore planetary facts, distances, and cosmic phenomena.
+
+✨ Why It’s Exciting
+
+Brings space science to life through immersive visuals.
+
+Inspires curiosity about astronomy, physics, and space exploration.
+
+Creates a memorable “wow” effect for all age groups.
+
+⚡ Short Museum Panel (70 words)
+
+Journey to Universe is an interactive voyage across space, starting from Earth and reaching the farthest corners of the cosmos. Through VR and 3D projection, visitors can fly past planets, touch asteroids, and witness galaxies and black holes. The exhibit combines science with immersive storytelling, offering a breathtaking experience of astronomy. It inspires curiosity about space exploration and our place in the vast universe.",space-and-astronomy,"Dehradun, Uttarakhand, India",first,students,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756461532403-912339497.jpg,1,,"{""floor"":""first"",""x"":9.25,""y"":20}",9.25,20,,,{},2025-08-29T09:58:53.436Z,2025-08-29T09:58:53.436Z,true,,,,,
+cmewnxee90012hnnp1bqz0agh,Colonizing Space & Space Tourism,"This exhibit immerses visitors into the future of humanity in space. It blends real science with futuristic concepts of living beyond Earth:
+
+🔹 Colonizing Space
+
+Mars Colonies → 3D models/VR experience showing domed habitats, greenhouses, and underground bases protecting humans from radiation.
+
+Moon Bases → Ice-mining for water and oxygen, lunar regolith used for 3D-printed buildings.
+
+Space Stations & Orbital Habitats → Rotating O’Neill cylinders with artificial gravity, housing entire communities.
+
+🔹 Space Tourism
+
+Suborbital Flights (Virgin Galactic, Blue Origin) → Visitors can “feel” a 3-min weightless VR experience.
+
+Orbital Hotels (future concepts like Voyager Station) → Luxury in low-Earth orbit with views of Earthrise.
+
+Deep Space Cruises → AR journey through asteroid belts and around Jupiter.
+
+🌟 Why It’s Exciting
+
+Connects today’s progress (SpaceX Starship, Artemis program, Blue Origin tourism) with tomorrow’s dreams.
+
+Makes people imagine being travelers beyond Earth.
+
+Inspires careers in aerospace, robotics, AI, material science, renewable energy.
+
+⚡ Short Museum Panel (70 words)
+
+Colonizing Space & Space Tourism invites you to imagine humanity’s bold future beyond Earth. Explore life in Mars colonies, lunar bases, and giant orbital habitats. Discover how private companies are opening doors to space vacations — from suborbital flights to orbital hotels. This exhibit lets you step into a VR journey where Earth is just the starting point, and the universe becomes humanity’s new frontier.",stars-and-planets,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756461668979-118839207.jpg,1,,"{""floor"":""first"",""x"":10.416666666666668,""y"":28.666666666666668}",10.416666666666668,28.666666666666668,,,{},2025-08-29T10:01:09.920Z,2025-08-29T10:01:09.920Z,true,,,,,
+cmf97ohja0003snwdwzd9jhb7,Taramandal,"The Taramandal is a mini planetarium designed to bring the wonders of the night sky indoors.
+
+Inside the dome, visitors can watch projections of stars, planets, and constellations, just like they appear in the real sky.
+
+The system can simulate the motion of celestial bodies, helping understand day and night, seasons, eclipses, and planetary motion.
+
+It provides an immersive experience to learn about astronomy, space science, and the universe in an engaging way.
+
+The Taramandal offers a journey through the cosmos, making stargazing possible at any time of the day.",stars-and-planets,"Dehradun, Uttarakhand, India",ground,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1757220439747-200902713.jpg,1,,"{""floor"":""ground"",""x"":8.083333333333332,""y"":49.333333333333336}",8.083333333333332,49.333333333333336,,,{},2025-09-07T04:47:20.518Z,2025-09-07T04:47:20.518Z,true,,,,,
+cmezjmbzh00085vbijo49pyzz,3D Film Show,"Put on the special 3D glasses and watch the film on the screen. Notice how the images appear to “pop out” or move into the depth of the screen, giving you a three-dimensional experience.
+
+Scientific Principle:
+
+Normally, a movie screen shows only 2D pictures (height and width).
+
+To create the illusion of depth, 3D films use the fact that our two eyes see slightly different views of the same object (this is called binocular vision or stereopsis).
+
+In a 3D movie, two slightly different images of the same scene are projected at once, one for the left eye and one for the right eye.
+
+The special glasses filter these images so that each eye receives only its intended image (using polarized light or color filters like red-cyan anaglyphs).
+
+Your brain then combines the two images to create a perception of depth and realism.
+
+Applications:
+
+3D movies in cinemas and VR headsets.
+
+Medical imaging for better visualization.
+
+Scientific simulations and training.",technology,"Dehradun, Uttarakhand, India",ground,families,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756635832956-804078335.jpg,1,,"{""floor"":""ground"",""x"":60.25,""y"":14.333333333333334}",60.25,14.333333333333334,,,{},2025-08-31T10:23:53.629Z,2025-08-31T10:23:53.629Z,true,,,,,
+cmewnqygq000yhnnp8lt0dg72,3D Hologram Pyramid,"A 3D Hologram Pyramid is a simple but fascinating device that creates the illusion of floating 3D holograms in mid-air. It works using Pepper’s Ghost Illusion, where a transparent pyramid (made of glass or plastic) reflects video images from a mobile/tablet placed below.
+
+When special holographic videos are played, the pyramid projects floating 3D objects like planets, rotating DNA, cars, or animals that appear to hover inside the pyramid.
+
+✨ Why It’s Exciting
+
+Shows how holography and optical illusions work.
+
+Can be used in advertising, education, product displays, and entertainment.
+
+Affordable and easy to build (just need transparent plastic sheet + mobile).
+
+⚡ Short Museum Panel (70 words)
+
+The 3D Hologram Pyramid uses light reflection to create the illusion of floating 3D objects in mid-air. A transparent pyramid reflects video images from a screen, producing lifelike visuals of rotating models, planets, or animations. This simple yet powerful demonstration of holography is widely used in education, advertising, and exhibitions. It turns an ordinary mobile screen into a mini holographic projector, captivating audiences of all ages.",technology,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756461368709-164185078.jpg,1,,"{""floor"":""first"",""x"":9.75,""y"":30.5}",9.75,30.5,,,{},2025-08-29T09:56:09.339Z,2025-08-29T09:56:09.339Z,true,,,,,
+cmewn3xk5000lhnnpy76ly75q,3D Modelling – Designing the Future in Virtual Space,"3D Modelling is the process of creating digital representations of real or imaginary objects using specialized software. From designing cars, buildings, and medical implants to creating characters in movies and video games, 3D modelling has become a core technology of the modern world. Visitors can explore how objects are designed, textured, and rendered in three dimensions, and even try building a simple 3D model.
+
+✨ Applications
+
+Engineering & Architecture – design of machines, buildings, and infrastructure.
+
+Medicine – 3D printed organs, prosthetics, and surgical planning.
+
+Entertainment – animation, gaming, and visual effects.
+
+Education & Research – interactive simulations for better learning.
+
+🎯 Learning Outcome
+
+Understand the basics of how digital 3D objects are created.
+
+Discover real-world applications across industries.
+
+Appreciate the role of 3D modelling in innovation and creativity.",technology,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756460294466-356937082.jpg,1,,"{""floor"":""first"",""x"":2.5833333333333335,""y"":20.5}",2.5833333333333335,20.5,,,{},2025-08-29T09:38:15.077Z,2025-08-29T09:38:15.077Z,true,,,,,
+cmewmobfk000fhnnpk0xlvl8q,Carbon Nanotubes & Graphene – Supermaterials of the Future,"1. Carbon Nanotubes (CNTs)
+
+Cylindrical structures made of rolled-up sheets of carbon atoms arranged in a hexagonal lattice.
+
+Diameter: ~1–2 nm, length can be several micrometers.
+
+Properties:
+
+100x stronger than steel but very light.
+
+Excellent electrical and thermal conductivity.
+
+Can be metallic or semiconducting depending on their structure.
+
+Applications: Aerospace materials, lightweight vehicles, nanoelectronics, drug delivery, and supercapacitors.
+
+2. Graphene
+
+A single layer of carbon atoms arranged in a 2D honeycomb (hexagonal) lattice.
+
+Properties:
+
+Strongest material ever tested (200x stronger than steel).
+
+Extremely thin – only one atom thick.
+
+Transparent yet highly conductive.
+
+Applications: Flexible electronics, transparent displays, high-speed transistors, medical sensors, desalination membranes, and advanced batteries.
+
+🎯 Interactive Elements
+
+AR Zoom Table → Visitors can use a touchscreen to zoom into a carbon sheet → see how graphene looks → then roll it into a tube (CNT).
+
+Material Comparison → A scale showing weight vs. strength (e.g., steel rod vs. CNT fiber).
+
+Virtual Lab → A VR headset where visitors can “build” a graphene sheet and roll it into nanotubes.
+
+Real-Life Samples → Transparent graphene-coated glass, CNT composites in sports equipment (like a tennis racket).
+
+✨ Learning Outcome
+
+Understand the atomic structure of CNTs and graphene.
+
+Explore why these materials are called “supermaterials”.
+
+Recognize their transformative applications in future technology.",technology,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756459565260-173366263.jpg; exhibit-1756459565344-267698460.jpg,2,,"{""floor"":""first"",""x"":0.4166666666666667,""y"":31.5}",0.4166666666666667,31.5,,,{},2025-08-29T09:26:06.560Z,2025-08-29T09:26:06.560Z,true,,,,,
+cmewna21t000phnnpkrto3zpt,Cloud Computing – The Invisible Powerhouse,"Cloud Computing is the delivery of computing services—storage, servers, databases, software, and AI—over the internet (“the cloud”) instead of on local computers. It powers apps like Google Drive, Netflix, and online banking. With scalability, flexibility, and low cost, cloud computing forms the backbone of today’s digital world.
+
+✨ Applications
+
+Everyday Life – Google Photos, iCloud, online gaming.
+
+Business – scalable IT, virtual collaboration, e-commerce.
+
+Science & Research – big data, climate modeling, AI training.
+
+🎯 Learning Outcome
+
+Understand how the cloud eliminates hardware limits.
+
+Learn why industries rely on shared online resources.
+
+See how cloud enables future innovations (AI, IoT, 5G).",technology,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756460580146-946437194.jpg,1,,"{""floor"":""first"",""x"":8.25,""y"":33.33333333333333}",8.25,33.33333333333333,,,{},2025-08-29T09:43:00.833Z,2025-08-29T09:43:00.833Z,true,,,,,
+cmezgnkgj00005vbic64xd7g0,Digital Library,"The Digital Library exhibit brings the world of books, research, and knowledge into a virtual space. Visitors can explore thousands of e-books, journals, historical archives, and multimedia collections using touchscreens, tablets, or VR headsets. Features like voice search, AI-based recommendations, and AR pop-up content make learning interactive.
+
+The exhibit can also demonstrate how cloud computing, digitization, and AI are transforming libraries into knowledge hubs without walls—accessible anytime, anywhere.
+
+✨ Why It’s Exciting
+
+Shows the shift from traditional to digital learning.
+
+Promotes knowledge sharing & lifelong learning.
+
+Lets visitors search, read, and interact with rare manuscripts, videos, or 3D models instantly.
+
+⚡ Short Museum Panel (70 words)
+
+Digital Library opens the gateway to knowledge through technology. Visitors can explore books, archives, and multimedia collections on interactive screens or in VR, with features like search, AI recommendations, and AR-enhanced content. This exhibit shows how libraries have transformed into digital hubs, accessible anytime and anywhere. It highlights the role of digitization and cloud computing in preserving information and making knowledge universally available.",technology,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756630851547-78521528.jpg,1,,"{""floor"":""first"",""x"":72.41666666666666,""y"":51.5}",72.41666666666666,51.5,,,{},2025-08-31T09:00:52.431Z,2025-08-31T09:00:52.431Z,true,,,,,
+cmewhm4g20000hnnpgvmhhhet,Future Technologies,"The Future Technologies exhibit highlights the cutting-edge innovations that are shaping tomorrow’s world. It introduces visitors to advancements in areas like artificial intelligence, robotics, nanotechnology, biotechnology, renewable energy, and space exploration. Through models, interactive displays, and information panels, the exhibit encourages visitors to imagine the possibilities of science in transforming everyday life and solving global challenges.
+
+✨ Learning Outcome
+
+Awareness of upcoming technologies that will influence industries, health, education, and society.
+
+Understanding the role of research, innovation, and interdisciplinary science in shaping the future.
+
+Inspires creativity and critical thinking about how technology can be applied responsibly for sustainable development.",technology,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756451065076-574926022.jpg,1,,"{""floor"":""first"",""x"":10.75,""y"":45.166666666666664}",10.75,45.166666666666664,,,{},2025-08-29T07:04:26.112Z,2025-08-29T07:04:26.112Z,true,,,,,
+cmez3psxs0014hnnpzru869tm,Future Technologies – Redefining Human Comfort,"This exhibit demonstrates how emerging technologies are being developed to enhance human comfort, convenience, and well-being:
+
+🔹 Smart Homes & IoT
+
+Interactive “Smart Living Room” with voice-controlled lights, climate control, automated cooking, and health-monitoring wearables.
+
+Visitors can try voice commands or use a phone app to control devices.
+
+🔹 Personalized Healthcare
+
+Demo of wearable health trackers, AI-powered diagnosis, robotic surgery models.
+
+“Future Hospital” VR walkthrough — showing remote surgery, AI doctors, and nanomedicine.
+
+🔹 Sustainable Comfort
+
+Self-cleaning materials for homes and clothes.
+
+Smart furniture that adapts to body posture.
+
+AR model of green smart cities with solar roads, AI traffic, and vertical farming.
+
+🔹 Mobility & Work
+
+Futuristic autonomous vehicles that double as mobile lounges/offices.
+
+AI-powered personal assistants that help manage stress, schedules, and work-life balance.
+
+🔹 Immersive Relaxation
+
+VR Meditation Pods → simulate beaches, forests, or space journeys for mental comfort.
+
+AI-curated personalized entertainment playlists for relaxation.
+
+🌟 Why It’s Exciting
+
+Visitors experience the comfort of tomorrow today.
+
+Mixes AI, robotics, smart materials, and sustainable tech.
+
+Connects with everyday life → everyone can imagine using it.
+
+⚡ Short Museum Panel (70 words)
+
+Future Technologies in Aid of Human Comfort showcase innovations designed to make life healthier, easier, and more sustainable. From smart homes that adjust to your needs, to AI healthcare, self-cleaning materials, and immersive relaxation pods — the future is about comfort and well-being. This exhibit invites you to explore how technology merges with daily life, creating a world where convenience, sustainability, and human happiness go hand in hand.",technology,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756609120993-614359601.jpg,1,,"{""floor"":""first"",""x"":7.583333333333334,""y"":25}",7.583333333333334,25,,,{},2025-08-31T02:58:41.727Z,2025-08-31T02:58:41.727Z,true,,,,,
+cmewhw1990001hnnpyw7ojez0,Global Positioning System (GPS),"The Global Positioning System (GPS) exhibit demonstrates how satellites help us determine our exact location anywhere on Earth. GPS works through a network of at least 24 satellites orbiting the Earth, continuously transmitting signals. A GPS receiver (like in our phones or vehicles) picks up signals from at least four satellites to calculate precise latitude, longitude, altitude, and time.
+
+The exhibit shows practical applications such as navigation, disaster management, military use, weather prediction, agriculture, and daily life tools like Google Maps. Visitors can learn how triangulation and time synchronization are the basis of this remarkable technology.
+
+✨ Learning Outcome
+
+Understand the working principle of GPS using satellites and triangulation.
+
+Recognize the importance of GPS in modern life (transport, communication, environment, and defense).
+
+Appreciate how space science contributes to everyday problem-solving.",technology,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756451527556-914226116.jpg,1,,"{""floor"":""first"",""x"":8.416666666666666,""y"":43.5}",8.416666666666666,43.5,,,{},2025-08-29T07:12:08.524Z,2025-08-29T07:12:08.524Z,true,,,,,
+cmewn6so8000nhnnpj7f2xh0u,Image Processing – Teaching Computers to See,"Image Processing is the technology of analyzing, enhancing, and transforming images so that computers can interpret them just like humans do. It combines mathematics, algorithms, and AI to recognize patterns, detect objects, improve medical scans, and even create artistic effects. Visitors will see real-time demos like face detection, satellite image analysis, and medical imaging.
+
+✨ Applications
+
+Healthcare – X-ray and MRI image enhancement.
+
+Security – facial recognition, surveillance.
+
+Space & Remote Sensing – satellite image analysis for weather & agriculture.
+
+Everyday Life – photo filters, QR codes, AR apps.
+
+🎯 Learning Outcome
+
+Understand how computers “see” through pixels.
+
+Learn real-life uses of image processing in science and society.
+
+Explore future trends like computer vision, self-driving cars, and AI art.",technology,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756460428156-697795595.jpg,1,,"{""floor"":""first"",""x"":5.083333333333333,""y"":23.833333333333336}",5.083333333333333,23.833333333333336,,,{},2025-08-29T09:40:28.712Z,2025-08-29T09:40:28.712Z,true,,,,,
+cmewn5fme000mhnnplhobs1gb,Information & Communication Technology – Connecting the World,"Information and Communication Technology (ICT) refers to all the tools and systems used to collect, process, store, and share information. From the printing press and telegraph to the internet, cloud, and smartphones, ICT has revolutionized the way we live, learn, and work. Visitors will explore the evolution of communication and see how ICT powers global connectivity, e-learning, e-health, smart cities, and artificial intelligence.
+
+✨ Applications
+
+Education – digital classrooms, online learning platforms.
+
+Healthcare – telemedicine, medical databases, AI-assisted diagnosis.
+
+Business & Governance – e-commerce, e-banking, e-governance.
+
+Social Life – instant messaging, video calls, social networking.
+
+🎯 Learning Outcome
+
+Understand how ICT integrates computing and communication.
+
+Appreciate its role in transforming societies and economies.
+
+Imagine the future of 5G, IoT, and AI-driven communication.",technology,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756460364483-371539360.jpg,1,,"{""floor"":""first"",""x"":1.7500000000000002,""y"":25.666666666666664}",1.7500000000000002,25.666666666666664,,,{},2025-08-29T09:39:25.141Z,2025-08-29T09:39:25.141Z,true,,,,,
+cmf97mx7k0002snwdtvkbxdlz,Innovation Hub,"The Innovation Hub is a creative space designed to encourage curiosity, problem-solving, and hands-on learning among students and young innovators.
+
+Equipped with modern tools, models, and interactive setups, it provides an environment to experiment, design, and build new ideas.
+
+Activities focus on STEM (Science, Technology, Engineering & Mathematics) learning through projects, tinkering, and workshops.
+
+The hub nurtures creativity, teamwork, and innovation, inspiring the next generation of scientists, engineers, and entrepreneurs.
+
+The Innovation Hub acts as a bridge between classroom learning and real-world application, giving young minds the opportunity to think, explore, and innovate.",technology,"Dehradun, Uttarakhand, India",ground,researchers,hands-on,indoor,,8,8,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1757220362634-206201442.jpg; exhibit-1757220362784-123982949.jpg; exhibit-1757220362860-928357455.jpg; exhibit-1757220362918-127193907.jpg; exhibit-1757220362989-32330843.jpg,5,,"{""floor"":""ground"",""x"":10.416666666666668,""y"":35.833333333333336}",10.416666666666668,35.833333333333336,,,{},2025-09-07T04:46:07.520Z,2025-09-07T04:46:07.520Z,true,,,,,
+cmewmrlwq000ghnnpinip82su,Intelligent Materials – Smart Glass in Action,"Smart Glass / Intelligent Material
+
+Made of liquid crystal layers or electrochromic coatings sandwiched between two glass sheets.
+
+Working principle:
+
+When no power applied → glass becomes hazy / whitish (scatters light, looks frosted).
+
+When electric current applied → molecules align → glass becomes transparent.
+
+This is called “Switchable Glass”.
+
+⚙️ How It Works in the Exhibit
+
+Visitors press a button or switch.
+
+A demo glass panel instantly shifts from hazy → clear → hazy.
+
+A light source or object behind the glass becomes visible only when the glass is transparent.
+
+🌍 Applications
+
+Privacy windows in offices, hospitals, hotels.
+
+Car sunroofs (luxury vehicles already use it).
+
+Energy-saving buildings → reduces heat & lighting needs.
+
+Future homes → one window can be a wall, a screen, or a clear view outside.
+
+✨ Learning Outcome
+
+Understand how liquid crystals respond to electricity.
+
+See a real-time transformation from opaque to transparent.
+
+Connect to future sustainable technologies in daily life.",technology,"Dehradun, Uttarakhand, India",first,students,interactive,indoor,,6,6,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756459718992-279522322.jpg; exhibit-1756459719057-12700796.jpg,2,,"{""floor"":""first"",""x"":0.9166666666666666,""y"":30.5}",0.9166666666666666,30.5,,,{},2025-08-29T09:28:40.106Z,2025-08-29T09:28:40.106Z,true,,,,,
+cmewmwhc8000ihnnpus8dl8ym,Material of the Future,"This exhibit showcases next-generation materials that are revolutionizing science, technology, and daily life. Visitors explore the smart, sustainable, and high-performance materials that scientists are developing to build the future:
+
+Graphene – one-atom-thick sheet, stronger than steel, excellent conductor.
+
+Aerogel – ultra-light “frozen smoke” with amazing insulation.
+
+Shape Memory Alloys – metals that return to their original shape when heated.
+
+Self-healing polymers – plastics that repair cracks automatically.
+
+Biodegradable plastics – eco-friendly replacements for harmful plastics.
+
+Metamaterials – engineered to bend light, enabling cloaking and superlenses.
+
+✨ Applications
+
+Medicine (stents, prosthetics, bio-compatible materials)
+
+Energy (better batteries, solar panels, hydrogen storage)
+
+Construction & Transport (lighter, stronger, greener buildings and vehicles)
+
+Environment (materials for clean water, air, and biodegradable products)
+
+🎯 Learning Outcome
+
+Get a glimpse into how materials are shaping the future.
+
+Understand the role of nanotechnology, sustainability, and smart design.
+
+Inspire curiosity about science-driven innovation.",technology,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756459946631-385432559.jpg,1,,"{""floor"":""first"",""x"":0.75,""y"":27.500000000000004}",0.75,27.500000000000004,,,{},2025-08-29T09:32:27.464Z,2025-08-29T09:32:27.464Z,true,,,,,
+cmez3mu7t0013hnnp3yt6i47o,Modern Entertainment – From Screens to Immersion,"This exhibit explores how entertainment has transformed from traditional cinema and TV to immersive digital experiences:
+
+🔹 Streaming Revolution
+
+Timeline wall showing transition from radio → cinema → TV → streaming (Netflix, Disney+, YouTube).
+
+Interactive display: visitors pick a show/movie and see how recommendation AI works.
+
+🔹 Gaming & Esports
+
+Demo stations for VR gaming, AR puzzles, multiplayer experiences.
+
+Giant screen highlighting esports tournaments and global audiences.
+
+🔹 Immersive Experiences
+
+360° Dome Projection simulating concerts, festivals, and virtual stages.
+
+Holographic Performance → famous singers or actors projected in 3D.
+
+Metaverse Entertainment → try on VR headset and attend a “virtual concert” or sports match.
+
+🔹 AI & Creativity
+
+How AI is used in music generation, film editing, deepfake actors, and personalized storytelling.
+
+Interactive booth where visitors can generate a short AI-created song or movie trailer.
+
+🌟 Why It’s Exciting
+
+Shows how tech + art create new ways to relax, learn, and connect.
+
+Appeals to everyone: movies, music, gaming, and VR.
+
+Gives hands-on immersive experience rather than just watching.
+
+⚡ Short Museum Panel (70 words)
+
+Modern Entertainment reveals how technology has transformed the way we enjoy stories, music, and games. From streaming platforms and esports to VR concerts and holographic shows, entertainment has become interactive and immersive. This exhibit lets you experience the evolution — try VR gaming, attend a virtual concert, and see how AI creates music and films. Step inside the future of fun, where imagination and technology merge.",technology,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756608982001-370952033.jpg,1,,"{""floor"":""first"",""x"":5.583333333333333,""y"":27.500000000000004}",5.583333333333333,27.500000000000004,,,{},2025-08-31T02:56:23.398Z,2025-08-31T02:56:23.398Z,true,,,,,
+cmewmlou8000ehnnp7rhprtx7,Nanomaterials – The Power of the Very Small,"Nanomaterials are substances engineered at the nanometer scale (1–100 nm), where materials exhibit unique physical, chemical, optical, and electrical properties not seen in their bulk form. At this scale, the behavior of matter is influenced by quantum effects and large surface area to volume ratio.
+
+Key points in the exhibit:
+
+What are Nanomaterials? → Explanation of nanoparticles, nanowires, nanotubes, quantum dots, and thin films.
+
+Special Properties → Strength, lightweight, high conductivity, self-cleaning, and antibacterial effects.
+
+Applications:
+
+Medicine – targeted drug delivery, cancer therapy, imaging.
+
+Electronics – faster, smaller, more efficient chips.
+
+Energy – better batteries, solar panels, fuel cells.
+
+Environment – water purification, pollution control.
+
+Everyday Life – scratch-resistant coatings, sunscreens, sports equipment.
+
+Interactive Element →
+
+A touchscreen where visitors can “zoom in” from bulk material → micro scale → nano scale.
+
+AR models of carbon nanotubes and graphene sheets.
+
+Safety & Ethics → Possible risks of nanotoxicity and the importance of responsible use.
+
+✨ Learning Outcome
+
+Understand how shrinking materials to the nanoscale changes their properties.
+
+Discover the transformative impact of nanomaterials in industries and daily life.
+
+Encourage curiosity about the future potential of nanotechnology.",technology,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756459443365-98114222.jpg,1,,"{""floor"":""first"",""x"":2.25,""y"":35.833333333333336}",2.25,35.833333333333336,,,{},2025-08-29T09:24:03.968Z,2025-08-29T09:24:03.968Z,true,,,,,
+cmewn8j11000ohnnpcud3yv5n,Perceptual Computing – When Machines Understand You,"Perceptual Computing is a field of technology where computers sense, interpret, and respond to human actions in a natural way — through gesture, voice, facial expressions, and even emotions. Instead of keyboards and mice, people interact with machines the way they interact with each other. Imagine waving to scroll, speaking to search, or letting a computer read your emotions!
+
+✨ Applications
+
+Gaming & AR/VR – gesture-controlled immersive experiences.
+
+Healthcare – patient monitoring through emotion and movement analysis.
+
+Education – interactive learning environments.
+
+Robotics – smarter human–robot collaboration.
+
+🎯 Learning Outcome
+
+Discover how computers can “see, hear, and feel.”
+
+Learn how AI + sensors enable natural interaction.
+
+Imagine future devices that understand you like another human.",technology,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756460508793-865826391.jpg,1,,"{""floor"":""first"",""x"":9.25,""y"":25}",9.25,25,,,{},2025-08-29T09:41:49.525Z,2025-08-29T09:41:49.525Z,true,,,,,
+cmewnf30z000rhnnp804x2ohp,Photonic Computing – Harnessing Light for Speed  ,"Traditional computers rely on electrons (electric signals) moving through circuits. Photonic computing uses photons (light particles) instead, traveling through optical fibers and chips at nearly the speed of light. Since photons don’t generate heat like electrons, this method allows faster processing, lower power use, and massive data transfer.
+
+✨ Applications
+
+Ultra-fast processors for AI and Big Data
+
+High-speed internet & communications
+
+Efficient data centers with less energy consumption
+
+Space and defense technologies needing high bandwidth
+
+🎯 Learning Outcome
+
+Understand the difference between electron-based vs light-based computing.
+
+Learn how photons can make computers faster and greener.
+
+Explore the role of photonics in shaping future supercomputers and the internet.",technology,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756460814475-363868788.jpg,1,,"{""floor"":""first"",""x"":4.75,""y"":30.666666666666664}",4.75,30.666666666666664,,,{},2025-08-29T09:46:55.379Z,2025-08-29T09:46:55.379Z,true,,,,,
+cmewncogg000qhnnpzcwcckqd,Quantum Computing – Power Beyond Imagination,"Perceptual Computing is a field of technology where computers sense, interpret, and respond to human actions in a natural way — through gesture, voice, facial expressions, and even emotions. Instead of keyboards and mice, people interact with machines the way they interact with each other. Imagine waving to scroll, speaking to search, or letting a computer read your emotions!
+
+✨ Applications
+
+Gaming & AR/VR – gesture-controlled immersive experiences.
+
+Healthcare – patient monitoring through emotion and movement analysis.
+
+Education – interactive learning environments.
+
+Robotics – smarter human–robot collaboration.
+
+🎯 Learning Outcome
+
+Discover how computers can “see, hear, and feel.”
+
+Learn how AI + sensors enable natural interaction.
+
+Imagine future devices that understand you like another human.",technology,"Dehradun, Uttarakhand, India",first,families,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756460702045-190780416.jpg,1,,"{""floor"":""first"",""x"":5.916666666666667,""y"":28.833333333333332}",5.916666666666667,28.833333333333332,,,{},2025-08-29T09:45:03.184Z,2025-08-29T09:45:03.184Z,true,,,,,
+cmewmtzvt000hhnnp3owj1gu8,Shape Memory Alloy (SMA) – Metal with a Memory,"Shape Memory Alloys (SMAs) are special metals that can be deformed when cool but will return to their original shape when heated. This fascinating property is due to a solid-state phase transformation between two crystal structures: martensite (soft, deformable) and austenite (strong, memory phase).
+
+In the exhibit, visitors can bend a wire or strip of SMA, then watch it magically return to its preset shape when dipped in hot water or heated.
+
+✨ Applications
+
+Used in biomedical stents, eyeglass frames, self-repairing materials, aerospace actuators.
+
+Demonstrates how material science meets innovation.
+
+🎯 Learning Outcome
+
+Discover how materials can ""remember"" shapes.
+
+Understand phase change in metals.
+
+See real-world applications of smart materials.",technology,"Dehradun, Uttarakhand, India",first,students,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756459830833-780528010.jpg,1,,"{""floor"":""first"",""x"":0.9166666666666666,""y"":30.5}",0.9166666666666666,30.5,,,{},2025-08-29T09:30:31.529Z,2025-08-29T09:30:31.529Z,true,,,,,
+cmewnhld9000shnnpg80wgshi,Wearable Technology – Gadgets You Can Wear,"Wearable technology refers to electronic devices worn on the body that monitor health, assist communication, or enhance daily life. From smartwatches that track heartbeats to augmented reality glasses that blend digital info with the real world, these devices are becoming part of everyday living.
+
+✨ Applications
+
+Healthcare: Heart-rate, blood oxygen, sleep monitoring
+
+Fitness: Step counters, calorie trackers, smart clothing
+
+Entertainment & Work: AR/VR headsets, smart glasses
+
+Safety: Wearables for soldiers, miners, and astronauts
+
+🎯 Learning Outcome
+
+See how technology integrates with the human body.
+
+Understand real-life applications of wearables in health, fitness, work, and entertainment.
+
+Imagine the future of humans enhanced with smart gadgets.",technology,"Dehradun, Uttarakhand, India",first,researchers,passive,indoor,,3,3,0,0,0,,,,,,,,,,,,,,,,,,,,,,,exhibit-1756460931446-684930534.jpg,1,,"{""floor"":""first"",""x"":3.5833333333333335,""y"":32.33333333333333}",3.5833333333333335,32.33333333333333,,,{},2025-08-29T09:48:52.461Z,2025-08-29T09:48:52.461Z,true,,,,,

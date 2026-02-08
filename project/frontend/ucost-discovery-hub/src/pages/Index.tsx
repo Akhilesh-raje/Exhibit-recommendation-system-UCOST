@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import { WelcomeScreen } from "@/components/WelcomeScreen";
-import { OnboardingFlow, UserProfile } from "@/components/OnboardingFlow";
-import { ExhibitMap } from "@/components/ExhibitMap";
-import { ExhibitDetail } from "@/components/ExhibitDetail";
-import { MyTour } from "@/components/MyTour";
-import AdminLogin from "@/components/AdminLogin";
-import AdminPanel from "@/components/AdminPanel";
+import { UserProfile } from "@/components/OnboardingFlow";
 import { useToast } from "@/hooks/use-toast";
+
+// Lazy load heavy components for optimal code splitting
+const OnboardingFlow = lazy(() => import("@/components/OnboardingFlow").then(m => ({ default: m.OnboardingFlow })));
+const ExhibitMap = lazy(() => import("@/components/ExhibitMap").then(m => ({ default: m.ExhibitMap })));
+const ExhibitDetail = lazy(() => import("@/components/ExhibitDetail").then(m => ({ default: m.ExhibitDetail })));
+const MyTour = lazy(() => import("@/components/MyTour").then(m => ({ default: m.MyTour })));
+const AdminLogin = lazy(() => import("@/components/AdminLogin"));
+const AdminPanel = lazy(() => import("@/components/AdminPanel"));
+
+// Loading fallback for lazy components
+const ComponentLoader = () => (
+  <div className="flex items-center justify-center min-h-[400px]">
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+  </div>
+);
 
 type Screen = "welcome" | "onboarding" | "map" | "exhibit" | "tour" | "admin";
 
@@ -123,46 +133,60 @@ const Index = () => {
       )}
 
       {currentScreen === "onboarding" && (
-        <OnboardingFlow
-          onComplete={handleOnboardingComplete}
-          onBack={handleBack}
-        />
+        <Suspense fallback={<ComponentLoader />}>
+          <OnboardingFlow
+            onComplete={handleOnboardingComplete}
+            onBack={handleBack}
+          />
+        </Suspense>
       )}
       
       {currentScreen === "map" && (
-        <ExhibitMap 
-          userProfile={userProfile}
-          onExhibitSelect={handleExhibitSelect}
-          onBack={handleBack}
-        />
+        <Suspense fallback={<ComponentLoader />}>
+          <ExhibitMap 
+            userProfile={userProfile}
+            onExhibitSelect={handleExhibitSelect}
+            onBack={handleBack}
+          />
+        </Suspense>
       )}
       
       {currentScreen === "exhibit" && (
-        <ExhibitDetail
-          exhibitId={selectedExhibit}
-          onBack={handleBack}
-          onAddToTour={handleAddToTour}
-        />
+        <Suspense fallback={<ComponentLoader />}>
+          <ExhibitDetail
+            exhibitId={selectedExhibit}
+            onBack={handleBack}
+            onAddToTour={handleAddToTour}
+          />
+        </Suspense>
       )}
       
       {currentScreen === "tour" && (
-        <MyTour
-          selectedExhibits={tourExhibits}
-          onBack={handleBack}
-          onStartTour={handleStartTour}
-          onRemoveExhibit={handleRemoveFromTour}
-        />
+        <Suspense fallback={<ComponentLoader />}>
+          <MyTour
+            selectedExhibits={tourExhibits}
+            onStartTour={handleStartTour}
+            onBack={handleBack}
+            onRemoveExhibit={handleRemoveFromTour}
+          />
+        </Suspense>
       )}
 
       {currentScreen === "admin" && (
-        <AdminPanel onBack={handleBackFromAdmin} />
+        <Suspense fallback={<ComponentLoader />}>
+          <AdminPanel onBack={handleBackFromAdmin} />
+        </Suspense>
       )}
 
-      <AdminLogin
-        isOpen={showAdminLogin}
-        onClose={() => setShowAdminLogin(false)}
-        onSuccess={handleAdminLoginSuccess}
-      />
+      {showAdminLogin && (
+        <Suspense fallback={<ComponentLoader />}>
+          <AdminLogin
+            isOpen={showAdminLogin}
+            onClose={() => setShowAdminLogin(false)}
+            onSuccess={handleAdminLoginSuccess}
+          />
+        </Suspense>
+      )}
     </div>
   );
 };

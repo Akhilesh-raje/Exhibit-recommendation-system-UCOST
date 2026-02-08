@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+*.exe
+*.dmg
+*.deb
+*.rpm
+*.AppImage
+*.snap
+
+# Logs
+*.log
+logs/
+
+# User data
+user-data/
+*.db
+
+# Development
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Documentation (keep in repo, but ignore in npm)
+# README.md
+# INSTALLATION.md
+# QUICK_START.md
+

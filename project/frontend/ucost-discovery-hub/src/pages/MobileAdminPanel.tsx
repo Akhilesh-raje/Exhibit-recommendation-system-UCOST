@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useCapacitor } from '../hooks/useCapacitor';
 import { MobileLayout, MobileCard, MobileButton, MobileInput } from '../components/ui/mobile-layout';
 import { MobileNavigation, MobileBreadcrumb } from '../components/ui/mobile-navigation';
-import { 
-  Users, 
-  Settings, 
-  BarChart3, 
-  Shield, 
-  Database, 
+import {
+  Users,
+  Settings,
+  BarChart3,
+  Shield,
+  Database,
   Activity,
   Plus,
   Edit,
@@ -82,6 +83,7 @@ const mockUsers: User[] = [
 ];
 
 export const MobileAdminPanel: React.FC = () => {
+  const navigate = useNavigate();
   const { isNative, triggerHaptic, platform } = useCapacitor();
   const [activeTab, setActiveTab] = useState<'dashboard' | 'users' | 'system' | 'settings'>('dashboard');
   const [searchQuery, setSearchQuery] = useState('');
@@ -133,15 +135,15 @@ export const MobileAdminPanel: React.FC = () => {
     <MobileLayout>
       {/* Mobile Navigation */}
       <MobileNavigation />
-      
+
       {/* Main Content with Safe Area Spacing */}
       <div className="pt-20 pb-20">
         {/* Breadcrumb */}
-        <MobileBreadcrumb 
+        <MobileBreadcrumb
           items={[
             { label: 'Admin', path: '/admin' },
             { label: 'Dashboard' }
-          ]} 
+          ]}
         />
 
         {/* Header Section */}
@@ -185,11 +187,10 @@ export const MobileAdminPanel: React.FC = () => {
               <button
                 key={tab.id}
                 onClick={() => handleTabChange(tab.id as typeof activeTab)}
-                className={`flex-1 flex items-center justify-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  activeTab === tab.id
-                    ? 'bg-background text-foreground shadow-sm'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
+                className={`flex-1 flex items-center justify-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${activeTab === tab.id
+                  ? 'bg-background text-foreground shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground'
+                  }`}
               >
                 {tab.icon}
                 <span className="hidden sm:inline">{tab.label}</span>
@@ -297,18 +298,16 @@ export const MobileAdminPanel: React.FC = () => {
                           <h4 className="font-medium text-foreground truncate">{user.name}</h4>
                           <p className="text-sm text-muted-foreground truncate">{user.email}</p>
                           <div className="flex items-center space-x-2 mt-1">
-                            <span className={`text-xs px-2 py-1 rounded-full ${
-                              user.role === 'admin' ? 'bg-red-100 text-red-700' :
+                            <span className={`text-xs px-2 py-1 rounded-full ${user.role === 'admin' ? 'bg-red-100 text-red-700' :
                               user.role === 'moderator' ? 'bg-blue-100 text-blue-700' :
-                              'bg-gray-100 text-gray-700'
-                            }`}>
+                                'bg-gray-100 text-gray-700'
+                              }`}>
                               {user.role}
                             </span>
-                            <span className={`text-xs px-2 py-1 rounded-full ${
-                              user.status === 'active' ? 'bg-green-100 text-green-700' :
+                            <span className={`text-xs px-2 py-1 rounded-full ${user.status === 'active' ? 'bg-green-100 text-green-700' :
                               user.status === 'inactive' ? 'bg-yellow-100 text-yellow-700' :
-                              'bg-red-100 text-red-700'
-                            }`}>
+                                'bg-red-100 text-red-700'
+                              }`}>
                               {user.status}
                             </span>
                           </div>
@@ -360,7 +359,7 @@ export const MobileAdminPanel: React.FC = () => {
         {activeTab === 'system' && (
           <div className="space-y-4">
             <h3 className="font-semibold">System Monitoring</h3>
-            
+
             {/* System Status */}
             <MobileCard className="p-4">
               <div className="space-y-3">
@@ -400,6 +399,14 @@ export const MobileAdminPanel: React.FC = () => {
               </MobileButton>
               <MobileButton
                 variant="outline"
+                onClick={() => navigate('/admin/p2p')}
+                className="h-12"
+              >
+                <Wifi className="mr-2" size={18} />
+                P2P Sync
+              </MobileButton>
+              <MobileButton
+                variant="outline"
                 onClick={() => console.log('System Logs')}
                 className="h-12"
               >
@@ -413,7 +420,7 @@ export const MobileAdminPanel: React.FC = () => {
         {activeTab === 'settings' && (
           <div className="space-y-4">
             <h3 className="font-semibold">Admin Settings</h3>
-            
+
             {/* Security Settings */}
             <MobileCard className="p-4">
               <h4 className="font-medium mb-3">Security</h4>

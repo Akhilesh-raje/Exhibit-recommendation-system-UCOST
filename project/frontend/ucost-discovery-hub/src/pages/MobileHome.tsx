@@ -3,18 +3,20 @@ import { useNavigate } from 'react-router-dom';
 import { useCapacitor } from '../hooks/useCapacitor';
 import { MobileLayout, MobileCard, MobileButton, MobileInput } from '../components/ui/mobile-layout';
 import { MobileNavigation, MobileBreadcrumb } from '../components/ui/mobile-navigation';
-import { 
-  Search, 
-  Map, 
-  Users, 
-  Settings, 
-  Bell, 
+import {
+  Search,
+  Map,
+  Users,
+  Settings,
+  Bell,
   Star,
   TrendingUp,
   Activity
 } from 'lucide-react';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+import { getApiUrl } from '@/lib/desktop-config';
+
+const API_BASE_URL = getApiUrl();
 
 interface Exhibit {
   id: string;
@@ -83,17 +85,17 @@ export const MobileHome: React.FC = () => {
     <MobileLayout>
       {/* Mobile Navigation */}
       <MobileNavigation />
-      
+
       {/* Main Content with Safe Area Spacing */}
       <div className={cn(
         "pt-20 pb-20", // Account for top and bottom navigation
         isNative && "pt-24 pb-24" // Extra spacing for mobile
       )}>
         {/* Breadcrumb */}
-        <MobileBreadcrumb 
+        <MobileBreadcrumb
           items={[
             { label: 'Home', path: '/' }
-          ]} 
+          ]}
         />
 
         {/* Welcome Section */}
@@ -124,44 +126,44 @@ export const MobileHome: React.FC = () => {
           </div>
         </div>
 
-                        {/* Quick Actions */}
-                <div className="mb-6">
-                  <h2 className="text-lg font-semibold mb-3">Quick Actions</h2>
-                  <div className="grid grid-cols-2 gap-3">
-                    <MobileCard
-                      onClick={() => navigate('/admin')}
-                      interactive
-                      className="text-center p-4"
-                    >
-                      <Settings className="mx-auto mb-2 text-primary" size={24} />
-                      <span className="text-sm font-medium">Admin Panel</span>
-                    </MobileCard>
-                    <MobileCard
-                      onClick={() => navigate('/admin/exhibits')}
-                      interactive
-                      className="text-center p-4"
-                    >
-                      <Map className="mx-auto mb-2 text-primary" size={24} />
-                      <span className="text-sm font-medium">Manage Exhibits</span>
-                    </MobileCard>
-                    <MobileCard
-                      onClick={() => handleQuickAction('notifications')}
-                      interactive
-                      className="text-center p-4"
-                    >
-                      <Bell className="mx-auto mb-2 text-primary" size={24} />
-                      <span className="text-sm font-medium">Notifications</span>
-                    </MobileCard>
-                    <MobileCard
-                      onClick={() => handleQuickAction('settings')}
-                      interactive
-                      className="text-center p-4"
-                    >
-                      <Settings className="mx-auto mb-2 text-primary" size={24} />
-                      <span className="text-sm font-medium">Settings</span>
-                    </MobileCard>
-                  </div>
-                </div>
+        {/* Quick Actions */}
+        <div className="mb-6">
+          <h2 className="text-lg font-semibold mb-3">Quick Actions</h2>
+          <div className="grid grid-cols-2 gap-3">
+            <MobileCard
+              onClick={() => navigate('/admin')}
+              interactive
+              className="text-center p-4"
+            >
+              <Settings className="mx-auto mb-2 text-primary" size={24} />
+              <span className="text-sm font-medium">Admin Panel</span>
+            </MobileCard>
+            <MobileCard
+              onClick={() => navigate('/admin/exhibits')}
+              interactive
+              className="text-center p-4"
+            >
+              <Map className="mx-auto mb-2 text-primary" size={24} />
+              <span className="text-sm font-medium">Manage Exhibits</span>
+            </MobileCard>
+            <MobileCard
+              onClick={() => handleQuickAction('notifications')}
+              interactive
+              className="text-center p-4"
+            >
+              <Bell className="mx-auto mb-2 text-primary" size={24} />
+              <span className="text-sm font-medium">Notifications</span>
+            </MobileCard>
+            <MobileCard
+              onClick={() => handleQuickAction('settings')}
+              interactive
+              className="text-center p-4"
+            >
+              <Settings className="mx-auto mb-2 text-primary" size={24} />
+              <span className="text-sm font-medium">Settings</span>
+            </MobileCard>
+          </div>
+        </div>
 
         {/* Statistics */}
         <div className="mb-6">
@@ -192,7 +194,7 @@ export const MobileHome: React.FC = () => {
               View All
             </MobileButton>
           </div>
-          
+
           {isLoading ? (
             <div className="space-y-3">
               {[1, 2, 3].map((i) => (

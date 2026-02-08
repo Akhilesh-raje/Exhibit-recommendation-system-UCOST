@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const { spawn } = require('child_process');
 const path = require('path');
+const fs = require('fs');
 
 function run(cmd, args, options = {}) {
   return new Promise((resolve, reject) => {
@@ -12,10 +13,29 @@ function run(cmd, args, options = {}) {
   });
 }
 
+function getRepoRoot() {
+  const isPackaged = typeof process.pkg !== 'undefined';
+  if (isPackaged) {
+    // When packaged by pkg, use the directory of the executable
+    return path.dirname(process.execPath);
+  }
+  // In dev, use project root relative to this file
+  return path.resolve(__dirname, '..');
+}
+
 (async () => {
   try {
-    const repoRoot = path.resolve(__dirname, '..');
+    const repoRoot = getRepoRoot();
     process.chdir(repoRoot);
+
+    // Sanity check: ensure package.json exists at repo root
+    if (!fs.existsSync(path.join(repoRoot, 'package.json'))) {
+      console.error('package.json not found. Please place UCOST-Launcher.exe inside the project root folder.');
+      process.exit(1);
+    }
+
+    // Ensure npm is available (EXE relies on system Node/npm)
+    // Users must have Node.js (with npm) installed and on PATH.
 
     const isFirstRun = process.argv.includes('--install');
     if (isFirstRun) {

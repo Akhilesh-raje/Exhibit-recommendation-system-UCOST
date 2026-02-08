@@ -1,0 +1,165 @@
+{
+    "appId": "org.ucost.discoveryhub",
+    "productName": "UCOST Discovery Hub",
+    "directories": {
+        "output": "dist-prod",
+        "buildResources": "build"
+    },
+    "files": [
+        "main.js",
+        "src/**/*",
+        "scripts/**/*",
+        "requirements/**/*",
+        "docs/**/*",
+        "!src/**/*.map",
+        "package.json"
+    ],
+    "extraResources": [
+        {
+            "from": "../project/backend/backend/dist",
+            "to": "backend/dist",
+            "filter": [
+                "**/*"
+            ]
+        },
+        {
+            "from": "../project/backend/backend/prisma",
+            "to": "backend/prisma",
+            "filter": [
+                "**/*"
+            ]
+        },
+        {
+            "from": "../project/backend/backend/node_modules",
+            "to": "backend/node_modules",
+            "filter": [
+                "**/*",
+                "!**/*.map",
+                "!**/*.md",
+                "!**/test/**",
+                "!**/tests/**",
+                "!**/__tests__/**",
+                "!**/.cache/**"
+            ]
+        },
+        {
+            "from": "../project/frontend/ucost-discovery-hub/dist",
+            "to": "frontend/dist",
+            "filter": [
+                "**/*"
+            ]
+        },
+        {
+            "from": "../project/chatbot-mini/dist",
+            "to": "chatbot/dist",
+            "filter": [
+                "**/*"
+            ]
+        },
+        {
+            "from": "../project/chatbot-mini/node_modules",
+            "to": "chatbot/node_modules",
+            "filter": [
+                "**/*",
+                "!**/*.map",
+                "!**/*.md",
+                "!**/test/**",
+                "!**/tests/**",
+                "!**/__tests__/**",
+                "!**/.cache/**"
+            ]
+        },
+        {
+            "from": "../project/embed-service",
+            "to": "embed-service",
+            "filter": [
+                "**/*",
+                "!**/__pycache__/**",
+                "!**/*.pyc",
+                "!**/node_modules/**"
+            ]
+        },
+        {
+            "from": "../gemma/infer",
+            "to": "gemma/infer",
+            "filter": [
+                "**/*",
+                "!**/__pycache__/**",
+                "!**/*.pyc"
+            ]
+        },
+        {
+            "from": "../project/ocr-engine",
+            "to": "ocr-engine",
+            "filter": [
+                "**/*",
+                "!**/__pycache__/**",
+                "!**/*.pyc",
+                "!**/node_modules/**"
+            ]
+        },
+        {
+            "from": "../docs/exhibits.csv",
+            "to": "data/exhibits.csv"
+        },
+        {
+            "from": "requirements",
+            "to": "requirements",
+            "filter": [
+                "**/*.txt"
+            ]
+        },
+        {
+            "from": "resources/python",
+            "to": "python",
+            "filter": [
+                "**/*"
+            ]
+        },
+        {
+            "from": "resources/models",
+            "to": "models",
+            "filter": [
+                "**/*"
+            ]
+        },
+        {
+            "from": "resources/tesseract",
+            "to": "tesseract",
+            "filter": [
+                "**/*"
+            ]
+        },
+        {
+            "from": "docs",
+            "to": "docs",
+            "filter": [
+                "**/*.md"
+            ]
+        }
+    ],
+    "win": {
+        "target": [
+            {
+                "target": "nsis",
+                "arch": [
+                    "x64"
+                ]
+            }
+        ],
+        "icon": "build/icon.ico",
+        "requestedExecutionLevel": "asInvoker"
+    },
+    "extraMetadata": {
+        "main": "main.js",
+        "author": "Uttarakhand Science and Technology Council",
+        "description": "UCOST Discovery Hub - Museum Exhibit Management System"
+    },
+    "nsis": {
+        "oneClick": false,
+        "allowToChangeInstallationDirectory": true,
+        "createDesktopShortcut": true,
+        "createStartMenuShortcut": true,
+        "deleteAppDataOnUninstall": false
+    }
+}

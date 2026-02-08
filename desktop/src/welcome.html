@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome - UCOST Discovery Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #333;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 700px;
+      margin: 0 auto;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+      color: #667eea;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .status-section {
+      margin: 30px 0;
+    }
+
+    .status-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .service-list {
+      list-style: none;
+    }
+
+    .service-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      margin-bottom: 8px;
+      background: #f5f5f5;
+      border-radius: 8px;
+    }
+
+    .service-name {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .service-status {
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .status-running {
+      background: #4caf50;
+      color: white;
+    }
+
+    .status-error {
+      background: #f44336;
+      color: white;
+    }
+
+    .status-warning {
+      background: #ff9800;
+      color: white;
+    }
+
+    .actions {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-primary {
+      background: #667eea;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #5568d3;
+    }
+
+    .btn-secondary {
+      background: #e0e0e0;
+      color: #333;
+    }
+
+    .btn-secondary:hover {
+      background: #d0d0d0;
+    }
+
+    .info {
+      margin-top: 20px;
+      padding: 15px;
+      background: #e3f2fd;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #1976d2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">🔬</div>
+      <div class="title">Welcome to UCOST Discovery Hub!</div>
+      <div class="subtitle">AI-Powered Exhibit Recommendation System</div>
+    </div>
+
+    <div class="status-section">
+      <div class="status-title">Service Status</div>
+      <ul class="service-list" id="service-list">
+        <li class="service-item">
+          <span class="service-name">Loading...</span>
+          <span class="service-status status-warning">Checking</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-primary" onclick="openApp()">Get Started</button>
+      <button class="btn btn-secondary" onclick="viewDocs()">Documentation</button>
+    </div>
+
+    <div class="info">
+      <strong>Version:</strong> <span id="app-version">1.0.0</span><br>
+      All services are starting up. This may take a moment on first launch.
+    </div>
+  </div>
+
+  <script>
+    const { ipcRenderer } = require('electron');
+
+    // Get app version
+    ipcRenderer.invoke('welcome:get-app-version').then(version => {
+      document.getElementById('app-version').textContent = version;
+    });
+
+    // Update service status
+    function updateServiceStatus(status) {
+      const serviceList = document.getElementById('service-list');
+      serviceList.innerHTML = '';
+
+      const services = [
+        { name: 'Backend API', key: 'backend' },
+        { name: 'Chatbot', key: 'chatbot' },
+        { name: 'Embed Service', key: 'embed' },
+        { name: 'Gemma Recommender', key: 'gemma' },
+        { name: 'OCR Engine', key: 'ocr' }
+      ];
+
+      for (const service of services) {
+        const serviceStatus = status[service.key] || { status: 'unknown' };
+        const item = document.createElement('li');
+        item.className = 'service-item';
+        
+        let statusClass = 'status-warning';
+        let statusText = 'Unknown';
+        
+        if (serviceStatus.status === 'running') {
+          statusClass = 'status-running';
+          statusText = 'Running';
+        } else if (serviceStatus.status === 'error') {
+          statusClass = 'status-error';
+          statusText = 'Error';
+        } else if (serviceStatus.status === 'starting') {
+          statusClass = 'status-warning';
+          statusText = 'Starting...';
+        }
+
+        item.innerHTML = `
+          <span class="service-name">${service.name}</span>
+          <span class="service-status ${statusClass}">${statusText}</span>
+        `;
+        
+        serviceList.appendChild(item);
+      }
+    }
+
+    // Listen for status updates
+    ipcRenderer.on('service-status-update', (event, status) => {
+      updateServiceStatus(status);
+    });
+
+    // Request initial status
+    ipcRenderer.invoke('welcome:get-service-status').then(status => {
+      updateServiceStatus(status);
+    });
+
+    // Update every 2 seconds
+    setInterval(() => {
+      ipcRenderer.invoke('welcome:get-service-status').then(status => {
+        updateServiceStatus(status);
+      });
+    }, 2000);
+
+    function openApp() {
+      window.close();
+    }
+
+    function viewDocs() {
+      // Documentation will be opened by main process
+      ipcRenderer.send('open-documentation');
+    }
+  </script>
+</body>
+</html>
+

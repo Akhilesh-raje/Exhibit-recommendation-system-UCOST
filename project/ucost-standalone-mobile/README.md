@@ -1,5 +1,7 @@
 # 🚀 UCOST Discovery Hub - Capacitor Mobile App
 
+> Integrated monorepo guidance is in the root `README.md` (**Subsystem Guides → Capacitor Mobile App**). This document drills into the mobile workspace specifics.
+
 A modern, mobile-first museum exhibit management system built with React, TypeScript, and Capacitor.
 
 ## ✨ Features

@@ -11,7 +11,15 @@ interface MyTourProps {
 }
 
 export function MyTour({ selectedExhibits, onBack, onStartTour, onRemoveExhibit }: MyTourProps) {
-  const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+  // Use centralized API config for desktop compatibility
+  const API_BASE_URL = (() => {
+    try {
+      const { getApiUrl } = require('@/lib/desktop-config');
+      return getApiUrl();
+    } catch {
+      return import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+    }
+  })();
 
   interface ExhibitDetailItem {
     id: string;
@@ -114,7 +122,7 @@ export function MyTour({ selectedExhibits, onBack, onStartTour, onRemoveExhibit 
                 <Check className="w-6 h-6 text-green-500" />
                 Selected Exhibits
               </h2>
-              
+
               {selectedExhibits.length === 0 ? (
                 <div className="text-center py-8">
                   <p className="text-gray-600 text-lg mb-4">No exhibits selected yet</p>
@@ -158,7 +166,7 @@ export function MyTour({ selectedExhibits, onBack, onStartTour, onRemoveExhibit 
                 <MapPin className="w-6 h-6 text-red-500" />
                 Your Route
               </h2>
-              
+
               {/* Mini Map */}
               <div className="relative bg-gradient-to-br from-blue-400 via-green-400 to-blue-500 rounded-2xl h-64 overflow-hidden">
                 {/* Map background */}
@@ -167,7 +175,7 @@ export function MyTour({ selectedExhibits, onBack, onStartTour, onRemoveExhibit 
                   <div className="absolute bottom-4 right-4 w-20 h-14 bg-green-600 rounded-lg opacity-80"></div>
                   <div className="absolute top-8 right-8 w-12 h-10 bg-green-400 rounded-lg opacity-70"></div>
                 </div>
-                
+
                 {/* Route Path */}
                 {selectedExhibits.length > 1 && (
                   <svg className="absolute inset-0 w-full h-full">
@@ -181,16 +189,16 @@ export function MyTour({ selectedExhibits, onBack, onStartTour, onRemoveExhibit 
                     />
                   </svg>
                 )}
-                
+
                 {/* Start Point */}
                 <div className="absolute top-8 left-8 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
-                
+
                 {/* End Point */}
                 {selectedExhibits.length > 0 && (
                   <div className="absolute bottom-8 right-8 w-4 h-4 bg-red-500 rounded-full border-2 border-white"></div>
                 )}
               </div>
-              
+
               {/* Start Button */}
               {selectedExhibits.length > 0 && (
                 <div className="mt-8">

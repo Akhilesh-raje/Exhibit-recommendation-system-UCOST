@@ -40,7 +40,15 @@ export function ExhibitMap({ userProfile, onExhibitSelect, onBack }: ExhibitMapP
   const lastOffsetRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const pinchStartRef = useRef<{ distance: number; midpoint: { x: number; y: number }; scale: number } | null>(null);
 
-  const API_BASE_URL = (import.meta as any).env?.VITE_API_URL || 'http://localhost:5000/api';
+  // Use centralized API config for desktop compatibility
+  const API_BASE_URL = (() => {
+    try {
+      const { getApiUrl } = require('@/lib/desktop-config');
+      return getApiUrl();
+    } catch {
+      return (import.meta as any).env?.VITE_API_URL || 'http://localhost:5000/api';
+    }
+  })();
   const SERVER_BASE_URL = API_BASE_URL.replace(/\/api$/, '');
 
   const pinColorsForCategory = (category?: string) => {
@@ -97,7 +105,7 @@ export function ExhibitMap({ userProfile, onExhibitSelect, onBack }: ExhibitMapP
   // Load recommended exhibits directly from backend recommend endpoint (global, all floors)
   useEffect(() => {
     let mounted = true;
-    
+
     const loadRecommendedExhibits = async () => {
       try {
         setRecoLoading(true);
@@ -115,9 +123,9 @@ export function ExhibitMap({ userProfile, onExhibitSelect, onBack }: ExhibitMapP
           })
         });
         const data = await res.json();
-        
+
         if (!mounted) return;
-        
+
         if (res.ok && data?.success && Array.isArray(data.exhibits)) {
           setRecommendedExhibits(data.exhibits);
         } else {
@@ -133,9 +141,9 @@ export function ExhibitMap({ userProfile, onExhibitSelect, onBack }: ExhibitMapP
         if (mounted) setRecoLoading(false);
       }
     };
-    
+
     loadRecommendedExhibits();
-    
+
     return () => { mounted = false; };
   }, [API_BASE_URL, userProfile?.group, JSON.stringify(userProfile?.interests)]);
 
@@ -274,8 +282,8 @@ export function ExhibitMap({ userProfile, onExhibitSelect, onBack }: ExhibitMapP
     pinchStartRef.current = null;
   };
 
-  const handleZoomIn = () => onWheel({ preventDefault: () => {}, deltaY: -100, clientX: (containerRef.current?.getBoundingClientRect().left || 0) + (containerRef.current?.clientWidth || 0) / 2, clientY: (containerRef.current?.getBoundingClientRect().top || 0) + (containerRef.current?.clientHeight || 0) / 2 } as unknown as React.WheelEvent<HTMLDivElement>);
-  const handleZoomOut = () => onWheel({ preventDefault: () => {}, deltaY: 100, clientX: (containerRef.current?.getBoundingClientRect().left || 0) + (containerRef.current?.clientWidth || 0) / 2, clientY: (containerRef.current?.getBoundingClientRect().top || 0) + (containerRef.current?.clientHeight || 0) / 2 } as unknown as React.WheelEvent<HTMLDivElement>);
+  const handleZoomIn = () => onWheel({ preventDefault: () => { }, deltaY: -100, clientX: (containerRef.current?.getBoundingClientRect().left || 0) + (containerRef.current?.clientWidth || 0) / 2, clientY: (containerRef.current?.getBoundingClientRect().top || 0) + (containerRef.current?.clientHeight || 0) / 2 } as unknown as React.WheelEvent<HTMLDivElement>);
+  const handleZoomOut = () => onWheel({ preventDefault: () => { }, deltaY: 100, clientX: (containerRef.current?.getBoundingClientRect().left || 0) + (containerRef.current?.clientWidth || 0) / 2, clientY: (containerRef.current?.getBoundingClientRect().top || 0) + (containerRef.current?.clientHeight || 0) / 2 } as unknown as React.WheelEvent<HTMLDivElement>);
   const handleReset = () => { setScale(1); setOffset({ x: 0, y: 0 }); lastOffsetRef.current = { x: 0, y: 0 }; };
 
   return (
@@ -306,11 +314,11 @@ export function ExhibitMap({ userProfile, onExhibitSelect, onBack }: ExhibitMapP
         <div className="absolute top-16 right-16 w-32 h-32 bg-blue-400 rounded-full animate-float-delayed opacity-25"></div>
         <div className="absolute bottom-24 left-24 w-20 h-20 bg-purple-400 rounded-full animate-float opacity-35"></div>
         <div className="absolute bottom-32 right-32 w-28 h-28 bg-green-400 rounded-full animate-float-delayed opacity-30"></div>
-        
+
         {/* Stars */}
         <div className="absolute top-20 left-1/3 w-2 h-2 bg-yellow-300 rounded-full animate-pulse"></div>
-        <div className="absolute top-48 right-1/4 w-2 h-2 bg-blue-300 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-48 left-1/2 w-2 h-2 bg-purple-300 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-48 right-1/4 w-2 h-2 bg-blue-300 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-48 left-1/2 w-2 h-2 bg-purple-300 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="container mx-auto px-8 py-12 relative z-10">
@@ -342,7 +350,7 @@ export function ExhibitMap({ userProfile, onExhibitSelect, onBack }: ExhibitMapP
 
         {/* Interactive Map with zoom/pan */}
         <div className="relative mx-auto max-w-[900px] w-full">
-          <AspectRatio ratio={selectedFloor === 'outside' ? 8/5 : 1}>
+          <AspectRatio ratio={selectedFloor === 'outside' ? 8 / 5 : 1}>
             <div
               ref={containerRef}
               className="relative w-full h-full rounded-3xl overflow-hidden touch-pan-y"
@@ -472,7 +480,7 @@ export function ExhibitMap({ userProfile, onExhibitSelect, onBack }: ExhibitMapP
 
               {/* Right: Big image */}
               <div className="order-1 md:order-2">
-                <AspectRatio ratio={16/10}>
+                <AspectRatio ratio={16 / 10}>
                   {active.images?.[0] ? (
                     <img src={`${SERVER_BASE_URL}/uploads/${active.images[0]}`} alt={active.name} className="w-full h-full object-cover rounded" />
                   ) : (

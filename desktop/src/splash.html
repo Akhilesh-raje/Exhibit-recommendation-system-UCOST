@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>UCOST Discovery Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      overflow: hidden;
+    }
+
+    .logo {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .spinner {
+      border: 4px solid rgba(255,255,255,0.3);
+      border-top: 4px solid white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .status {
+      font-size: 16px;
+      margin-top: 10px;
+      text-align: center;
+      min-height: 24px;
+    }
+
+    .progress-bar {
+      width: 300px;
+      height: 4px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 2px;
+      margin-top: 20px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: white;
+      width: 0%;
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .version {
+      position: absolute;
+      bottom: 20px;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">UCOST Discovery Hub</div>
+  <div class="spinner"></div>
+  <div class="status" id="status">Initializing...</div>
+  <div class="progress-bar">
+    <div class="progress-fill" id="progress"></div>
+  </div>
+  <div class="version">Version 1.0.0</div>
+
+  <script>
+    const statusEl = document.getElementById('status');
+    const progressEl = document.getElementById('progress');
+
+    function updateSplash(data) {
+      if (data && data.message) {
+        statusEl.textContent = data.message;
+      }
+      if (data && data.progress !== null && data.progress !== undefined) {
+        progressEl.style.width = `${data.progress}%`;
+      }
+    }
+
+    // Expose update function globally for executeJavaScript
+    window.updateSplash = updateSplash;
+
+    // Listen for IPC messages (will be set up by preload if available)
+    if (window.electronAPI && window.electronAPI.onServiceStatusChange) {
+      window.electronAPI.onServiceStatusChange(updateSplash);
+    }
+
+    // Fallback: listen for postMessage
+    window.addEventListener('message', (event) => {
+      if (event.data && event.data.type === 'splash-update') {
+        updateSplash(event.data);
+      }
+    });
+
+      // Listen for IPC from main process (only if in Electron context)
+      if (typeof require !== 'undefined') {
+        try {
+          const { ipcRenderer } = require('electron');
+          ipcRenderer.on('splash-update', (event, data) => {
+            updateSplash(data);
+          });
+        } catch (e) {
+          // Not in Electron context, ignore
+        }
+      }
+  </script>
+</body>
+</html>
+

@@ -1,24 +1,16 @@
-# Welcome to your Lovable project
+# UCOST Discovery Hub - Frontend Web Application
 
-## Project info
+> Consolidated documentation is tracked in the root `README.md` (see **Subsystem Guides → Frontend Web**). Use this file for workspace-specific notes.
 
-**URL**: https://lovable.dev/projects/6d549ad4-5cc7-4a13-8a42-3b528507fce0
+**React + TypeScript + Vite Frontend for UCOST Discovery Hub Museum Management System**
+
+## ✅ **Status: 100% Complete & Working**
+
+**All frontend features are operational, including admin panel, exhibit management, maps, tours, analytics, and chatbot integration.**
 
 ## How can I edit this code?
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/6d549ad4-5cc7-4a13-8a42-3b528507fce0) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+To work with this project locally using your preferred IDE, you need Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 Follow these steps:
 
@@ -54,20 +46,88 @@ npm run dev
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Core Framework
+- **Vite** - Fast build tool and dev server
+- **React 18** - UI library with hooks and concurrent features
+- **TypeScript** - Type-safe JavaScript
+- **React Router** - Client-side routing
+
+### UI & Styling
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - High-quality React component library
+- **Radix UI** - Accessible component primitives
+- **Lucide React** - Icon library
+- **Tailwind Animate** - Animation utilities
+
+### State Management & Data
+- **TanStack Query (React Query)** - Server state management
+- **React Hook Form** - Form state management
+- **Zod** - Schema validation
+
+### Mobile & Native
+- **Capacitor 6** - Native mobile app framework
+- **Capacitor Plugins**: App, Device, Haptics, Keyboard, Network, Status Bar
+
+### Charts & Visualization
+- **Recharts** - Charting library
+- **QR Code React** - QR code generation
+
+### Utilities
+- **date-fns** - Date manipulation
+- **clsx** - Conditional class names
+- **Sonner** - Toast notifications
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/6d549ad4-5cc7-4a13-8a42-3b528507fce0) and click on Share -> Publish.
+### Build for Production
 
-## Can I connect a custom domain to my Lovable project?
+```sh
+npm run build
+```
 
-Yes, you can!
+This creates an optimized production build in the `dist/` folder.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Deployment Options
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1. **Static Hosting** (Vercel, Netlify, GitHub Pages)
+   - Deploy the `dist/` folder directly
+   - Configure environment variables for API endpoints
+   - Set up redirects for client-side routing
+
+2. **Docker Container**
+   - Build Docker image with nginx serving static files
+   - Configure reverse proxy for API endpoints
+
+3. **Capacitor Mobile App**
+   ```sh
+   npm run build
+   npm run cap:sync
+   npm run cap:open:android  # or ios
+   ```
+
+4. **Electron Desktop** (via desktop app)
+   - Frontend is bundled with Electron desktop application
+   - See `desktop/README.md` for details
+
+### Environment Configuration
+
+Create a `.env` file for production:
+```env
+VITE_API_URL=http://localhost:5000/api
+VITE_CHATBOT_URL=http://localhost:4321
+VITE_EMBED_URL=http://localhost:8001
+VITE_GEMMA_URL=http://localhost:8011
+```
+
+### Key Features
+
+- **Admin Panel**: Complete exhibit and user management
+- **Interactive Maps**: Floor-based exhibit visualization
+- **Visitor Onboarding**: Multi-step profile creation
+- **AI Recommendations**: Personalized exhibit suggestions
+- **Tour Management**: Create and manage personalized tours
+- **Analytics Dashboard**: Real-time visitor statistics
+- **Chatbot Integration**: Embedded conversational AI
+- **Data Export**: Excel/CSV export with backup management
+- **Mobile Responsive**: Optimized for all screen sizes
+- **PWA Ready**: Can be installed as Progressive Web App

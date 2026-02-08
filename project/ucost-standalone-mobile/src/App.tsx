@@ -56,7 +56,19 @@ function App() {
     <div className="min-h-screen bg-gray-50 mobile-safe-area">
       <header className="bg-primary-600 text-white p-4 shadow-lg">
         <div className="flex items-center justify-between">
-          <h1 className="text-xl font-bold">UCOST Discovery Hub</h1>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/logo.png" 
+              alt="UCOST Logo" 
+              className="h-10 w-10 object-contain"
+              onError={(e) => {
+                if (e.currentTarget.src !== '/logo.svg') {
+                  e.currentTarget.src = '/logo.svg';
+                }
+              }}
+            />
+            <h1 className="text-xl font-bold">UCOST Discovery Hub</h1>
+          </div>
           <div className="flex items-center space-x-2">
             <span className="text-sm bg-primary-500 px-2 py-1 rounded-full">
               {isNative ? 'Mobile' : 'Web'}

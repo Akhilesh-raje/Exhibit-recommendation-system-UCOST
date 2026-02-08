@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
 import os
@@ -9,6 +10,15 @@ import clip
 import torch
 
 app = FastAPI(title='Gemma Recommender', version='0.1')
+
+# Enable CORS to allow frontend requests
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, specify your frontend URL
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class RecommendRequest(BaseModel):
     query: str
@@ -21,7 +31,7 @@ _clip = None
 _BASE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 def _load_index():
-    global _index, _meta
+    global _index, _meta, _rows
     if _index is None:
         idx_path = os.path.join(_BASE, 'embeddings', 'faiss.index')
         meta_path = os.path.join(_BASE, 'embeddings', 'meta.json')
@@ -34,6 +44,9 @@ def _load_index():
         if os.path.exists(rows_path):
             with open(rows_path, 'r', encoding='utf-8') as f:
                 _rows = json.load(f)
+        else:
+            # Initialize as empty list if rows.json doesn't exist yet
+            _rows = None
 
 def _load_clip():
     global _clip
@@ -53,23 +66,55 @@ def _embed_text(text: str):
 @app.get('/health')
 def health():
     _load_index()
-    return {'status': 'ok', 'indexed': bool(_index)}
+    indexed = bool(_index)
+    has_rows = _rows is not None and len(_rows) > 0 if _rows else False
+    count = _index.ntotal if _index else 0
+    return {
+        'status': 'ok',
+        'indexed': indexed,
+        'has_rows': has_rows,
+        'exhibit_count': count if indexed else 0
+    }
 
 @app.post('/recommend')
 def recommend(req: RecommendRequest):
-    _load_index()
-    _load_clip()
-    if _index is None:
-        return {'exhibits': [], 'reason': 'index not built'}
-    vec = _embed_text(req.query)
-    D, I = _index.search(vec.astype(np.float32), req.limit)
-    results = []
-    for i, d in zip(I[0], D[0]):
-        ex_id = None
-        if _rows and 0 <= int(i) < len(_rows):
-            ex_id = _rows[int(i)]
-        results.append({'id': ex_id if ex_id else int(i), 'score': float(d)})
-    return {'exhibits': results}
+    global _rows
+    try:
+        _load_index()
+        _load_clip()
+        
+        if _index is None:
+            return {'exhibits': [], 'reason': 'index not built', 'error': 'FAISS index file not found. Please build embeddings first.'}
+        
+        if _rows is None:
+            # Try to create rows from meta.json or use index numbers
+            print("Warning: rows.json not found, using index numbers as IDs")
+            _rows = [str(i) for i in range(_index.ntotal)]
+        
+        vec = _embed_text(req.query)
+        D, I = _index.search(vec.astype(np.float32), req.limit)
+        results = []
+        
+        for i, d in zip(I[0], D[0]):
+            ex_id = None
+            idx = int(i)
+            if _rows and 0 <= idx < len(_rows):
+                ex_id = _rows[idx]
+            else:
+                ex_id = str(idx)
+            
+            # Convert score (distance) to similarity score (higher is better)
+            # FAISS IndexFlatIP returns inner product, so higher is better
+            # If using L2, we'd need to convert distance to similarity
+            similarity_score = float(d) if d > 0 else 0.0
+            results.append({'id': ex_id, 'score': similarity_score})
+        
+        return {'exhibits': results}
+    except Exception as e:
+        import traceback
+        error_msg = str(e)
+        traceback.print_exc()
+        return {'exhibits': [], 'reason': 'error', 'error': error_msg}
 
 if __name__ == '__main__':
     import uvicorn

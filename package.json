@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "start:all": "npm run dev:all",
-    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev": "npm run dev:all",
     "dev:backend": "cd project/backend/backend && npm run dev",
     "dev:frontend": "cd project/frontend/ucost-discovery-hub && npm run dev",
     "dev:desktop": "cd desktop && npm run dev",
@@ -17,7 +17,17 @@
     "dev:ai:core": "cd project/ai-system/ai && npm run dev",
     "dev:mobile-backend": "cd project/mobile-backend && npm run dev",
     "dev:ocr": "cd project/ocr-engine && npm run start",
-    "dev:all": "concurrently -n BACKEND,FRONTEND,AI,MBACKEND,OCR -c blue,magenta,green,yellow,cyan \"npm run dev:backend\" \"npm run dev:frontend\" \"npm run dev:ai:core\" \"npm run dev:mobile-backend\" \"npm run dev:ocr\"",
+    "dev:embed": "cd project/embed-service && python -m uvicorn main:app --host 0.0.0.0 --port 8001",
+    "dev:gemma": "cd gemma/infer && python -m uvicorn server:app --host 0.0.0.0 --port 8011",
+    "dev:chatbot": "cd project/chatbot-mini && npm run dev",
+    "gemma:rebuild": "cd gemma/scripts && python rebuild_embeddings.py",
+    "gemma:test": "cd gemma/scripts && python test_server.py",
+    "gemma:fix-rows": "cd gemma/scripts && python create_rows_json.py",
+    "chatbot:test": "cd gemma/scripts && python test_chatbot.py",
+    "dev:all": "concurrently -n BACKEND,FRONTEND,AI,MBACKEND,OCR,EMBED,GEMMA,CHATBOT -c blue,magenta,green,yellow,cyan,white,red,brightGreen \"npm run dev:backend\" \"npm run dev:frontend\" \"npm run dev:ai:core\" \"npm run dev:mobile-backend\" \"npm run dev:ocr\" \"npm run dev:embed\" \"npm run dev:gemma\" \"npm run dev:chatbot\"",
+    "start:everything": "scripts\\dev\\start-everything.bat",
+    "start:everything:ps1": "powershell -ExecutionPolicy Bypass -File scripts\\dev\\start-everything.ps1",
+    "analyze": "cd desktop && npm run analyze",
     "install:all": "npm install && npm run install:workspaces",
     "install:workspaces": "npm install --workspaces",
     "build": "npm run build:backend && npm run build:frontend && npm run build:desktop",
@@ -36,7 +46,7 @@
     "dist": "npm run build && node -e \"const fs=require('fs'),cp=require('child_process'); if(fs.existsSync('desktop')){ process.chdir('desktop'); cp.execSync('npm run dist',{stdio:'inherit'}); } else { console.log('No desktop dir. Skipping desktop dist.'); }\"",
     "create-exe": "npm run build && node -e \"const fs=require('fs'),cp=require('child_process'); if(fs.existsSync('desktop')){ process.chdir('desktop'); cp.execSync('npm run create-exe',{stdio:'inherit'}); } else { console.log('No desktop dir. Skipping create-exe.'); }\"",
     "setup:ocr": "bash scripts/dev/setup-ocr.sh",
-    "create-launcher": "pkg launcher/index.js --targets node20-win-x64 --output dist/UCOST-Launcher.exe"
+    "create-launcher": "pkg launcher/index.js --targets node18-win-x64 --output dist/UCOST-Launcher.exe"
   },
   "keywords": [
     "museum",
@@ -57,7 +67,9 @@
   "devDependencies": {
     "concurrently": "^8.2.2",
     "pkg": "^5.8.1",
+    "png-to-ico": "^3.0.1",
     "rimraf": "^5.0.5",
+    "tsx": "^4.20.6",
     "wait-on": "^7.2.0"
   },
   "engines": {

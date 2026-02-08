@@ -52,7 +52,57 @@ def main():
         for line in f:
             j = json.loads(line)
             ctx = j.get('context') or {}
-            t = ' '.join([str(ctx.get('name','')), str(ctx.get('description','')), str(ctx.get('category',''))]).strip()
+            
+            # Include ALL fields for comprehensive search
+            # CLIP has a 77 TOKEN limit (not characters), so we need aggressive truncation
+            # Rough estimate: 1 token ≈ 4 characters, so 77 tokens ≈ 300 characters max
+            
+            name = str(ctx.get('name', ''))
+            description = str(ctx.get('description', ''))
+            category = str(ctx.get('category', ''))
+            location = str(ctx.get('location', ''))
+            
+            # Truncate description aggressively - keep first 200 chars max
+            if len(description) > 200:
+                description = description[:197] + '...'
+            
+            # Build text with priority: name, description, category, location
+            # These are the most important for search
+            text_parts = [name]
+            if description:
+                text_parts.append(description)
+            if category:
+                text_parts.append(category)
+            if location:
+                text_parts.append(location)
+            
+            # Add educational value (truncated to 50 chars)
+            if ctx.get('educationalValue'):
+                edu = str(ctx.get('educationalValue'))[:50]
+                if edu:
+                    text_parts.append(edu)
+            
+            # Add scientific name if short
+            if ctx.get('scientificName'):
+                sci_name = str(ctx.get('scientificName'))
+                if len(sci_name) < 30:
+                    text_parts.append(sci_name)
+            
+            # Combine and truncate to ~280 chars (safe for 77 tokens)
+            t = ' '.join([p for p in text_parts if p]).strip()
+            
+            # Aggressive truncation to ensure it fits (280 chars ≈ 70 tokens, safe margin)
+            if len(t) > 280:
+                # Try to preserve name and category
+                name_cat = f"{name} {category}".strip()
+                remaining = 280 - len(name_cat) - 10  # 10 for spacing/ellipsis
+                if remaining > 50 and description:
+                    # Include truncated description
+                    desc = description[:remaining] if len(description) <= remaining else description[:remaining-3] + '...'
+                    t = f"{name_cat} {desc}".strip()
+                else:
+                    t = name_cat[:280]
+            
             texts.append(t if t else 'unknown')
             records.append(j)
             ids.append(j.get('id') or '')

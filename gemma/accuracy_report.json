@@ -1,0 +1,94 @@
+{
+  "metrics": {
+    "total_tests": 4,
+    "successful_tests": 4,
+    "failed_tests": 0,
+    "average_precision": 0.03571428571428571,
+    "average_recall": 0.1,
+    "average_f1_score": 0.05263157894736841,
+    "average_accuracy": 0.6956521739130435,
+    "average_mrr": 0.05,
+    "average_coverage": 0.1,
+    "average_interest_match": 0.14285714285714285,
+    "average_relevance_score": 0.14285714285714285
+  },
+  "test_results": [
+    {
+      "test_name": "Physics Interest Match",
+      "success": true,
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "accuracy": 0.9565217391304348,
+        "mrr": 0.0,
+        "coverage": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "tn": 110,
+        "interest_match": 0.0,
+        "relevance_score": 0.0
+      },
+      "recommended_count": 0
+    },
+    {
+      "test_name": "Family-Friendly Exhibits",
+      "success": true,
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "accuracy": 0.9565217391304348,
+        "mrr": 0.0,
+        "coverage": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "tn": 110,
+        "interest_match": 0.0,
+        "relevance_score": 0.0
+      },
+      "recommended_count": 0
+    },
+    {
+      "test_name": "Energy Category Match",
+      "success": true,
+      "metrics": {
+        "precision": 0.14285714285714285,
+        "recall": 0.4,
+        "f1_score": 0.21052631578947364,
+        "accuracy": 0.8695652173913043,
+        "mrr": 0.2,
+        "coverage": 0.4,
+        "tp": 2,
+        "fp": 12,
+        "fn": 3,
+        "tn": 98,
+        "interest_match": 0.5714285714285714,
+        "relevance_score": 0.5714285714285714
+      },
+      "recommended_count": 14
+    },
+    {
+      "test_name": "General Recommendations",
+      "success": true,
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "accuracy": 0.0,
+        "mrr": 0.0,
+        "coverage": 0.0,
+        "tp": 0,
+        "fp": 18,
+        "fn": 0,
+        "tn": 0,
+        "interest_match": 0.0,
+        "relevance_score": 0.0
+      },
+      "recommended_count": 18
+    }
+  ],
+  "timestamp": "2025-11-02T15:52:17.758361"
+}

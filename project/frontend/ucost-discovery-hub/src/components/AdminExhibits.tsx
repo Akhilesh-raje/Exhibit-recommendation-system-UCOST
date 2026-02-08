@@ -10,8 +10,9 @@ import { AspectRatio } from './ui/aspect-ratio';
 import outsideMap from './maps/outside.png';
 import groundMap from './maps/ground.png';
 import firstFloorMap from './maps/1st-floor.png';
+import { getApiUrl } from '@/lib/desktop-config';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = getApiUrl();
 const SERVER_BASE_URL = API_BASE_URL.replace(/\/api$/, '');
 
 interface ExhibitListItem {
@@ -206,7 +207,7 @@ function SingleExhibitMap({ exhibit }: { exhibit: ExhibitListItem }) {
 				</div>
 			</div>
 			<div className="relative w-full">
-				<AspectRatio ratio={exhibitFloor === 'outside' ? 8/5 : 1}>
+				<AspectRatio ratio={exhibitFloor === 'outside' ? 8 / 5 : 1}>
 					<div className="relative w-full h-full">
 						{/* Map Background */}
 						<div className="absolute inset-0">
@@ -216,14 +217,14 @@ function SingleExhibitMap({ exhibit }: { exhibit: ExhibitListItem }) {
 								className="w-full h-full object-contain bg-gray-700"
 							/>
 						</div>
-						
+
 						{/* Exhibit Location Pin */}
 						<div
 							className="absolute -translate-x-1/2 -translate-y-1/2 z-10"
 							style={{ left: `${x}%`, top: `${y}%` }}
 						>
-							<PinMarker 
-								category={exhibit.category} 
+							<PinMarker
+								category={exhibit.category}
 								label={exhibit.name}
 								sizePx={48}
 								showLabel={true}

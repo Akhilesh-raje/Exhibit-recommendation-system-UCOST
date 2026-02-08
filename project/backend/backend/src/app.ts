@@ -3,11 +3,28 @@ import express from 'express';
 import cors from 'cors';
 import path from 'path';
 
-// Load environment variables early and ensure DATABASE_URL defaults to local SQLite
+// Load environment variables early
 dotenv.config();
-if (!process.env.DATABASE_URL || !process.env.DATABASE_URL.startsWith('file:')) {
-  const defaultDbPath = path.join(process.cwd(), 'prisma', 'dev.db').replace(/\\/g, '/');
-  process.env.DATABASE_URL = `file:${defaultDbPath}`;
+
+// CRITICAL FIX: Enforce production database path
+// Priority: 1) Environment variable, 2) AppData production path, 3) Dev fallback
+if (!process.env.DATABASE_URL) {
+  const isProduction = process.env.NODE_ENV === 'production';
+  const appDataPath = process.env.APPDATA || process.env.HOME || '.';
+
+  if (isProduction) {
+    // Production: Always use AppData
+    const prodDbPath = path.join(appDataPath, 'UCOST Discovery Hub', 'database.db').replace(/\\/g, '/');
+    process.env.DATABASE_URL = `file:${prodDbPath}`;
+    console.log('[Backend] 🔧 Using production database:', prodDbPath);
+  } else {
+    // Development: Use local dev.db
+    const defaultDbPath = path.join(process.cwd(), 'prisma', 'dev.db').replace(/\\/g, '/');
+    process.env.DATABASE_URL = `file:${defaultDbPath}`;
+    console.log('[Backend] 🔧 Using development database:', defaultDbPath);
+  }
+} else {
+  console.log('[Backend] ✅ DATABASE_URL from environment:', process.env.DATABASE_URL);
 }
 
 // Import all route modules
@@ -71,7 +88,7 @@ app.use('*', (req, res) => {
     path: req.originalUrl,
     availableEndpoints: [
       '/api/auth',
-      '/api/exhibits', 
+      '/api/exhibits',
       '/api/tours',
       '/api/analytics',
       '/api/ocr',
@@ -92,14 +109,19 @@ app.use((err: any, req: any, res: any, next: any) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 UCOST Discovery Hub Backend running on port ${PORT}`);
-  console.log(`🔍 API Documentation: http://localhost:${PORT}/health`);
-  console.log(`📁 Uploads: http://localhost:${PORT}/uploads`);
-  console.log(`🔐 Auth: http://localhost:${PORT}/api/auth`);
-  console.log(`🏛️ Exhibits: http://localhost:${PORT}/api/exhibits`);
-  console.log(`🗺️ Tours: http://localhost:${PORT}/api/tours`);
-  console.log(`📊 Analytics: http://localhost:${PORT}/api/analytics`);
-  console.log(`🔍 OCR: http://localhost:${PORT}/api/ocr`);
+  console.log('\n=== UCOST Discovery Hub Backend ===');
+  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`🗄️  Database: ${process.env.DATABASE_URL}`);
+  console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log('\n📡 Available Endpoints:');
+  console.log(`  🔍 Health Check:  http://localhost:${PORT}/health`);
+  console.log(`  📁 Uploads:       http://localhost:${PORT}/uploads`);
+  console.log(`  🔐 Auth:          http://localhost:${PORT}/api/auth`);
+  console.log(`  🏛️  Exhibits:      http://localhost:${PORT}/api/exhibits`);
+  console.log(`  🗺️  Tours:         http://localhost:${PORT}/api/tours`);
+  console.log(`  📊 Analytics:     http://localhost:${PORT}/api/analytics`);
+  console.log(`  🔍 OCR:           http://localhost:${PORT}/api/ocr`);
+  console.log('===================================\n');
 });
 
 export default app; 

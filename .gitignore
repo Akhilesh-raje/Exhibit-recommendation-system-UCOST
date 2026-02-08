@@ -200,3 +200,17 @@ ucost-discovery-hub-backup/
 porjcet/
 old-*/
 backup-*/
+
+# Archive folder
+_archive/
+
+# Duplicate/old dist folders
+desktop/dist_*/
+desktop/dist-*/
+desktop/dist_build_*/
+
+# Packaging config backups
+desktop/packaging-config-*.json
+
+# Tesseract data files (large)
+*.traineddata

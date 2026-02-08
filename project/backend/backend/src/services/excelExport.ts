@@ -75,9 +75,10 @@ export class ExcelExportService {
       fgColor: { argb: '4472C4' }
     };
 
-    // Set up alternating row colors
-    this.worksheet.addRow = function(values: any) {
-      const row = this.addRow(values);
+    // Set up alternating row colors safely without recursive override
+    const originalAddRow = this.worksheet.addRow.bind(this.worksheet);
+    this.worksheet.addRow = (...args: Parameters<typeof originalAddRow>) => {
+      const row = originalAddRow(...args);
       if (row.number > 1 && row.number % 2 === 0) {
         row.fill = {
           type: 'pattern',
