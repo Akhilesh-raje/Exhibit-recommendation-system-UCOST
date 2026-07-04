@@ -8,10 +8,7 @@
     "start": "node dist/app.js",
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
     "test": "jest --passWithNoTests",
-    "recompute:times": "ts-node-dev --transpile-only scripts/recompute-exhibit-times.ts",
-    "postinstall": "prisma generate",
-    "db:generate": "prisma generate",
-    "db:push": "prisma db push"
+    "recompute:times": "ts-node-dev --transpile-only scripts/recompute-exhibit-times.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.7.0",

@@ -28,8 +28,6 @@ const EnvValidator = require('./src/env-validator');
 const PrismaManager = require('./src/prisma-manager');
 const AdminSeeder = require('./src/admin-seeder');
 const PathUtils = require('./src/path-utils');
-const AutoInstaller = require('./src/auto-installer');
-const StartupOrchestrator = require('./src/startup-orchestrator');
 const { injectFrontendConfig, updateFrontendConfig } = require('./src/frontend-config');
 const {
   getServiceConfig,
@@ -142,37 +140,6 @@ async function initializeApp() {
     });
     await envSetup.setup();
     logger.info('Environment setup complete');
-
-    // Run auto-installer (first-run detection and setup)
-    windowManager.updateSplashStatus('Checking installation...', 12);
-    const autoInstaller = new AutoInstaller(
-      process.resourcesPath || path.join(path.dirname(process.execPath), 'resources'),
-      appConfig.userDataPath,
-      logger
-    );
-
-    if (autoInstaller.isFirstRun()) {
-      logger.info('🆕 First run detected - running setup wizard...');
-      windowManager.updateSplashStatus('First run - setting up...', 15);
-
-      const setupResult = await autoInstaller.runFirstTimeSetup(
-        (message, progress) => {
-          logger.info(`Setup: ${message}`);
-          windowManager.updateSplashStatus(message, Math.min(15 + progress * 0.25, 40));
-        }
-      );
-
-      if (!setupResult.success) {
-        throw new Error('First-run setup failed');
-      }
-
-      logger.info('✅ First-run setup complete');
-    } else {
-      logger.info('Existing installation detected');
-      await autoInstaller.quickSetupCheck(
-        (message, progress) => windowManager.updateSplashStatus(message, 15 + progress * 0.05)
-      );
-    }
 
     // Initialize database
     windowManager.updateSplashStatus('Setting up database...', 10);

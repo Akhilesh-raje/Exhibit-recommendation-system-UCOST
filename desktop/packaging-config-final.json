@@ -2,7 +2,7 @@
     "appId": "org.ucost.discoveryhub",
     "productName": "UCOST Discovery Hub",
     "directories": {
-        "output": "dist_build_v2",
+        "output": "dist_final",
         "buildResources": "build"
     },
     "files": [
@@ -16,17 +16,24 @@
     ],
     "extraResources": [
         {
-            "from": "../project/backend/backend/dist",
-            "to": "backend/dist",
+            "from": "../project/backend/backend",
+            "to": "backend",
             "filter": [
-                "**/*"
-            ]
-        },
-        {
-            "from": "../project/backend/backend/prisma",
-            "to": "backend/prisma",
-            "filter": [
-                "**/*"
+                "dist/**/*",
+                "prisma/**/*",
+                "node_modules/**/*",
+                "package.json",
+                "!src/**/*",
+                "!**/*.ts",
+                "!**/*.map",
+                "!.env",
+                "!*.db",
+                "!**/*.db",
+                "!**/*.db-journal",
+                "!uploads/**/*",
+                "!temp/**/*",
+                "!backups/**/*",
+                "!training-data/**/*"
             ]
         },
         {
@@ -37,17 +44,23 @@
             ]
         },
         {
-            "from": "../project/chatbot-mini/dist",
-            "to": "chatbot/dist",
+            "from": "../project/chatbot-mini",
+            "to": "chatbot",
             "filter": [
-                "**/*"
+                "dist/**/*",
+                "node_modules/**/*",
+                "package.json",
+                "!src/**/*",
+                "!**/*.ts",
+                "!**/*.map"
             ]
         },
         {
             "from": "../project/embed-service",
             "to": "embed-service",
             "filter": [
-                "**/*",
+                "**/*.py",
+                "requirements.txt",
                 "!**/__pycache__/**",
                 "!**/*.pyc"
             ]
@@ -56,7 +69,8 @@
             "from": "../gemma/infer",
             "to": "gemma/infer",
             "filter": [
-                "**/*",
+                "**/*.py",
+                "requirements.txt",
                 "!**/__pycache__/**",
                 "!**/*.pyc"
             ]

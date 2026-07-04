@@ -2,7 +2,7 @@
     "appId": "org.ucost.discoveryhub",
     "productName": "UCOST Discovery Hub",
     "directories": {
-        "output": "dist_build_v2",
+        "output": "dist_build_v4",
         "buildResources": "build"
     },
     "files": [
@@ -30,6 +30,15 @@
             ]
         },
         {
+            "from": "../project/backend/backend/node_modules",
+            "to": "backend/node_modules",
+            "filter": [
+                "**/*",
+                "!**/*.map",
+                "!.bin/**/*"
+            ]
+        },
+        {
             "from": "../project/frontend/ucost-discovery-hub/dist",
             "to": "frontend/dist",
             "filter": [
@@ -44,12 +53,22 @@
             ]
         },
         {
+            "from": "../project/chatbot-mini/node_modules",
+            "to": "chatbot/node_modules",
+            "filter": [
+                "**/*",
+                "!**/*.map",
+                "!.bin/**/*"
+            ]
+        },
+        {
             "from": "../project/embed-service",
             "to": "embed-service",
             "filter": [
                 "**/*",
                 "!**/__pycache__/**",
-                "!**/*.pyc"
+                "!**/*.pyc",
+                "!**/node_modules/**"
             ]
         },
         {
@@ -67,7 +86,8 @@
             "filter": [
                 "**/*",
                 "!**/__pycache__/**",
-                "!**/*.pyc"
+                "!**/*.pyc",
+                "!**/node_modules/**"
             ]
         },
         {
